@@ -4,8 +4,17 @@
 
 https://youtu.be/LlhmzVL5bm8 
 
-**Internet vecí** (angl. Internet of things, skratka **IoT**) je v informatike označenie pre prepojenie zariadení/objektov/ľudí s internetom.
-Pri tomto type zariadení sa často využíva pripojenie Wi-Fi a/alebo Bluetooth.
+**Internet vecí** (angl. **Internet of things**, skratka **IoT**) je v informatike označenie pre prepojenie zariadení/objektov/ľudí prostredníctvom internetu.
+
+~~~
+Internet vecí (angl. Internet of things, skratka IoT) je označenie pre obrovskú sieť prepojených zariadení. Tieto zariadenia počas svojho používania jednak zhromažďujú a zdielajú údaje o prostredí v ktorom sú používané a jednak vykonávajú požadované úkony.
+
+To všetko sa deje pomocou vstavaných senzorov a aktorov (výkonných členov) 
+~~~
+![](IoT01.png)
+
+Pri tomto **prepojení** zariadení sa okrem **internetu** často využíva aj pripojenie pomocou **Wi-Fi** (dosah cca 100 až 200m) a **Bluetooth** (dosah >10m).
+
 Prepojené zariadenie by malo byť najmä bezdrôtové a malo by priniesť nové možnosti vzájomnej interakcie nielen medzi jednotlivými systémami a tiež priniesť nové možnosti ich ovládania, sledovania a zabezpečenie pokročilých služieb.
 
 ![](svd01.png)
@@ -15,11 +24,13 @@ IoT sa odvoláva na sieťové pripojenie každodenných objektov, ktoré sú ča
 V tomto kontexte môže byť Internet taktiež platforma pre zariadenia na elektronickú komunikáciu, zdieľanie informácií a špecifických dát so svetom okolo nich.
 IoT môžeme považovať za kombináciu senzorov a akčných členov poskytujúcich a prijímajúcich informáciu, ktorá je digitalizovaná a odoslaná na obojsmernú sieť schopnú preniesť všetky dáta určené na použitie rôznymi službami a koncovými používateľmi.
 
-* Poskytovateľ senzorových dát - Podnikateľské subjekty nasadzujúce a manažujúce senzory
-* Organizácie - Verejná alebo súkromná. Verejné infraštruktúry. Komerčné organizácie. Súkromné spoločnosti. Poskytovatelia technológií a služieb.
-* Osoby a domácnosti - Mobilné telefóny, inteligentné hodinky, gyroskopy, kamery, GPS, akcelerometre, mikrofóny, notebooky , televízie, kamery, mrazničky, mikrovlnky, sporáky, umývačky riadu, inteligentné spotrebiče atď.
+Subjekty ktoré sú zdrojom a príjemcom informácii môžu byť :
+* **Poskytovatelia senzorových dát** - Podnikateľské subjekty nasadzujúce a manažujúce senzory
+* **Organizácie** - Verejná alebo súkromná. Verejné infraštruktúry. Komerčné organizácie. Súkromné spoločnosti. Poskytovatelia technológií a služieb.
+* **Osoby a domácnosti** - Mobilné telefóny, inteligentné hodinky, gyroskopy, kamery, GPS, akcelerometre, mikrofóny, notebooky , televízie, kamery, mrazničky, mikrovlnky, sporáky, umývačky riadu, inteligentné spotrebiče atď.
 
-Viacero senzorov môže byť pripojených na objekt alebo zariadenie za účelom merania širokej škály fyzikálnych premenných alebo javov a dáta následne prenesené na cloud. Snímanie môže byť chápané ako model služby.
+Viacero rôznych senzorov môže byť pripojených na jeden objekt alebo zariadenie za účelom merania širokej škály fyzikálnych veličín alebo javov. A tieto dáta sú následne prostredníctvom cloud-u prenesené na spracovanie príslušným serverom. Snímanie môže byť chápané ako model služby.
+
 V dnešnej dobe sú najmodernejšie zariadenia, obvykle domové spotrebiče ako chladničky alebo televízory, vybavené komunikačnými a snímacími zariadeniami. Ich schopnosti budú neustále rozširované začlenením čoraz väčšieho počtu inteligentných komunikačných a snímacích nástrojov.
 
 
@@ -27,7 +38,7 @@ V dnešnej dobe sú najmodernejšie zariadenia, obvykle domové spotrebiče ako 
 
 https://youtu.be/yLZbzbO_7yQ
 
-PRIPOJENÉ INTELIGENTNÉ BUDOVY
+**PRIPOJENÉ INTELIGENTNÉ BUDOVY**
 * Zlepšenie účinnosti (manažment spotreby energie a úspory) a bezpečnosti (senzory a alarmy). Domové aplikácie vrátane inteligentných senzorov a akčných členov na ovládanie domácich spotrebičov.
 * Zdravotné a vzdelávacie služby doma.
 * Diaľkové ovládanie liečby pacientov.
@@ -41,7 +52,7 @@ PRIPOJENÉ INTELIGENTNÉ BUDOVY
 * Senzory zabudované v infraštruktúre budovy na výpomoc a asistenciu záchranárom.
 * Bezpečnosť pre všetkých členov rodiny.
 
-INTELIGENTNÉ MESTÁ A DOPRAVA
+**INTELIGENTNÉ MESTÁ A DOPRAVA**
 * Integrácia bezpečnostných služieb.
 * Optimalizácia verejnej a súkromnej dopravy.
 * Parkovacie senzory.
@@ -55,7 +66,7 @@ INTELIGENTNÉ MESTÁ A DOPRAVA
 * Získavanie okamžitej spätnej väzby a názorov od občanov.
 * Inteligentná správa.
 
-VZDELÁVANIE
+**VZDELÁVANIE**
 * Prepojenie virtuálnych a fyzických učební na zabezpečenie efektívnejšieho a dostupnejšieho vzdelávania, e-learning.
 * Prístupové služby k virtuálnym knižniciam a vzdelávacím portálom.
 * Výmena správ a výsledkov v reálnom čase.
@@ -63,7 +74,7 @@ VZDELÁVANIE
 * Učenie sa cudzích jazykov.
 * Správa účasti.
 
-SPOTREBNÁ ELEKTRONIKA
+**SPOTREBNÁ ELEKTRONIKA**
 * Inteligentné telefóny.
 * Inteligentná TV.
 * Notebooky, počítače a tablety.
@@ -75,7 +86,7 @@ SPOTREBNÁ ELEKTRONIKA
 * Autonómna prevádzka výrobku. Osobné lokátory.
 * Inteligentné okuliare.
 
-INTELIGENTNÉ PRIPOJENIE
+**INTELIGENTNÉ PRIPOJENIE**
 * Správa dát a poskytovanie služieb.
 * Využitie sociálnych sietí a médií.
 * Prístup k e-mailom, hlasovým a video službám.
@@ -88,13 +99,19 @@ INTELIGENTNÉ PRIPOJENIE
 
 
 >## 3. Architektúra IoT
-Architektúra IoT je spôsob, akým sú zariadenia pripojené k internetu, komunikujú medzi sebou a spracovávajú dáta. Existuje viacero možných architektúr IoT, ktoré sa líšia podľa úrovne abstrakcie, funkcionality a bezpečnosti. Všeobecne sa dá povedať, že architektúra IoT pozostáva z troch základných vrstiev: vrstvy snímania objektov, informačno-integračnej vrstvy a vrstvy aplikácií a služieb.
+**Architektúra IoT je** spôsob, akým sú zariadenia pripojené k internetu, komunikujú medzi sebou a spracovávajú dáta. Existuje viacero možných architektúr IoT, ktoré sa líšia podľa úrovne abstrakcie, funkcionality a bezpečnosti. Všeobecne sa dá povedať, že architektúra IoT pozostáva z troch základných vrstiev: vrstvy snímania objektov, informačno-integračnej vrstvy a vrstvy aplikácií a služieb.
 
-1. Vrstva snímania objektov zahŕňa fyzické zariadenia, ktoré snímajú a získavajú dáta z okolia, ako napríklad teplomery, gyroskopy, magnetometre, snímače tlaku a ďalšie. Tieto zariadenia môžu byť pripojené k internetu pomocou rôznych technológií, ako napríklad Wi-Fi, Bluetooth, ZigBee, LoRaWAN, NB-IoT a ďalšie. Zariadenia môžu byť tiež zoskupené do logických celkov, ktoré sa nazývajú aktíva. Aktívum je časť vybavenia, ku ktorej môže byť pripojený jeden alebo viac senzorov, napríklad chladnička, auto, výťah alebo turbína.
+1. **Vrstva snímania objektov** 
 
-2. Informačno-integračná vrstva zabezpečuje prenos dát z vrstvy snímania objektov do vrstvy aplikácií a služieb. Táto vrstva sa zaoberá spracovaním nejednoznačných informácií zo siete, filtrovaním nežiadúcich dát a integráciou hlavnej informácie do využiteľných znalostí pre koncových používateľov a služby. Táto vrstva môže využívať rôzne technológie, ako napríklad cloudové služby, edge computing, big data analytics, strojové učenie, umelej inteligencie a ďalšie.
+    zahŕňa fyzické zariadenia, ktoré snímajú a získavajú dáta z okolia, ako napríklad teplomery, gyroskopy, magnetometre, snímače tlaku a ďalšie. Tieto zariadenia môžu byť pripojené k internetu pomocou rôznych technológií, ako napríklad Wi-Fi, Bluetooth, ZigBee, LoRaWAN, NB-IoT a ďalšie. Zariadenia môžu byť tiež zoskupené do logických celkov, ktoré sa nazývajú aktíva. Aktívum je časť vybavenia, ku ktorej môže byť pripojený jeden alebo viac senzorov, napríklad chladnička, auto, výťah alebo turbína.
 
-3. Vrstva aplikácií a služieb poskytuje riešenia pre rôzne oblasti, ktoré využívajú dáta z vrstvy snímania objektov. Táto vrstva môže zahŕňať aplikácie pre monitorovanie, riadenie, optimalizáciu a autonómiu pripojených zariadení. Táto vrstva môže tiež ponúkať služby pre rôzne odvetvia, ako napríklad zdravotníctvo, dopravu, energetiku, poľnohospodárstvo, priemysel, smart city a ďalšie.
+2. **Informačno-integračná vrstva** 
+
+    zabezpečuje prenos dát z vrstvy snímania objektov do vrstvy aplikácií a služieb. Táto vrstva sa zaoberá spracovaním nejednoznačných informácií zo siete, filtrovaním nežiadúcich dát a integráciou hlavnej informácie do využiteľných znalostí pre koncových používateľov a služby. Táto vrstva môže využívať rôzne technológie, ako napríklad cloudové služby, edge computing, big data analytics, strojové učenie, umelej inteligencie a ďalšie.
+
+3. **Vrstva aplikácií a služieb**
+
+     poskytuje riešenia pre rôzne oblasti, ktoré využívajú dáta z vrstvy snímania objektov. Táto vrstva môže zahŕňať aplikácie pre monitorovanie, riadenie, optimalizáciu a autonómiu pripojených zariadení. Táto vrstva môže tiež ponúkať služby pre rôzne odvetvia, ako napríklad zdravotníctvo, dopravu, energetiku, poľnohospodárstvo, priemysel, smart city a ďalšie.
 
 
 >## 4. Úlohy systémov
@@ -107,40 +124,64 @@ Systém je skupina vzájomne sa ovplyvňujúcich alebo vzájomne súvisiacich pr
 
 >## 5. Kategorizácia systémov
 
-Kategorizácia systémov je proces členenia systémov z rôznych uhlov:
+**Kategorizácia systémov** 
 
-#### A) Kategorizácia systémov sa vykonáva v súlade s metodikou klasifikácie informácií
-a kategorizácie sietí a informačných systémov, ktorú vydalo Ministerstvo investícií, regionálneho rozvoja a informatizácie Slovenskej republiky. Cieľom kategorizácie systémov je zabezpečiť primeranú ochranu informácií a systémov pred kybernetickými hrozbami a rizikami. Kategorizácia systémov sa vykonáva pre každú sieť a informačný systém vytvorením zoznamu komponentov sietí a informačných systémov, ktorý identifikuje jednotlivé siete a informačné systémy, ich podporné systémy a podsystémy s uvedením ich bezpečnostnej funkcie a zaradenia do príslušných bezpečnostných kategórií.
+je proces členenia systémov z rôznych hladísk:
+
+#### A) Kategorizácia systémov sa vykonáva v súlade s metodikou klasifikácie informácií a kategorizácie sietí a informačných systémov, 
+
+ktorú vydalo Ministerstvo investícií, regionálneho rozvoja a informatizácie Slovenskej republiky. **Cieľom kategorizácie systémov je zabezpečiť primeranú ochranu informácií a systémov pred kybernetickými hrozbami a rizikami.** Kategorizácia systémov sa vykonáva pre každú sieť a informačný systém vytvorením zoznamu komponentov sietí a informačných systémov, ktorý identifikuje jednotlivé siete a informačné systémy, ich podporné systémy a podsystémy s uvedením ich bezpečnostnej funkcie a zaradenia do príslušných bezpečnostných kategórií.
+
 Existujú tri kategórie sietí a informačných systémov:
-* Kategória I zahŕňa siete a informačné systémy, ktoré spracúvajú prísne chránené informácie, ktorých narušenie by malo vážne následky pre základné služby, verejný poriadok, národnú bezpečnosť alebo medzinárodné vzťahy.
-* Kategória II zahŕňa siete a informačné systémy, ktoré spracúvajú chránené informácie, ktorých narušenie by malo značné následky pre základné služby, verejný poriadok, národnú bezpečnosť alebo medzinárodné vzťahy.
-* Kategória III zahŕňa siete a informačné systémy, ktoré spracúvajú interné informácie, ktorých narušenie by malo mierny alebo žiadny vplyv na základné služby, verejný poriadok, národnú bezpečnosť alebo medzinárodné vzťahy.
+* **Kategória I** 
+
+    zahŕňa siete a informačné systémy, ktoré spracúvajú prísne chránené informácie, ktorých narušenie by malo **vážne následky** pre základné služby, verejný poriadok, národnú bezpečnosť alebo medzinárodné vzťahy.
+
+* **Kategória II** 
+
+    zahŕňa siete a informačné systémy, ktoré spracúvajú chránené informácie, ktorých narušenie by malo **značné následky** pre základné služby, verejný poriadok, národnú bezpečnosť alebo medzinárodné vzťahy.
+* **Kategória III** zahŕňa siete a informačné systémy, ktoré spracúvajú interné informácie, ktorých narušenie by malo **mierny alebo žiadny vplyv** na základné služby, verejný poriadok, národnú bezpečnosť alebo medzinárodné vzťahy.
 
 #### B) Otvorený a uzavretý systém
-Otvorený – Systém, ktorý voľne interaguje so svojím prostredím, prijíma vstupy a vracia výstupy. Napríklad vzdelávací systém alebo akýkoľvek systém podnikových procesov, ktorý sa rýchlo zmení, keď sa zmení prostredie.
+**Otvorený – Systém**, 
 
-Uzavretý – Systém, ktorý je odrezaný od prostredia a neinteraguje s ním. Napríklad zapečatené digitálne hodinky, zložené z množstva komponentov, ktoré spolu fungujú na vykonávanie určitej úlohy.
+ktorý voľne interaguje so svojím prostredím, prijíma vstupy a vracia výstupy. 
+
+Napríklad vzdelávací systém alebo akýkoľvek systém podnikových procesov, ktorý sa rýchlo zmení, keď sa zmení prostredie.
+
+**Uzavretý – Systém**, 
+
+ktorý je odrezaný od prostredia a neinteraguje s ním.
+
+ Napríklad zapečatené digitálne hodinky, zložené z množstva komponentov, ktoré spolu fungujú na vykonávanie určitej úlohy.
 
 #### C) Fyzický a abstraktný systém
-Fyzické systémy sú hmotné entity. Môžeme sa ich dotýkať a cítiť. Fyzický systém môže mať statický alebo dynamický charakter. Napríklad písacie stoly a stoličky sú fyzické časti výpočtového strediska, ktoré sú statické. A naprogramovaný počítač je dynamický systém, v ktorom sú programy, dáta a aplikácie sa môžu meniť podľa potrieb používateľa.
-Abstraktné systémy sú nefyzické entity alebo konceptuály, ktoré môžu byť vzorcami, reprezentácia alebo model reálneho systému.
+
+**Fyzické systémy sú hmotné entity.**
+Môžeme sa ich dotýkať a cítiť. 
+
+**Fyzický systém môže mať statický alebo dynamický charakter.** Napríklad písacie stoly a stoličky sú fyzické časti výpočtového strediska, ktoré sú statické. A naprogramovaný počítač je dynamický systém, v ktorom sú programy, dáta a aplikácie sa môžu meniť podľa potrieb používateľa.
+
+**Abstraktné systémy sú nehmotné entity** alebo konceptuály, ktoré môžu byť vzorcami, reprezentácia alebo model reálneho systému.
 
 #### D) Adaptívny a neadaptívny systém
-Adaptívny systém reaguje na zmenu prostredia spôsobom, ktorým zlepší svoj výkon a prežije. Napríklad ľudské bytosti, zvieratá.
 
-Neadaptívny systém je systém, ktorý nereaguje na životné prostredie. Napríklad stroje.
+**Adaptívny systém** reaguje na zmenu prostredia spôsobom, ktorým zlepší svoj výkon a prežije. Napríklad ľudské bytosti, zvieratá.
+
+**Neadaptívny systém** je systém, ktorý nereaguje na životné prostredie. Napríklad stroje.
 
 #### E) Dočasný a permanentný systém
-Trvalý (Permanentý) systém pretrváva dlhú dobu. Napríklad obchodné politiky.
 
-Dočasný systém je vyrobený len na určený čas. Napríklad, DJ systém je nastavený pre program a potom sa rozoberie.
+**Trvalý (Permanentý) systém** pretrváva dlhú dobu. Napríklad obchodné politiky.
+
+**Dočasný systém** je vyrobený len na určený čas. Napríklad, DJ systém je nastavený pre program a potom sa rozoberie.
 
 #### F) Prirodzený systém a systém vyrobený človekom
-Prirodzené systémy vytvára príroda. Napríklad slnečná sústava, sezónny systém.
+**Prirodzené systémy** vytvára príroda. Napríklad slnečná sústava, sezónny systém.
 
-Systém vyrobený človekom – napríklad rakety, vlaky ...
+**Systém vyrobený človekom** vytvára človek. Napríklad rakety, vlaky ...
 
-KATEGORIZÁCIA SYSTÉMOV z pohľadu praxe:
+KATEGORIZÁCIA SYSTÉMOV z hľadiska praxe:
 * Informačný systém
 * Registračný systém
 * Podnikový informačný systém (firemný/organizačný)
@@ -158,13 +199,13 @@ KATEGORIZÁCIA SYSTÉMOV z pohľadu praxe:
 
 IoT výhody a nevýhody
 
-Výhody internetu vecí:
+**Výhody internetu vecí:**
 * Kontrola zdrojov (napr. sledovanie stavu pôdy pomocou senzorov)
 * Okamžitá akcia (napr. pri monitorovaní implantátov, stavu semaforov)
 * Úspora času (automatický zber dát zo snímačov teploty)
 * Analýza dát (zber a analýza dát v reálnom čase)
 
-Nevýhody internetu vecí:
+**Nevýhody internetu vecí:**
 * Softvér nie je bezpečný
 * Informácie nie sú šifrované (porušenie súkromia)
 * Nedostatok kompatibility (hlavne staršie zariadenia)
