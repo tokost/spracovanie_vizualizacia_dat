@@ -218,48 +218,62 @@ Príležitosti
 
 >## 7. Informačný systém
 
-Informačný systém je kombináciou softvéru, hardvéru a telekomunikačných sietí na zhromažďovanie užitočných údajov, najmä v organizácii. Mnoho podnikov používa informačné technológie na dokončenie a riadenie svojich operácií, interakciu so svojimi spotrebiteľmi a udržanie si náskoku pred konkurenciou. Niektoré spoločnosti sú dnes úplne postavené na informačných technológiách, ako napríklad eBay, Amazon, Alibaba a Google.
+**Informačný systém** je kombináciou softvéru, hardvéru a telekomunikačných sietí na zhromažďovanie, spracovanie a poskytovanie údajov.
 
-**Základné zložky (subsystémy) všeobecné informačného systému**
+Často sa používajú najmä v organizáciáciách na zber užitočných údajov ktoré priamo súvisia s predmetom ich činnosti. 
 
-1. podsystém zhromažďovania údajov –zahŕňa zhromažďovanie údajov pomocou rozličných zariadení a prostriedkov, záznam na príslušné pamäťové médium a kontrolu správnosti údajov. Môže nadobúdať tieto formy:
-    * centralizované zhromažďovanie údajov – spočívalo v tom, že údaje sa na prvotných dokladoch odovzdávali mimo podniku., kde sa uskutočnil ich záznam na príslušné médium pre vstup do počítača…používa sa v súčasnosti veľmi málo
-    * decentralizované zhromažďovanie údajov – údaje sa z prvotných dokladov zaznamenajú prostredníctvom technických prostriedkov na médium priamo v podniku
+Mnoho podnikov používa informačné technológie na vykonávanie a riadenie svojich operácií, interakciu so svojimi spotrebiteľmi a dodávateľmi resp. udržanie si náskoku pred konkurenciou. Pre niektoré spoločnosti sú dnes informačné technológie ich obsahovou náplňou a predmetom podnikania ako je to napríklad v prípade Microsoft, eBay, Amazon, Alibaba a Google a pod.
 
-2. podsystém prenosu údajov – fyzický alebo elektronický presun údajov na miesto ich uchovania alebo spracovania
-3. podsystém pamätania a uchovávania údajov – zabezpečuje uchovávanie a zapamätanie údajov, ktoré vstúpili do systému a budú sa spracovávať
-4. podsystém výberu údajov – rieši výber údajov z pamäťového média na ďalšie spracovanie
-5. podsystém spracovania údajov – spracovanie údajov zahŕňa aktualizáciu, ich agregáciu (zoskupovanie) údajov a výpočty, ktoré treba urobiť aby sa dosiahol požadovaný výsledok. Výsledkom spracovania údajov sú výstupné údaje.
-6. podsystém prezentácie a distribúcie informácií – zabezpečuje prezentáciu vo vhodnej forme a ich distribúcia na riadiace miesta v termínoch.
+**Základné zložky (subsystémy) všeobecného informačného systému**
+
+1. **podsystém zhromažďovania údajov** –zahŕňa zhromažďovanie údajov pomocou rozličných zariadení a prostriedkov, záznam na príslušné pamäťové médium a kontrolu správnosti údajov. Môže nadobúdať tieto formy:
+    * **centralizované zhromažďovanie údajov** – údaje sa na prvotných dokladoch alebo elektronickou cestou odovzdávajú mimo podniku t.j. **mimo miesta ich vzniku** kde sú zaznamenané na pamäťové médiu.
+    
+        , kde sa uskutočnil ich záznam na príslušné médium pre vstup do počítača…<s>používa sa v súčasnosti veľmi málo</s>
+
+    * **decentralizované zhromažďovanie údajov** – údaje sa z prvotných dokladov zaznamenajú prostredníctvom technických prostriedkov na pamäťové médium priamo v podniku t.j. **na mieste ich vzniku**
+
+2. **podsystém prenosu údajov** – fyzický alebo elektronický presun údajov na miesto ich uchovania alebo ďalšieho spracovania
+
+3. **podsystém archivácie a uchovávania údajov** – zabezpečuje uchovávanie a zapamätanie údajov, ktoré vstúpili do resp. vystúpili zo systému a budú sa archivovať resp. používať pre v prípade potreby používať pre ďaľšie spracovanie tzv. dátové sklady
+
+4. **podsystém výberu údajov** – rieši výber údajov z pamäťového média na ďalšie spracovanie
+
+5. **podsystém spracovania údajov** – spracovanie údajov zahŕňa aktualizáciu, ich agregáciu (zoskupovanie) údajov a výpočty, ktoré treba urobiť aby sa dosiahol požadovaný výsledok. Výsledkom spracovania údajov sú výstupné údaje.
+
+6. **podsystém prezentácie a distribúcie informácií** – zabezpečuje prezentáciu vo vhodnej forme a ich distribúcia na riadiace miesta v daných termínoch.
 
 **Klasifikácia informačných systémov**
 
-Je zrejmé, že informačné systémy môžeme klasifikovať podľa celého radu hľadísk, napr. podľa:
-* funkcie IS,
-* oblasti využívania,
-* stupňa automatizácie,
-* priestorového rozloženia jednotlivých subsystémov.
+Je zrejmé, že informačné systémy (IO) môžeme klasifikovať podľa celého radu hľadísk, napr.:
+* IO podľa funkcie IS,
+* IO podľa oblasti využívania,
+* IO podľa stupňa automatizácie,
+* IO podľa priestorového rozloženia jednotlivých subsystémov.
 
 V súčasnosti nie je všeobecne akceptovaná jednotná metodika klasifikácie informačných systémov. Preto, bez nároku na ich vyčerpávajúce členenie, uvádzame tie, ktoré pokladáme z hľadiska vytvorenia si všeobecného názoru za podstatné.
-Delenie informačných systémov podľa funkcie
 
-Pod uvedeným spôsobom triedenia rozumieme posúdenie IS podľa toho, aké služby poskytuje IS koncovému používateľovi. V tomto zmysle rozlišujeme tri druhy IS:
-* Referenčné informačné systémy – ich funkciou je pamätať si údaje o správach a informáciách, ktoré sú zaznamenané obyčajne na dokumentoch, či iných nosičoch mimo IS. Tento druh IS odpovedá
-používateľovi na jeho otázku nepriamo: informácie, ktoré potrebujete existujú (príp. neexistujú) a obsahujú ich tieto a tieto dokumenty, či iné zdroje.
-* Zdrojové informačné systémy – poskytujú používateľovi na jeho otázku už cieľové fakty a nie odkaz na ich existenciu, či miesto uloženia.
-* Logické – syntetizujúce informačné systémy – fakty nielen uchovávajú, ale na ich základe, použitím logických operácií aj odvodzujú nové fakty, úsudky hypotézy, ktoré nie sú v informačnom systéme bezprostredne uložené.
+<u>IO podľa funkcie</u>
 
-Delenie informačných systémov podľa oblasti využívania
+Pod uvedeným spôsobom triedenia rozumieme posúdenie IS podľa toho, **aké služby poskytuje IS koncovému používateľovi**. V tomto zmysle rozlišujeme tri druhy IS:
+* **Referenčné informačné systémy** – poskytujú používateľovi na jeho dotaz iba odpoveď či dané informácie existujú alebo nie a miesto uloženia kde ich užívateľ môže nájisť. Ich funkciou je pamätať si údaje o správach a informáciách, ktoré sú zaznamenané na dokumentoch, či iných nosičoch mimo IS. Tento druh IS odpovedá používateľovi na jeho otázku nepriamo: informácie, ktoré potrebujete existujú (príp. neexistujú) a obsahujú ich tieto a tieto dokumenty, či iné zdroje.
+* **Zdrojové informačné systémy** – poskytujú používateľovi na jeho otázku už cieľové fakty a nie odkaz na ich existenciu, či miesto uloženia.
+* **Logické – syntetizujúce informačné systémy** – fakty nielen uchovávajú, ale na ich základe, použitím logických operácií aj odvodzujú nové fakty, úsudky hypotézy, ktoré nie sú v informačnom systéme bezprostredne uložené.
+
+<u>IO podľa oblasti využívania</u>
+
 Podľa oblastí využívania môžeme informačné systémy deliť na:
-* informačné systémy pre oblasť organizácie a riadenia,
-* informačné systémy pre oblasť vedy výskumu, výchovy a vzdelávania,
-* informačné systémy pre oblasť masovokomunikačného informovania a informačných služieb verejnosti, napr. rozhlas, televízia, IS rezervácie leteniek, IS rezervácie vlakových miesteniek, Bratislavská informačná služba a pod.
+* informačné systémy **pre oblasť organizácie a riadenia**,
+* informačné systémy **pre oblasť vedy výskumu, výchovy a vzdelávania**,
+* informačné systémy **pre oblasť masovokomunikačného informovania a informačných služieb verejnosti**, napr. rozhlas, televízia, IS rezervácie leteniek, IS rezervácie vlakových miesteniek, Bratislavská informačná služba a pod.
 
-Delenie informačných systémov podľa úrovne automatizácie zohľadňuje využitie organizačnej a výpočtovej techniky v IS:
-* automatizované riadenie fondov informácií pomocou SRBD,
-* automatizovaný zber dát, napr. pri riadení technologických procesov,
-* automatickú selekciu či indexáciu vstupných dát, napr. v dokumentografických IS, prípadne
-* automatickú dokumentáciu informačných procesov
+<u>IO podľa stupňa automatizácie</u>
+
+ Zohľadňuje využitie organizačnej a výpočtovej techniky v IS:
+* **automatizované riadenie fondov** informácií pomocou SRBD,
+* **automatizovaný zber dát*, napr. pri riadení technologických procesov,
+* **automatickú selekciu či indexáciu vstupných dát**, napr. v dokumentografických IS, prípadne
+* **automatickú dokumentáciu informačných procesov**
 
 
 >## 8. Databázový systém
