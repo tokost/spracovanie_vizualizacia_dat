@@ -128,7 +128,7 @@ Systém je skupina vzájomne sa ovplyvňujúcich alebo vzájomne súvisiacich pr
 
 je proces členenia systémov z rôznych hladísk:
 
-#### A) Kategorizácia systémov sa vykonáva v súlade s metodikou klasifikácie informácií a kategorizácie sietí a informačných systémov, 
+#### A) <u>Kategorizácia systémov sa vykonáva v súlade s metodikou klasifikácie informácií a kategorizácie sietí a informačných systémov</u> 
 
 ktorú vydalo Ministerstvo investícií, regionálneho rozvoja a informatizácie Slovenskej republiky. **Cieľom kategorizácie systémov je zabezpečiť primeranú ochranu informácií a systémov pred kybernetickými hrozbami a rizikami.** Kategorizácia systémov sa vykonáva pre každú sieť a informačný systém vytvorením zoznamu komponentov sietí a informačných systémov, ktorý identifikuje jednotlivé siete a informačné systémy, ich podporné systémy a podsystémy s uvedením ich bezpečnostnej funkcie a zaradenia do príslušných bezpečnostných kategórií.
 
@@ -142,7 +142,7 @@ Existujú tri kategórie sietí a informačných systémov:
     zahŕňa siete a informačné systémy, ktoré spracúvajú chránené informácie, ktorých narušenie by malo **značné následky** pre základné služby, verejný poriadok, národnú bezpečnosť alebo medzinárodné vzťahy.
 * **Kategória III** zahŕňa siete a informačné systémy, ktoré spracúvajú interné informácie, ktorých narušenie by malo **mierny alebo žiadny vplyv** na základné služby, verejný poriadok, národnú bezpečnosť alebo medzinárodné vzťahy.
 
-#### B) Otvorený a uzavretý systém
+#### B) <u>Otvorený a uzavretý systém</u>
 **Otvorený – Systém**, 
 
 ktorý voľne interaguje so svojím prostredím, prijíma vstupy a vracia výstupy. 
@@ -155,7 +155,7 @@ ktorý je odrezaný od prostredia a neinteraguje s ním.
 
  Napríklad zapečatené digitálne hodinky, zložené z množstva komponentov, ktoré spolu fungujú na vykonávanie určitej úlohy.
 
-#### C) Fyzický a abstraktný systém
+#### C) <u>Fyzický a abstraktný systém</u>
 
 **Fyzické systémy sú hmotné entity.**
 Môžeme sa ich dotýkať a cítiť. 
@@ -164,19 +164,19 @@ Môžeme sa ich dotýkať a cítiť.
 
 **Abstraktné systémy sú nehmotné entity** alebo konceptuály, ktoré môžu byť vzorcami, reprezentácia alebo model reálneho systému.
 
-#### D) Adaptívny a neadaptívny systém
+#### D) <u>Adaptívny a neadaptívny systém</u>
 
 **Adaptívny systém** reaguje na zmenu prostredia spôsobom, ktorým zlepší svoj výkon a prežije. Napríklad ľudské bytosti, zvieratá.
 
 **Neadaptívny systém** je systém, ktorý nereaguje na životné prostredie. Napríklad stroje.
 
-#### E) Dočasný a permanentný systém
+#### E) <u>Dočasný a permanentný systém</u>
 
 **Trvalý (Permanentý) systém** pretrváva dlhú dobu. Napríklad obchodné politiky.
 
 **Dočasný systém** je vyrobený len na určený čas. Napríklad, DJ systém je nastavený pre program a potom sa rozoberie.
 
-#### F) Prirodzený systém a systém vyrobený človekom
+#### F) <u>Prirodzený systém a systém vyrobený človekom</u>
 **Prirodzené systémy** vytvára príroda. Napríklad slnečná sústava, sezónny systém.
 
 **Systém vyrobený človekom** vytvára človek. Napríklad rakety, vlaky ...
@@ -226,24 +226,31 @@ Mnoho podnikov používa informačné technológie na vykonávanie a riadenie sv
 
 **Základné zložky (subsystémy) všeobecného informačného systému**
 
-1. **podsystém zhromažďovania údajov** –zahŕňa zhromažďovanie údajov pomocou rozličných zariadení a prostriedkov, záznam na príslušné pamäťové médium a kontrolu správnosti údajov. Môže nadobúdať tieto formy:
-    * **centralizované zhromažďovanie údajov** – údaje sa na prvotných dokladoch alebo elektronickou cestou odovzdávajú mimo podniku t.j. **mimo miesta ich vzniku** kde sú zaznamenané na pamäťové médiu.
-    
-        , kde sa uskutočnil ich záznam na príslušné médium pre vstup do počítača…<s>používa sa v súčasnosti veľmi málo</s>
+1. **podsystém zhromažďovania údajov**\
+–zahŕňa zhromažďovanie údajov pomocou rozličných zariadení a prostriedkov, záznam na príslušné pamäťové médium a kontrolu správnosti údajov. Môže nadobúdať tieto formy:
+    * **centralizované zhromažďovanie údajov**\
+    – údaje sa na prvotných dokladoch alebo elektronickou cestou odovzdávajú mimo podniku t.j. **mimo miesta ich vzniku** kde sú zaznamenané na pamäťové médiu.
+    , kde sa uskutočnil ich záznam na príslušné médium pre vstup do počítača…<s>používa sa v súčasnosti veľmi málo</s>
 
-    * **decentralizované zhromažďovanie údajov** – údaje sa z prvotných dokladov zaznamenajú prostredníctvom technických prostriedkov na pamäťové médium priamo v podniku t.j. **na mieste ich vzniku**
+    * **decentralizované zhromažďovanie údajov**\
+    – údaje sa z prvotných dokladov zaznamenajú prostredníctvom technických prostriedkov na pamäťové médium priamo v podniku t.j. **na mieste ich vzniku**
 
-2. **podsystém prenosu údajov** – fyzický alebo elektronický presun údajov na miesto ich uchovania alebo ďalšieho spracovania
+2. **podsystém prenosu údajov**\
+ – fyzický alebo elektronický presun údajov na miesto ich uchovania alebo ďalšieho spracovania
 
-3. **podsystém archivácie a uchovávania údajov** – zabezpečuje uchovávanie a zapamätanie údajov, ktoré vstúpili do resp. vystúpili zo systému a budú sa archivovať resp. používať pre v prípade potreby používať pre ďaľšie spracovanie tzv. dátové sklady
+3. **podsystém archivácie a uchovávania údajov**\
+ – zabezpečuje uchovávanie a zapamätanie údajov, ktoré vstúpili do resp. vystúpili zo systému a budú sa archivovať resp. používať pre v prípade potreby používať pre ďaľšie spracovanie tzv. dátové sklady
 
-4. **podsystém výberu údajov** – rieši výber údajov z pamäťového média na ďalšie spracovanie
+4. **podsystém výberu údajov**\
+ – rieši výber údajov z pamäťového média na ďalšie spracovanie
 
-5. **podsystém spracovania údajov** – spracovanie údajov zahŕňa aktualizáciu, ich agregáciu (zoskupovanie) údajov a výpočty, ktoré treba urobiť aby sa dosiahol požadovaný výsledok. Výsledkom spracovania údajov sú výstupné údaje.
+5. **podsystém spracovania údajov**\
+ – spracovanie údajov zahŕňa aktualizáciu, ich agregáciu (zoskupovanie) údajov a výpočty, ktoré treba urobiť aby sa dosiahol požadovaný výsledok. Výsledkom spracovania údajov sú výstupné údaje.
 
-6. **podsystém prezentácie a distribúcie informácií** – zabezpečuje prezentáciu vo vhodnej forme a ich distribúcia na riadiace miesta v daných termínoch.
+6. **podsystém prezentácie a distribúcie informácií**\
+ – zabezpečuje prezentáciu vo vhodnej forme a ich distribúcia na riadiace miesta v daných termínoch.
 
-**Klasifikácia informačných systémov**
+<u>**Klasifikácia informačných systémov**</u>
 
 Je zrejmé, že informačné systémy (IO) môžeme klasifikovať podľa celého radu hľadísk, napr.:
 * IO podľa funkcie IS,
@@ -297,7 +304,27 @@ Rastúca potreba zhromažďovania a spracovania veľkého množstva údajov vied
 
 >Úlohou DBS je čo najpresnejšie zachytiť reálne údaje a vzťahy medzi nimi, umožniť ich trvalú uchovu, riadiť manipuláciu s nimi, umožniť ďalšie získavanie a dopĺňanie informácii, vedieť ich triediť a sústreďovať podľa daného kľúča.
 
-Databázové systémy sú špecifickým druhom informačného systému, ktorý v sebe zahrňuje súbor navzájom súvisiacich údajov a programového vybavenia, umožňujúceho prístup k týmto údajom a manipuláciu s nimi. Vývoj databázových systémov postupne prechádzal niekoľkými štádiami. Spočiatku to boli programy určené iba pre jedného používateľa a štruktúry údajov, s ktorými pracovali boli ich súčasťou. Pri každej zmene štruktúry údajov bolo nevyhnutné upraviť program a znova ho kompilovať. Táto technológia bola zdĺhavá, navyše každú úpravu robil samotný programátor. Práve z tohto dôvodu sa postupne vyvinuli programy, v ktorých boli údaje ukladané v samostatných súboroch, teda štruktúra údajov už nebola závislá od aplikačných programov. Ďalší dôležitý krok vo vývoji databázových informačných systémov vyvolala požiadavka na zabezpečenie ochrany údajov pri súčasnom prístupe viacerých používateľov k nim v tzv. konkurenčnom prístupe. Každá z požadovaných zmien vytvárala nové podmienky a zásady, ktoré vznikajúci systém musel spĺňať. Spracovávanie údajov prostredníctvom databázových systémov dnes patrí k najrozšírenejším technológiám v oblasti informatiky
+Databázové systémy sú dnes súčasťou informačného systému so špecifickými úlohami. Majú zabezpečiť rýchly a bezchybný prístup k údajom a manipuláciu s nimi. O to sa stará jeho programové vybavenie a na jeho kvalite záleží do akej miery budú tieto požiadavky splnené.  
+
+**Vývoj databázových systémov**\
+postupne prechádzal niekoľkými štádiami. Spočiatku to boli programy ktoré mali v sebe zabudované bloky kódu pre prácu s údajmi. Boli určené iba pre jedného používateľa a **štruktúry údajov ako aj programové bloky ktoré pracovali s údajmi boli súčasťou celého programu**. Pri každej zmene štruktúry údajov preto bolo potrebné upraviť aj vlastný program, odstrániť z neho chyby a znova ho skompilovať (preložiť do spustitelnej podoby). Táto technológia bola zdĺhavá, navyše každú úpravu robil samotný programátor. 
+
+Práve z tohto dôvodu sa postupne vyvinuli funkcie resp. moduly (knižnice), pomocou ktorých boli **údaje ukladané do samostatných súborov** mimo vlastného aplikačného programu. Štruktúra údajov takto už bola oddelená od aplikačných programov a nebola na nich závislá. 
+
+Ďalší dôležitý krok vo vývoji databázových informačných systémov vyvolala **požiadavka na zabezpečenie ochrany údajov** a **požiadavka na súčasný prístup viacerých používateľov k tým istým údajom** tzv. konkurenčný prístup. To viedlo k tvorbe programov tzv. systému riadenia bázy dát a vyčleneniu DBS ako samostatného systému ktorý s danou aplikáciou spolupracuje prostredníctvom rozhrania (databázových ovládačov) a súboru databázových príkazov (Application Programing Interface).
+
+![](/Temy_MS/DB_API01.png)
+
+Pokial sm edoposiaľ uvažovali DBS ktoré sú uložené, umiestnené a udržiavané iba na jednom mieste v podobe centrálneho počítača tak hovoríme o **centralizovanom DBS**. K centralizovanému umiestneniu sa pristupuje cez internetové pripojenie (LAN, WAN atď.). Tento centralizovaný DBS využívajú najmä inštitúcie alebo organizácie. 
+
+![](/Temy_MS/dbs02.png)
+
+**Distribuovaný databázový systém** je v podstate typ DBS, ktorá pozostáva z viacerých DBS, ktoré sú navzájom prepojené a sú rozmiestnené na rôznych fyzických miestach. Dáta, ktoré sú uložené na rôznych fyzických miestach, tak môžu byť spravované nezávisle od iných fyzických miest avšak medzi jednotlivými DBS existuje spolupráca a deľba práce. Komunikáciu medzi databázami na rôznych fyzických miestach teda zabezpečuje počítačová sieť. 
+
+![](/Temy_MS/dbs03.png)
+
+
+Každá z požadovaných zmien vytvárala nové podmienky a zásady, ktoré vznikajúci systém musel spĺňať. Spracovávanie údajov prostredníctvom databázových systémov dnes patrí k najrozšírenejším technológiám v oblasti informatiky
 
 **Výhody DBS:**
 * <u>kompaktnosť </u> t.j. údaje sú sústredené na jednom mieste spravidla vo výpočtovom stredisku resp. serverovni
