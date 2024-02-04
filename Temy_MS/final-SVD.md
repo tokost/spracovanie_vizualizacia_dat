@@ -378,25 +378,35 @@ https://www.verejnesutaze.sk/tender/zakazka-s-nizkou-hodnotou/1884
 
 >## 10. Základné pojmy: doména, hosting, stránka, značkovací jazyk, tag,...
 
-**Doména:**
+>### Doména:
+Doména je názov t.j. reťazec znakov, ktorý je priradený (namapovaný) na IP adresu pozostávajúcu zo štvorice čísiel.  Používa sa na prístup k webovej stránke z klientskeho softvéru ktorým je spravidla internetový prehliadač. Jednoducho povedané je názov domény text, ktorý používateľ zadá do okna prehliadača, aby sa dostal na konkrétnu webovú stránku. Napríklad názov domény pre Google je „google.com“.
+
+Skutočná adresa webovej stránky je zložitá číselná IP adresa (napr. pre Google 142.251.36.142), ale vďaka DNS (Domain Name System a jeho serveru) môžu používatelia zadávať ľudsky priateľské doménové mená a byť presmerovaní na webové stránky, ktoré hľadajú. Tento proces je známy ako vyhľadávanie DNS.
+
+![](/Temy_MS/dns01.png)
 
 * sa používa namiesto IP adresy
 * zodpovedá konkrétnemu webu
 
-Príklad doménového mena: [www.sportovaskolatn.sk](https://www.sportovaskolatn.sk)
+Príklad doménového mena: [www.sportovaskolatn.sk] https://www.sportovaskolatn.sk
 
-* Doménové meno sa skladá z niekoľkých častí (domén) oddelených bodkou.
-* Domény sú hierarchicky usporiadané.
-* Vpravo je najvšeobecnejšia, vľavo najpresnejšie určujúca doména.
+* Doménové meno sa skladá z niekoľkých častí oddelených bodkou.
+* Domény sú hierarchicky usporiadané od prava do ľava.
+* Vpravo je najvšeobecnejšia doména na najvyššej úrovni (top level), smerom do ľava sú domény a subdomény ktoré presnejšie určujú cieľovú adresu.
 * Doména vpravo sa nazýva TLD (Top Level Domain, Doména najvyššej úrovne).
 * TLD nemôže byť ľubovoľná, je nutné si vybrať zo zoznamu, ktorý spravuje/schvaľuje organizácia IANA resp. ICANN.
 
-Existujú dve základné skupiny TLD:
+![](/Temy_MS/dns02.png)
 
-    * národné TLD (country-code, ccTLD) – dvojznakové skratky štátov2, napríklad .sk, .cz, .pl, .hu, .au, ...
 
-    * generické TLD (gTLD) – Týkajú sa nejakej oblasti, napríklad: .edu (education, vzdelávanie), . com (commerce, obchod), .net, .org (organizations (neziskové organizácie), .science (veda), … .mil (military, armáda) a .gov (government, vláda) sú iba pre USA. .co.uk je tiež TLD.
-* Pred TLD (vľavo od nej) sú postupne domény 2.úrovne, 3.úrovne, 4. úrovne
+<u>Existujú dve základné skupiny TLD:</u>
+
+* národné TLD (country-code, ccTLD) – dvojznakové skratky štátov2, napríklad .sk, .cz, .pl, .hu, .au, ...
+
+* generické TLD (gTLD) – Týkajú sa nejakej oblasti, napríklad: .edu (education, vzdelávanie), . com (commerce, obchod), .net, .org (organizations (neziskové organizácie), .science (veda), … .mil (military, armáda) a .gov (government, vláda) sú iba pre USA. .co.uk je tiež TLD.
+
+* Pred TLD (vľavo od nej) sú postupne domény 2.úrovne, 3.úrovne, 4. úrovne atď. Hovorí sa im aj subdomény a ich počet a názov je v správe majiteľa TLD
+
 * V prípade, že niekto chce webovú stránku a má zvolenú TLD, tak môže požiadať o registráciu domény 2. úrovne. Doménu 2. úrovne si môže žiadateľ určiť ľubovoľne. Táto doména nesmie byť už registrovaná v rámci danej TLD. Subdomény (domény úrovne 3 a viac) si môže vlastník určovať ľubovoľne.
 
 **DNS (Domain Name System - systém doménových mien)**
@@ -408,28 +418,39 @@ Existujú dve základné skupiny TLD:
 
 ![](svd03.png)
 
-**Webhosting**
-* prevádzka webovej stránky na serveri, s neustálym pripojením na Internet;
-* komerčná služba, ktorej základom je prevádzka webovej stránky a elektronickej pošty;
-* činnosť alebo služba poskytovania úložného priestoru jednotlivcom alebo organizáciám pre webové stránky, ktoré sú prístupné cez WWW.
+>### Webhosting
 
-Podľa typu zdieľania systémových prostriedkov:\
-* Zdieľaný alebo „sharovaný“ hosting - prevádzka viacerých webových stránok na jednom serveri.
+Pojem webhostingu vyjadruje skutočnosť kde resp. u koho je webová stránka umiestnená na jeho serveri. Slovo hosting si možno voľne preložiť ako hosťovanie t.j. kto vašu stránku hosťuje na svojich prostriedkoch. Hostiteľ potom zabezpečuje:
 
-* Vyhradený alebo „dedikovaný“ hosting - prevádzka webovej stránky na samostatnom serveri, vyhradenom pre potreby jedného zákazníka.
+* <u>prevádzku webovej stránky</u> na svojom serveri, s neustálym pripojením na Internet;
+* <u>komerčné služby</u>, ktorých základom je okrem platenej prevádzky webovej stránky aj správa elektronickej pošty a rôzne iné ponúkané produkty ako napr. tvorba webových stránok
+* <u>poskytovanie úložného priestoru</u> a s tým spojené činnosťi alebo služby.
+
+Tieto aktivity hostitel, ktorým je spravidla ISP (Internet Service Provider) poskytuje ako jednotlivcom tak aj organizáciám a odbremeňuje tým majiteľov webových stránok od nákladov, personálných a technických požiadavok ktoré sú spojené s prístupnením a prevádzkovaním jeho webových stránok širokej verejnosti.
+
+<u>Podľa typu zdieľania systémových prostriedkov:</u>
+* **Zdieľaný alebo „sharovaný“ hosting** - prevádzka viacerých webových stránok na jednom serveri.
+
+* **Vyhradený alebo „dedikovaný“ hosting** - prevádzka webovej stránky na samostatnom serveri, vyhradenom pre potreby jedného zákazníka.
 
 **Freehosting** - poskytuje webhosting pre webové stránky zdarma; obvykle je však webová stránka doplnená prevádzkovateľom o reklamnú plochu, alebo sa reklama nachádza priamo v adrese webovej stránky.
 
 **Komerčný** alebo tiež „profesionálny“ webhosting - platená služba (za komerčný webhosting sa platia mesačné poplatky od freehostingu odlišuje predovšetkým absenciou reklamy a prítomnosťou prídavných služieb).
 
-**Webstránka** - je dokument zvyčajne obsahujúci hypertext, obrázky, multimediálne a ďalšie prvky uložený obyčajne na webovom serveri prístupný prostredníctvom služby WWW v sieti internet.
-* zvyčajne písaná/tvorená v značkovom jazyku HTML alebo XHTML, CSS, JavaScript a prenos prebieha pomocou protokolu http;
-* v súčasnosti sa tešia veľkej obľube rôzne redakčné systémy (CMS).
+>### Stránka resp. webová stránka
 
-**HTML** (**H**yper**T**ext **M**arkup **L**anguage) - hypertextový značkový jazyk
-* je značkovací jazyk určený na vytváranie webových stránok a iných informácií zobraziteľných vo webovom prehliadači.
-* celý jazyk HTML je zložený z tzv. tagov (nazývaných aj značiek), ktoré určujú zobrazenie jednotlivých elementov na stránke;
-* tagy sa píšu v lomených zátvorkách <> a rozlišujeme párové a nepárové; párové tagy majú úvodnú a koncovú značku.
+je dokument zvyčajne obsahujúci hypertext, obrázky, multimediálne a ďalšie prvky uložený obyčajne na webovom serveri prístupný prostredníctvom služby WWW v sieti internet.
+* zvyčajne písaná/tvorená v značkovom jazyku HTML alebo XHTML, CSS, JavaScript a prenos prebieha pomocou protokolu http;
+* v súčasnosti sa tešia veľkej obľube rôzne redakčné systémy (CMS) ktoré tieto technológie vo veľkej miere tiež používajú.
+
+>### Značkový jazyk alebo HTML jazyk a tagy
+
+je hyper textový značkovací jazyk **HTML** (**H**yper**T**ext **M**arkup **L**anguage) 
+* ktorý je určený na vytváranie webových stránok a iných informácií zobraziteľných vo webovom prehliadači.
+* webové prehliadače rozumejú tomuto jazyku a vedia podla jeho príkazov výtvárať obsah webových stránok a ich dizajn
+* HTML jazyk je zložený z tzv. **tagov** (nazývaných aj **značiek**), ktoré určujú zobrazenie jednotlivých elementov na stránke
+* tagy sa píšu v lomených zátvorkách <> a rozlišujeme **párové tagy** ktoré musia byť zapísané na začitku a na konci textu a **nepárové**, ktoré stačí zapísať iba na začiatku
+* párové tagy majú úvodnú  a koncovú značku napr. <h1> a </h1> kedy koncová značka sa od úvodnej odlišuje tým že začína spätným lomítkom
 
 
 >## 11. Firemné systémy
