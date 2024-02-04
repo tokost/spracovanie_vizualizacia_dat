@@ -271,27 +271,39 @@ Podľa oblastí využívania môžeme informačné systémy deliť na:
 
  Zohľadňuje využitie organizačnej a výpočtovej techniky v IS:
 * **automatizované riadenie fondov** informácií pomocou SRBD,
-* **automatizovaný zber dát*, napr. pri riadení technologických procesov,
+* **automatizovaný zber dát**, napr. pri riadení technologických procesov,
 * **automatickú selekciu či indexáciu vstupných dát**, napr. v dokumentografických IS, prípadne
 * **automatickú dokumentáciu informačných procesov**
 
 
 >## 8. Databázový systém
 
-Databázový systém (DBS) tvorí srdce informačného systému. Pod databázovým systémom chápeme množinu navzájom súvisiacich údajov spoločne s programovým vybavením, ktoré umožňuje prístup k údajom.
+**Databázový systém (DBS)** tvorí srdce každého informačného systému a je tvorený vlastnými údajmi tzv. **bázou dát (BD)** a **systémom riadenia bázy dát (SRBD)** ktorý je programové vybavenie pre prístup k údajom a narábanie s nimi.
 
-*****Význam:*****
+![](/Temy_MS/dbs01.png)
 
-Zber, uchovávanie a triedenie informácií patrí k základným úlohám informatiky. Pred objavením počítacích strojov sa všetky tieto činnosti vykonávali manuálne. Taká práca bola ťažkopádna, zdĺhavá a vyžadovala veľké zdroje ľudskej práce. Pretože išlo o ručné spracúvanie, výsledky často neboli presné a tvorba analýz nad danými informáciami bola takmer neuskutočniteľná. Až nástup výpočtovej techniky umožnil zlom v práci s informáciami. Nová doba počítačových systémov integrovala informatiku a výpočtovú techniku a dnes môžeme povedať, že bez nich nie je možný rozvoj spoločnosti. Tak ako sa menila výpočtová technika z "kalkulačiek obrovských rozmerov" na dokonalé počítače umiestnené napr. na písacom stole, menili sa aj nároky a požiadavky tých, ktorí určovali podmienky a spôsob spracovávania údajov. Rastúca potreba zhromažďovania údajov a manipulácie s nimi viedla tvorcov softvérových aplikácií k vzniku špecifických informačných systémov, ktoré dnes nazývame databázové systémy. Ich úlohou je čo najpresnejšie zachytiť reálne údaje a vzťahy medzi nimi, a umožniť uchovávať, riadiť a znovuzískavať informácie, sústredené podľa nejakého logického kľúča.
+
+***Význam:***
+
+>Zber, uchovávanie a triedenie informácií patrí k základným úlohám informatiky. 
+
+Pred objavením počítacích strojov sa všetky tieto činnosti vykonávali manuálne. Taká práca bola ťažkopádna, zdĺhavá a vyžadovala veľké zdroje ľudskej práce. Pretože išlo o ručné spracúvanie, výsledky často neboli presné ˇobsahovali veľa chýb a vytváranie analýz nad danými informáciami bolo takmer nemožné. 
+
+>Až nástup výpočtovej techniky umožnil zlom v práci s informáciami. 
+
+Nová doba počítačových systémov integrovala informatiku a výpočtovú techniku a dnes môžeme povedať, že bez nich nie je možný rozvoj spoločnosti. Tak ako sa menila výpočtová technika z "kalkulačiek obrovských rozmerov" na dokonalé počítače umiestnené napr. na písacom stole, menili sa aj nároky a požiadavky tých, ktorí určovali podmienky a spôsob spracovávania údajov. 
+
+Rastúca potreba zhromažďovania a spracovania veľkého množstva údajov viedla tvorcov výpočtových prostriedkov k vývoju pamäťových médii s väčšími kapacitami a vývoju softvérových aplikácií troré s nimi budú efektívne a rýchlo pracovať. Bol to impulz pre vznik špecifických prostriedkov informačných systémov, ktoré dnes nazývame databázové systémy. 
+
+>Úlohou DBS je čo najpresnejšie zachytiť reálne údaje a vzťahy medzi nimi, umožniť ich trvalú uchovu, riadiť manipuláciu s nimi, umožniť ďalšie získavanie a dopĺňanie informácii, vedieť ich triediť a sústreďovať podľa daného kľúča.
 
 Databázové systémy sú špecifickým druhom informačného systému, ktorý v sebe zahrňuje súbor navzájom súvisiacich údajov a programového vybavenia, umožňujúceho prístup k týmto údajom a manipuláciu s nimi. Vývoj databázových systémov postupne prechádzal niekoľkými štádiami. Spočiatku to boli programy určené iba pre jedného používateľa a štruktúry údajov, s ktorými pracovali boli ich súčasťou. Pri každej zmene štruktúry údajov bolo nevyhnutné upraviť program a znova ho kompilovať. Táto technológia bola zdĺhavá, navyše každú úpravu robil samotný programátor. Práve z tohto dôvodu sa postupne vyvinuli programy, v ktorých boli údaje ukladané v samostatných súboroch, teda štruktúra údajov už nebola závislá od aplikačných programov. Ďalší dôležitý krok vo vývoji databázových informačných systémov vyvolala požiadavka na zabezpečenie ochrany údajov pri súčasnom prístupe viacerých používateľov k nim v tzv. konkurenčnom prístupe. Každá z požadovaných zmien vytvárala nové podmienky a zásady, ktoré vznikajúci systém musel spĺňať. Spracovávanie údajov prostredníctvom databázových systémov dnes patrí k najrozšírenejším technológiám v oblasti informatiky
 
-Výhody DBS:
-* kompaktnosť,
-* údaje sú uložené elektronicky a nie je potrebné ich spracovávať z tradičných papierových dokumentov,
-* rýchlosť spracovania, ukladania a vyhľadávania požadovaných údajov je rýchle,
-* dostupnosť,
-* údaje sú prístupné na požiadanie v ľubovoľnom čase a mieste s možnosťou zabezpečenia kontroly správnosti ukladaných údajov.
+**Výhody DBS:**
+* <u>kompaktnosť </u> t.j. údaje sú sústredené na jednom mieste spravidla vo výpočtovom stredisku resp. serverovni
+* <u>úspornosť úchovy</u> t.j. údaje sú uchovávané v elektronickej podobe a nie je potrebné ich spracovávať z tradičných papierových dokumentov,
+* <u>rýchlosť spracovania</u> t.j. ukladanie a vyhľadávanie požadovaných údajov sa vykonáva veľmi rýchle pomocou elektronických zariadení a algoritmov,
+* <u>dostupnosť údajov</u> t.j. prístup k DBS nie je obmedzená ani priestorovo a ani časovo. Údaje sú prístupné na požiadanie v ľubovoľnom čase a na ľubovolnom mieste s možnosťou zabezpečenia kontroly správnosti dostupných údajov.
 
 
 >## 9. Registračný systémy
