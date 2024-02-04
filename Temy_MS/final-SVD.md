@@ -335,25 +335,44 @@ Každá z požadovaných zmien vytvárala nové podmienky a zásady, ktoré vzni
 
 >## 9. Registračný systémy
 
-Pod pojmom registračný systém sa môže skrývať viacero rôznych systémov, ktoré sa používajú na rôzne účely.
+Pod pojmom registračný systém sa môže skrývať viacero rôznych systémov, ktoré sa síce používajú na rôzne účely ale majú spoločnú jednu spoločnú vlastnosť že **vykonávajú registráciu uživateľov**.
 
 Príklady registračných systémov:
-* Systém e-kasa
-Pod tzv. eKasu môžeme zaradiť jednak on-line registračnú pokladnicu, ako aj virtuálnu registračnú pokladnicu. Podstatou systému eKasa je prepojenie registračných pokladníc a virtuálnych pokladníc na databázu finančnej správy. Každý podnikateľ má k dispozícii on-line tzv. eKasa zónu na webovom sídle finančnej správy, kde sú evidované informácie o prijatých tržbách.
-* Registračný systém audiovizuálneho fondu (http://registracia.avf.sk/ ) - verejnoprávna inštitúcia na podporu a rozvoj audiovizuálnej kultúry a priemyslu
-* Registračný systém škôl
-(https://www.fei.stuba.sk/sk/dekanat-fei-stu/pedagogicke-oddelenie/registracny-system-pgo.html?page_id=5505)- registračný systém pedagogickej fakulty
-(https://produkciaftf.sk/ ) – registračný systém filmovej a televíznej fakulty
-(http://dnidanovehoprava.pravo.upjs.sk/registracny-system.html) – registračný systém právnickej fakulty
--
-možnosť prihlasovania sa na štúdium, alebo konkrétne predmety, skúšky ...
-* Registračný systém na očkovanie (https://web.vucke.sk/sk/kompetencie/zdravotnictvo/aktuality/covid-19/zupa-spusta-registracny-system-ockovanie-terene-aj-vo-vakcinacnych-centrach.html)
--
-možnosť očkovania na základe registrácie – registrácia na presne určený čas
+
+<u>Systém e-kasa</u>\
+Pod tzv. eKasu môžeme zaradiť jednak on-line registračnú pokladnicu, ako aj virtuálnu registračnú pokladnicu. **Podstatou systému eKasa je prepojenie registračných pokladníc a virtuálnych pokladníc na databázu finančnej správy.** 
+
+Každý podnikateľ má k dispozícii on-line tzv. eKasa zónu na webovom sídle finančnej správy, kde sú evidované informácie o prijatých tržbách.
+
+<u>Registračný systém audiovizuálneho fondu</u>\
+http://registracia.avf.sk/ ) - je to verejnoprávna inštitúcia na podporu a rozvoj audiovizuálnej kultúry a priemyslu
+
+<u>Registračný systém škôl</u>\
+mmožňuje prihlasovanie sa na štúdium, alebo na konkrétne predmety, či skúšky a vybavovanie celej pedagogickej agendy online
+
+*registračný systém pedagogickej fakulty*
+https://www.fei.stuba.sk/sk/dekanat-fei-stu/pedagogicke-oddelenie/registracny-system-pgo.html?page_id=5505
+
+*registračný systém filmovej a televíznej fakulty*
+https://produkciaftf.sk/
+
+*registračný systém právnickej fakulty*
+http://dnidanovehoprava.pravo.upjs.sk/registracny-system.html
+
+<u>Registračný systém na očkovanie</u>\
+možnosť očkovania na základe registrácie – registrácia na presne určený čas a miesta očkovania
+https://web.vucke.sk/sk/kompetencie/zdravotnictvo/aktuality/covid-19/zupa-spusta-registracny-system-ockovanie-terene-aj-vo-vakcinacnych-centrach.html
+
+Ďalšie odkazy na niektoré registračné systémy:
+
 https://www.lehota.sk/zmos-pripravil-bezplatny-registracny-system-pre-mom-aktualizacia-17-2-2021--oznam/mid/433333/.html
+
 https://www.inviton.sk/registracne-formulare-eventove
+
 https://tvnoviny.sk/domace/clanok/148662-utecencov-ubytuju-rychlejsie
+
 https://www.datatag.co.uk/registration/sk.php
+
 https://www.verejnesutaze.sk/tender/zakazka-s-nizkou-hodnotou/1884
 
 
