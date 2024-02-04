@@ -455,22 +455,33 @@ je hyper textový značkovací jazyk **HTML** (**H**yper**T**ext **M**arkup **L*
 
 >## 11. Firemné systémy
 
-Firemný systém je softvérové riešenie, ktoré pomáha firmám riadiť a automatizovať základné firemné procesy ako účtovníctvo, výrobu, nákup či personalistiku. Tento systém sa skladá z množstva modulov, ktoré sa vedia prispôsobiť Vašemu zameraniu v obore. Všetky moduly sú vzájomne integrované a fungujú ako jeden komplexný celok. Každý z nich však dokáže plniť užívateľské požiadavky aj samostatne.
+**Firemný systém** je softvérové riešenie, ktoré pomáha firmám riadiť a automatizovať základné firemné procesy ako účtovníctvo, výrobu, nákup či personalistiku. 
+
+Tento systém sa skladá z množstva modulov, ktoré sa vedia prispôsobiť Vašemu zameraniu v obore. Všetky moduly sú vzájomne integrované a fungujú ako jeden komplexný celok. Každý z nich však dokáže plniť užívateľské požiadavky aj samostatne.
 
 Jednotlivé moduly spolu vzájomne komunikujú a zdieľajú dáta. Čím viac modulov začnete používať, tým bude mať pre Vás systém väčší prínos. Odhalí totiž súvislosti, ktoré Vám doteraz mohli unikať a získate väčší nadhľad alebo nový uhol pohľadu na samotné fungovanie podniku. Každý používateľ má pridelené určité právomoci podľa postavenia vo firme. Zobrazovanie a úprava citlivých firemných informácií je zabezpečené a dostupné len tomu, kto má dostatočné oprávnenie.
 
-Zoznam modulov vo firemnom systéme:
-* Interná komunikácia (Každý zamestnanec má k dispozícii firemný chat, prostredníctvom ktorého dokáže kontaktovať každého člena tímu. Okrem toho sú neodmysliteľnou súčasťou modulu aj osobné a skupinové mailové schránke, dôležité oznámenie či firemná WIKI. Vďaka modulu tiež získavate prístup k úložisku firemných dokumentov a kalendára udalostí.)
-* Štatistiky a reporty (Okrem toho, že vidíte výkonnosť svojich zamestnancov, sledujete aj finančný stav Vašej firmy. Štatistiky môžete sledovať pomocou ukazovateľov, grafov či trendov. Môžete si zvoliť rôzne sledované obdobie, hodnotiť vývoj alebo porovnávať jednotlivé projekty. Získate okamžitý nadhľad, dokážete včas odhaliť slabé miesta a následne tomu prispôsobiť svoje ďalšie plánovanie.)
-* Fakturácia a platby (Fakturačný modul dáva prístup k došlým a vyšlým faktúram i dobropisom. Na manažérskej pozícii môžete faktúry schvaľovať a zároveň mať neustály prehľad o tom, ktoré sú zaplatené, nezaplatené alebo sa blíži ich termín splatnosti. Modul tiež poskytuje možnosť automatického zasielania faktúr zákazníkovi na e-mail, automatické párovanie platieb a pohybov na účte či vytváranie hromadných platobných príkazov.)
-* Riadenie zákaziek (Modul zakázok umožní triedenie na základe ľubovoľnej kategórie, typu alebo priority. Tiež vidíte kompletnú históriu každej zákazky od jej vytvorenia až po jej dokončenie a to vrátane identity zamestnanca, ktorý s ňou pracoval.)
-* Sklad/cenník (Kompletná evidencia skladových zásob, ktorá zahŕňa okrem iného aj tagovanie podľa kľúčových slov a foto-dokumentáciu. Modul umožňuje vidieť detaily skladovej položky, ale tiež jej históriu. A teda vidíte to, kedy a kde bola použitá a kto túto zmenu vykonal. Počet skladových zásob sa upravuje automaticky pri použití v zákazke a vidíte, ktoré zásoby sa míňajú a treba doobjednať. Tento modul je možné využiť takisto ako cenník dodávaných služieb.)
-* Financie (Disponuje evidenciou všetkých pohybov v pokladniach jednotlivých pobočiek. Všetky údaje tak máte v reálnom čase na jednom mieste. Taktiež viete skontrolovať históriu pohybov a popis transakcií. Okrem toho máte prehľad aj o vyúčtovaní Vašich zamestnancov a vyplatených zálohách. Samozrejme sem spadá aj evidencia bločkov za nákupy do firemných nákladov a ich následné preplácanie. Tie si môžu vyžadovať schválenie, prípadne nastaviť limit pre automatické schvaľovanie.)
-* Úlohy (Modul pomôže získať podrobnejší a praktickejší prehľad o úlohách vo vašej spoločnosti. Každá hlavná úloha môže obsahovať viacero čiastkových podúloh, ktoré je nutné vyriešiť. Je možné označiť 1 osobu, ale aj ďalších spoluriešiteľov, ktorí sú zodpovední za úspešné dokončenie (prípadne chcú byť len notifikovaní o zmenách). Samozrejmosťou je úschova príloh ako dokumenty a fotografie, ktoré súvisia s danou problematikou. Okrem iného tu vidíte sekciu komentárov a zaznamenávanie progresu v riešení úlohy.)
-* Dochádzkový systém (Jednoduchý, ale účinný modul pre evidennciu dochádzky zamestnancov vo firme. Vďaka nemu vždy viete, ktorí kolegovia sa momentálne nachádzajú v práci, no zároveň si na vyššej pozícii môžete prezerať aj históriu ich prítomnosti a sumár odpracovaných hodín za jednotlivé dni/mesiace. Zaznamenávanie príchodov a odchodov sa vykonáva buď manuálne alebo pomocou čipových kariet na vstupe.)
-* Cestovné výkazy (Kniha jázd Vám pomáha evidovať všetky vozidlá, ktoré sa nachádzajú vo vašom autoparku. Máte prehľad o ich stave, spotrebe, užívaní, počte najazdených kilometrov a lokalite. Mimo toho môže byť vďaka tomuto modulu schvaľovanie jázd plne digitalizované. Modul tiež poskytuje prehľad medzi súkromnými a služobnými kilometrami, ktoré boli na vozidle najazdené. Pre presnejšie sledovania vozidiel je opäť možná integrácia s Google Maps. V tomto prípade viete sledovať aktuálnu polohu, ale tiež presnú trasu, ktorú vozidlo vykonalo za zvolené obdobie.)
-* Adresár (Adresár je zoznamom všetkých zákazníkov, ktorí vašu spoločnosť kontaktovali v minulosti, alebo spolupráca s nimi práve prebieha. Patrí sem tiež zoznam všetkých obchodných partnerov, dodávateľov a odberateľov. Spoločnosti, osoby a kontakty sú kategorizované podľa oblasti ich pôsobenia. Pri zobrazení detailu okrem iného vidíme prehľad o všetkých objednávkach, zmluvách a faktúrach s daným partnerom alebo klientom.)
-* ...
+<u>Zoznam modulov vo firemnom systéme:</u>
+
+* **Interná komunikácia** (Každý zamestnanec má k dispozícii firemný chat, prostredníctvom ktorého dokáže kontaktovať každého člena tímu. Okrem toho sú neodmysliteľnou súčasťou modulu aj osobné a skupinové mailové schránke, dôležité oznámenie či firemná WIKI. Vďaka modulu tiež získavate prístup k úložisku firemných dokumentov a kalendára udalostí.)
+* **Štatistiky a reporty** (Okrem toho, že vidíte výkonnosť svojich zamestnancov, sledujete aj finančný stav Vašej firmy. Štatistiky môžete sledovať pomocou ukazovateľov, grafov či trendov. Môžete si zvoliť rôzne sledované obdobie, hodnotiť vývoj alebo porovnávať jednotlivé projekty. Získate okamžitý nadhľad, dokážete včas odhaliť slabé miesta a následne tomu prispôsobiť svoje ďalšie plánovanie.)
+
+* **Fakturácia a platby** (Fakturačný modul dáva prístup k došlým a vyšlým faktúram i dobropisom. Na manažérskej pozícii môžete faktúry schvaľovať a zároveň mať neustály prehľad o tom, ktoré sú zaplatené, nezaplatené alebo sa blíži ich termín splatnosti. Modul tiež poskytuje možnosť automatického zasielania faktúr zákazníkovi na e-mail, automatické párovanie platieb a pohybov na účte či vytváranie hromadných platobných príkazov.)
+
+* **Riadenie zákaziek** (Modul zakázok umožní triedenie na základe ľubovoľnej kategórie, typu alebo priority. Tiež vidíte kompletnú históriu každej zákazky od jej vytvorenia až po jej dokončenie a to vrátane identity zamestnanca, ktorý s ňou pracoval.)
+
+* **Sklad/cenník** (Kompletná evidencia skladových zásob, ktorá zahŕňa okrem iného aj tagovanie podľa kľúčových slov a foto-dokumentáciu. Modul umožňuje vidieť detaily skladovej položky, ale tiež jej históriu. A teda vidíte to, kedy a kde bola použitá a kto túto zmenu vykonal. Počet skladových zásob sa upravuje automaticky pri použití v zákazke a vidíte, ktoré zásoby sa míňajú a treba doobjednať. Tento modul je možné využiť takisto ako cenník dodávaných služieb.)
+
+* **Financie** (Disponuje evidenciou všetkých pohybov v pokladniach jednotlivých pobočiek. Všetky údaje tak máte v reálnom čase na jednom mieste. Taktiež viete skontrolovať históriu pohybov a popis transakcií. Okrem toho máte prehľad aj o vyúčtovaní Vašich zamestnancov a vyplatených zálohách. Samozrejme sem spadá aj evidencia bločkov za nákupy do firemných nákladov a ich následné preplácanie. Tie si môžu vyžadovať schválenie, prípadne nastaviť limit pre automatické schvaľovanie.)
+
+* **Úlohy** (Modul pomôže získať podrobnejší a praktickejší prehľad o úlohách vo vašej spoločnosti. Každá hlavná úloha môže obsahovať viacero čiastkových podúloh, ktoré je nutné vyriešiť. Je možné označiť 1 osobu, ale aj ďalších spoluriešiteľov, ktorí sú zodpovední za úspešné dokončenie (prípadne chcú byť len notifikovaní o zmenách). Samozrejmosťou je úschova príloh ako dokumenty a fotografie, ktoré súvisia s danou problematikou. Okrem iného tu vidíte sekciu komentárov a zaznamenávanie progresu v riešení úlohy.)
+
+* **Dochádzkový systém** (Jednoduchý, ale účinný modul pre evidennciu dochádzky zamestnancov vo firme. Vďaka nemu vždy viete, ktorí kolegovia sa momentálne nachádzajú v práci, no zároveň si na vyššej pozícii môžete prezerať aj históriu ich prítomnosti a sumár odpracovaných hodín za jednotlivé dni/mesiace. Zaznamenávanie príchodov a odchodov sa vykonáva buď manuálne alebo pomocou čipových kariet na vstupe.)
+
+* **Cestovné výkazy** (Kniha jázd Vám pomáha evidovať všetky vozidlá, ktoré sa nachádzajú vo vašom autoparku. Máte prehľad o ich stave, spotrebe, užívaní, počte najazdených kilometrov a lokalite. Mimo toho môže byť vďaka tomuto modulu schvaľovanie jázd plne digitalizované. Modul tiež poskytuje prehľad medzi súkromnými a služobnými kilometrami, ktoré boli na vozidle najazdené. Pre presnejšie sledovania vozidiel je opäť možná integrácia s Google Maps. V tomto prípade viete sledovať aktuálnu polohu, ale tiež presnú trasu, ktorú vozidlo vykonalo za zvolené obdobie.)
+
+* **Adresár** (Adresár je zoznamom všetkých zákazníkov, ktorí vašu spoločnosť kontaktovali v minulosti, alebo spolupráca s nimi práve prebieha. Patrí sem tiež zoznam všetkých obchodných partnerov, dodávateľov a odberateľov. Spoločnosti, osoby a kontakty sú kategorizované podľa oblasti ich pôsobenia. Pri zobrazení detailu okrem iného vidíme prehľad o všetkých objednávkach, zmluvách a faktúrach s daným partnerom alebo klientom.)
+
 
 
 >## 12. Špeciálne systémy
@@ -520,7 +531,6 @@ Geografické informačné systémy sa využívajú vo viacerých technológiách
 https://youtu.be/NbEbs6I3eLw\
 https://youtu.be/oV74Najm6Nc?si=W5IdMMqcifqxYVRF
 https://youtu.be/oHsVAtUUodU?si=guTPPRswve_YBbp5*
-
 
 
 >## 13. Možnosti tvorby webových stránok
