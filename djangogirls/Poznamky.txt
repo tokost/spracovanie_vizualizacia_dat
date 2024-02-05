@@ -1,0 +1,8 @@
+Zistenie či je port (80) obsadený alebo volný
+
+    telnet 127.0.0.1 80 alebo netstat -na|findstr port
+ak hlási chybu je obsadený alebo ak LISTEN (počúva)
+
+Zistenie ktorý program ktorý port použiva
+
+    netstat -a -n -p tcp -b
