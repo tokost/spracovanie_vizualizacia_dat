@@ -213,12 +213,12 @@ INSTALLED_APPS = [
 ]
 ~~~
 
-### Vytvorenie modelu blogového príspevku
+>### Vytvorenie modelu blogového príspevku
 
 To čo sme si vyššie spomenuli, teraz budeme aplikovať v praxi a tým si doplníme predstavu o modeloch Djanga.
-Začneme tým že v súbore blog/models.py definujeme všetky používané objekty **Models** – toto je miesto, v ktorom budeme definovať náš blogový príspevok.
+Začneme tým že v súbore **mysite/blog/models.py** definujeme všetky používané objekty **Models**. Toto je miesto, v ktorom budeme definovať náš model blogového príspevku.
 
-Otvoríme vo VS-Code súbor blog/models.py, všetko z neho odstránime a napíšeme tam tento kód:
+Otvoríme vo VS-Code súbor mysite/blog/models.py, všetko z neho odstránime a napíšeme tam tento kód:
 ~~~
 from django.conf import settings
 from django.db import models
@@ -239,9 +239,10 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 ~~~
-Poznámka: Skontrolujte, či na každej strane str používame dva znaky podčiarknutia ( _) . Táto konvencia sa v Pythone často používa a niekedy ju nazývame aj „dunder“ (skratka pre „double-underscore“).
 
-#### V ďalšom vysvetlíme čo tieto riadky znamenajú
+Poznámka: Skontrolujte, či na každej strane str používame dva znaky podčiarknutia (__) . Táto konvencia sa v Pythone často používa a niekedy ju nazývame aj „dunder“ (skratka pre „**d**ouble-**under**score“).
+
+### V ďalšom vysvetlíme čo tieto riadky znamenajú
 
 Všetky riadky začínajúce na **from** alebo **import** sú riadkami, ktoré pridávajú nejaké kódy z iných súborov. Takže namiesto kopírovania a vkladania kódov ktoré sa opakujú do iných súborov môžeme niektoré časti zahrnúť do príkazového riadku **from ... import ...**
 ~~~
@@ -313,7 +314,7 @@ Pre prihlásenie je potrebné vytvoriť superužívateľa, ktorý má kontrolu n
 
 **POZOR**: Pamätajme, že ak chceme písať nové príkazy pre Git Bash, kým je webový server spustený je potrebné jeho činnosť ukončiť a až potom môžeme príkazy zadávať.
 ~~~
-(myvenv) C:\Users\Name\djangogirls> python manage.py createsuperuser
+(myvenv) C:\Users\Name\djangogirls>$ python manage.py createsuperuser
 ~~~
 Po zobrazení výzvy zadajte svoje používateľské meno (malé písmená, bez medzier), e-mailovú adresu a heslo. Nebojte sa, že nevidíte heslo, ktoré zadávate – tak to má byť. Zadajte ho a stlačením tlačidla enter pokračujte. Výstup by mal vyzerať takto (kde používateľské meno a e-mail by mali byť vaše vlastné):
 ~~~
@@ -339,7 +340,7 @@ Ak sa chcete dozvedieť viac o Django adminovi, mali by ste si pozrieť dokument
 
 Nasadenie do produkcie je dôležitou súčasťou procesu vývoja webových stránok. Táto kapitola je umiestnená v strede návodu a vyžaduje určitú námahu naviac ktorú si môžeme aj odpustiť a teda túto kapitolu preskočiť viď. https://tutorial.djangogirls.org/en/deploy/ 
 
-### Django URL
+>### I. Django URL
 
 Pokračujeme vo vývoji našej webovej aplikácie blogu. Najprv sa však musíme niečo dozvedieť o adresách URL Django.
 
@@ -436,13 +437,13 @@ AttributeError: module 'blog.views' has no attribute 'post_list'
 
 Naša konzola zobrazuje chybu, ale v skutočnosti je tento oznam pre nás veľmi užitočný. Hovorí nám totiž, že neexistuje **atribút 'post_list'** . Tak sa totiž volá view (pohľad), ktorý sa Django snaží nájsť na základe nasmerovania v urls.py aby ho použil. No tento view sme ešte nevytvorili, takže ho ani najisť nemôže. V tejto fáze nebude fungovať ale ani **/admin/** pri ktorom view definovaný máme. Žiadny strach – dostaneme sa tam. A ak sa zobrazí iná chybová správa, skúste reštartovať webový server. Ak to ale urobíte v okne konzoly, na ktorom je spustený webový server, tak ho treba najprv zastaviť stlačením klávesov Ctrl+C (spolu kláves Control a C). V systéme Windows možno budete musieť stlačiť kombináciu klávesov Ctrl+Break. Potom webový server znovu odštartujeme spustením príkazu **python manage.py runserver**.
 
-#### Django views
+>### II. Django VIEWS
 
 V tejto fáze vývoja programu začína priestor na kreatívnu tvorbu. Najprv sa zbavíme chyby, ktorú sme vytvorili v predchádzajúcej časti, tým že vytvoríme view v súbore blog/views.py.
 
 Views je miesto, kam vložíme kód pre „logiku“ našej aplikácie. Požiadame tu o informácie zo súboru **model** ktorý sme si  predtým vytvorili a odošleme ich do **template**. Neskôr v ďalšej časti potom teda k tomu do tretice vytvoríme prislušný template (šablónu). Views (zobrazenia) sú obdobné funkcie Pythonu, ktoré sú o niečo komplikovanejšie ako tie, ktoré sme spoznávali v rámci základov Pythonu .
 
-Views sú umiestnené v súbore views.py. A do tohoto súboru blog/views.py pridáme naše view.
+Views sú umiestnené v súbore views.py. A do tohoto súboru blog/templates/blog/views.py pridáme naše view.
 
 #### blog/views.py
 
@@ -480,6 +481,8 @@ Formát šablóny Django je opísaný v jazyku zvanom HTML (HyperText Markup Lan
 HTML je kód, ktorý interpretuje váš webový prehliadač – napríklad Chrome, Firefox alebo Safari – na zobrazenie webovej stránky pre používateľa.
 
 HTML je skratka pre „HyperText Markup Language“. HyperText znamená, že ide o typ textu, ktorý podporuje hypertextové prepojenia medzi stránkami. Označenie znamená, že sme vzali dokument a označili ho kódom, ktorý niečomu (v tomto prípade prehliadaču) povie, ako má stránku interpretovať. HTML kód je vytvorený pomocou značiek , z ktorých každá začína < a končí na >. Tieto značky predstavujú prvky označovania .
+
+>### III. Django TEMPLATES
 
 #### Vaša prvá šablóna
 
@@ -620,11 +623,11 @@ Vytvorili sme jednu sekciu **header** a dve sekcie.**article**
 V tomto štádiu je možné znovu nasadiť našu stránku do produkcie vybranému ISP ktorý ponúka prostredie na báze Pythonu a Django. Taktiež je vhodné výtvoriť zálohu nášho projektu na Git resp. GitHub.
 
 <div id="section1">
-<h3> Django ORM a QuerySets</h3>
+<h3> Django ORM a QuerySets - práca s databázou</h3>
 </div>
 
 
-V tejto časti sa budeme zaoberať problematikou ako sa Django pripája k databáze a ukladá do nej údaje.
+V tejto časti sa budeme zaoberať problematikou **ako sa Django pripája k databáze a ukladá do nej údaje**.
 Skôr však si povedzme čo je to QuerySets.
 
 QuerySet je v podstate zoznam objektov daného modelu. QuerySets nám umožňujú čítať dáta z databázy, filtrovať ich a objednávať.
