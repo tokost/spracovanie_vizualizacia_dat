@@ -38,18 +38,65 @@ náš adresárový strom teraz bude vyzerať takto:
         │   └── ...
         └───requirements.txt
 
-        
-5. Vytvoríme adresár našej aplikácie príkazom 
+
+5. Vytvoríme adresár našeho projektu blog príkazom
+
+Aby sme mali vo všetkom poriadok, vytvoríme v našom adresári **djangogirls** projekt s názvom **blog**. Na vytvorenie tohoto projektu musíme v konzole Git Bash spustiť nasledujúci príkaz :
+~~~
+$ django-admin.exe startproject blog .
+~~~
+Tým sa vytvoril nový adresár **blog** ktorý obsahuje množstvo súborov. Adresáre a súbory v našom projekte by mali potom vyzerať takto:
+~~~
+DJANGOGIRLS
+│
+├── blog
+│   ├── admin.py
+│   ├── apps.py
+│   ├── __init__.py
+│   ├── migrations
+│   │   └── __init__.py
+│   ├── models.py
+│   ├── tests.py
+│   └── views.py
+│
+├── myvenv
+│   └── ...
+├── manage.py
+└── requirements.txt
+~~~
+Keď  vytvoríme adresár nového projektu musíme to tiež povedať Djangovi aby ho mohol použiť. Urobíme to v súbore blog/settings.py. Musíme v ňom nájsť čast INSTALLED_APPSa pridať riadok obsahujúci 'blog',tesne nad ]. Takže konečný produkt by mal vyzerať takto:
+~~~
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'blog',
+]
+~~~
+
+6. Vytvoríme adresár našej aplikácie mysite príkazom 
 
 ~~~
-$ django-admin.exe startproject mysite .
+$ python manage.py startapp mysite
 ~~~
  a dostaneme novú adresárovú štruktúru:
 
 ~~~
 DJANGOGIRLS
 │
-├── manage.py
+├── blog
+│   ├── admin.py
+│   ├── apps.py
+│   ├── __init__.py
+│   ├── migrations
+│   │   └── __init__.py
+│   ├── models.py
+│   ├── tests.py
+│   └── views.py
+│
 ├── mysite
 │   ├── asgi.py
 │   ├── __init__.py
@@ -58,10 +105,11 @@ DJANGOGIRLS
 │   └── wsgi.py
 ├── myvenv
 │   └── ...
+├── manage.py
 └── requirements.txt
 ~~~
 
-6. Vykonáme zmeny v nastavení v súbore settings.py
+7. Vykonáme zmeny v nastavení v súbore settings.py
    1. nájdeme riadok, ktorý obsahuje TIME_ZONE, a upravíme ho tak, aby sme si vybrali svoje vlastné časové pásmo napr. TIME_ZONE = 'Europe/Berlin'
 
    2. ak chcete iný jazyk, zmeňte kód jazyka zmenou nasledujúceho riadku LANGUAGE_CODE = 'sk-sk'
@@ -72,13 +120,13 @@ DJANGOGIRLS
     STATIC_ROOT = BASE_DIR / 'static'
     ~~~
 
-7. keď DEBUGje True a ALLOWED_HOSTS je prázdne, hostiteľ je overený voči ['localhost', '127.0.0.1', '[::1]']. Po nasadení našej aplikácie na PythonAnywhere sa to ale nebude zhodovať s naším názvom hostiteľa, takže zmeníme nasledujúce nastavenie na :
+8. keď DEBUGje True a ALLOWED_HOSTS je prázdne, hostiteľ je overený voči ['localhost', '127.0.0.1', '[::1]']. Po nasadení našej aplikácie na PythonAnywhere sa to ale nebude zhodovať s naším názvom hostiteľa, takže zmeníme nasledujúce nastavenie na :
 ~~~
 ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
 ~~~
-8. Nastavenie databázy. Keďže použijeme predvolenú databázu SQLlite3 nemusíme pri tejto položke nič meniť a dopĺňať.
+9. Nastavenie databázy. Keďže použijeme predvolenú databázu SQLlite3 nemusíme pri tejto položke nič meniť a dopĺňať.
 
-9. Ak chcete vytvoriť databázu pre náš blog, spustite v konzole nasledovné: 
+10. Ak chcete vytvoriť databázu pre náš blog, spustite v konzole nasledovné: 
 ~~~
 $ python manage.py migrate
 ~~~
@@ -107,9 +155,38 @@ Running migrations:
   Applying auth.0012_alter_user_first_name_max_length... OK
   Applying sessions.0001_initial... OK
 ~~~
+Do štruktúry pribudne databáza db.sqlite3 ktorej obsah si môžeme prezrieť SQLite Viewer-om ktorý sme si nainštalovali pomocou Extensions (Ctrl+Shift+X). Adresárová štruktúra potom nadobudne konečný východzí tvar.
+~~~
+DJANGOGIRLS
+│
+├── blog
+│   ├── admin.py
+│   ├── apps.py
+│   ├── __init__.py
+│   ├── migrations
+│   │   └── __init__.py
+│   ├── models.py
+│   ├── tests.py
+│   └── views.py
+│
+├── mysite
+│   ├── asgi.py
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── myvenv
+│   └── ...
+├── db.sqlite3
+├── manage.py
+│
+└── requirements.txt
+~~~
+
+
 Máme hotovo! Je čas spustiť webový server a zistiť, či náš web funguje!
 
-10. Spustenie webového servera. Musíte byť v adresári, ktorý obsahuje súbor manage.py(adresár djangogirls) a napíšeme **$ python manage.py runserver cislo_portu**
+11. Spustenie webového servera. Musíte byť v adresári, ktorý obsahuje súbor manage.py(adresár djangogirls) a napíšeme **$ python manage.py runserver cislo_portu**
 
 >### Modely Django
 
@@ -169,49 +246,7 @@ Keď vieme, čo je objekt, môžeme vytvoriť  model Djanga pre náš blogový p
 
 Ako vieme Databáza je súbor údajov a teda miesto, kde budeme ukladať informácie o používateľoch, príspevky na blogu a pod. V tejto aplikácii na ukladanie údajov budeme používať databázu SQLite ktorá je predvoleným databázový adaptérom aj pre Django.
 
-### Vytvorenie aplikácie
 
-Aby sme mali vo všetkom poriadok, vytvoríme v našom projekte **djangogirls** samostatnú aplikáciu s názvom **blog**. Na vytvorenie tejto aplikácie musíme v konzole Git Bash spustiť nasledujúci príkaz (z adresára djangogirls, kde je súbor manage.py):
-~~~
-$ python manage.py startapp blog .
-~~~
-Tým sa vytvoril nový adresár **blog** ktorý obsahuje množstvo súborov. Adresáre a súbory v našom projekte by mali potom vyzerať takto:
-~~~
-DJANGOGIRLS
-│
-├── blog
-│   ├── admin.py
-│   ├── apps.py
-│   ├── __init__.py
-│   ├── migrations
-│   │   └── __init__.py
-│   ├── models.py
-│   ├── tests.py
-│   └── views.py
-├── db.sqlite3
-├── manage.py
-├── mysite
-│   ├── asgi.py
-│   ├── __init__.py
-│   ├── settings.py
-│   ├── urls.py
-│   └── wsgi.py
-├── myvenv
-│   └── ...
-└── requirements.txt
-~~~
-Keď  vytvoríme adresár novej aplikácie musíme to tiež povedať Djangovi aby ju mohol použiť. Urobíme to v súbore mysite/settings.py. Musíme v ňom nájsť čast INSTALLED_APPSa pridať riadok obsahujúci 'blog',tesne nad ]. Takže konečný produkt by mal vyzerať takto:
-~~~
-INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'blog',
-]
-~~~
 
 >### Vytvorenie modelu blogového príspevku
 

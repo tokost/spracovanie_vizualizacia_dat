@@ -8,35 +8,6 @@ Python verzia 3.8
 Django verzia 3.2
 Django-CMS verzia 3.9
 
-Kontrola verzie python:
-$ python --version
-
-Nastevania verzie Pythonu vo VS-Code:
-Ctrl+Shift+Pr
->Python:Select Interpreter
-a následne restart VS-Code
-
-Kontrola verzie Django
-$ python -m django --version
-
-Kontrola nainštalovaných knižníc:
-$ pip freeze
-
-Inštalacia knižníc z requirements.txt:
-$ pip install -r requirements.txt
-
-Aktualizácia pip-u:
-$ python.exe -m pip install --upgrade pip
-
-Poznámka-Doporučenie v prípade problémov:
-1. Zmazať myvenv
-2. Vytvoriť myvenv na novo: $ python -m venv myvenv
-3. Aktivácia myvenv : $ . myvenv/scripts/activate
-
-Spustenie web servera z adresára mysite. Dostanem sa do neho 
-z adresara djangogirls prikazom cd mysite:
-$ python manage.py runserver
-
 $ python manage.py migrate
 ak urobim migraciu vynuluju sa tabulky (auth_user, blog_post atd.)
 
@@ -46,7 +17,31 @@ $ python manage.py createsuperuser
 a cez 127.0.0.1:8000/admin
 naklepat nove post niektore aj s publikovanim
 
-$ python manage.py startapp blog .
+$ pip install Django==3.2.10
+
+$ django-admin.exe startproject blog .
+vytvori sa aj skript manage.py
+
+$ python manage.py startapp mysite
+
+Aktualizácia pip-u:
+$ python.exe -m pip install --upgrade pip
+
+Poznámka-Doporučenie v prípade problémov:
+1. Zmazať myvenv
+2. Vytvoriť myvenv na novo: $ python -m venv myvenv
+3. Aktivácia myvenv : $ . myvenv/scripts/activate
+
+Inštalacia knižníc z requirements.txt:
+$ pip install -r requirements.txt
+
+Kontrola nainštalovaných knižníc:
+$ pip freeze
+
+Spustenie web servera z adresára mysite. Dostanem sa do neho 
+z adresara djangogirls prikazom cd mysite:
+$ python manage.py runserver
+
 ~~~
 DJANGOGIRLS
 │
@@ -59,8 +54,7 @@ DJANGOGIRLS
 │   ├── models.py
 │   ├── tests.py
 │   └── views.py
-├── db.sqlite3
-├── manage.py
+│
 ├── mysite
 │   ├── asgi.py
 │   ├── __init__.py
@@ -69,6 +63,9 @@ DJANGOGIRLS
 │   └── wsgi.py
 ├── myvenv
 │   └── ...
+├── db.sqlite3
+├── manage.py
+│
 └── requirements.txt
 ~~~
 
@@ -96,3 +93,14 @@ DJANGOGIRLS
           └─── css
                └─── blog.css
 ~~~
+
+Kontrola verzie python:
+$ python --version
+
+Nastevania verzie Pythonu vo VS-Code:
+Ctrl+Shift+Pr
+>Python:Select Interpreter
+a následne restart VS-Code
+
+Kontrola verzie Django
+$ python -m django --version
