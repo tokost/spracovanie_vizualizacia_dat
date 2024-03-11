@@ -1,4 +1,4 @@
-#!f:\vyuka\spracovanie_vizualizacia_dat\djangogirls\myvenv\scripts\python.exe
+#!d:\vyuka\spracovanie_vizualizacia_dat\djangogirls\myvenv\scripts\python.exe
 # When the django-admin.py deprecation ends, remove this script.
 import warnings
 

@@ -1,0 +1,98 @@
+Ako aj v každej aplikácii, tak aj v tejto aplikácii
+ ktorá je postavená na Django-CMS je dôležité aby
+bola zachovaná kompatibilita medzi použitími nástrojmi
+a knižnicami. Pri Django-CMS je základom kompatibilita
+medzi Pythonom, Djangom a Django-CMS.
+V tomto prípade sú použité nasledovné verzie:
+Python verzia 3.8
+Django verzia 3.2
+Django-CMS verzia 3.9
+
+Kontrola verzie python:
+$ python --version
+
+Nastevania verzie Pythonu vo VS-Code:
+Ctrl+Shift+Pr
+>Python:Select Interpreter
+a následne restart VS-Code
+
+Kontrola verzie Django
+$ python -m django --version
+
+Kontrola nainštalovaných knižníc:
+$ pip freeze
+
+Inštalacia knižníc z requirements.txt:
+$ pip install -r requirements.txt
+
+Aktualizácia pip-u:
+$ python.exe -m pip install --upgrade pip
+
+Poznámka-Doporučenie v prípade problémov:
+1. Zmazať myvenv
+2. Vytvoriť myvenv na novo: $ python -m venv myvenv
+3. Aktivácia myvenv : $ . myvenv/scripts/activate
+
+Spustenie web servera z adresára mysite. Dostanem sa do neho 
+z adresara djangogirls prikazom cd mysite:
+$ python manage.py runserver
+
+$ python manage.py migrate
+ak urobim migraciu vynuluju sa tabulky (auth_user, blog_post atd.)
+
+potom treba nanovo zadat admina 
+$ python manage.py createsuperuser
+
+a cez 127.0.0.1:8000/admin
+naklepat nove post niektore aj s publikovanim
+
+$ python manage.py startapp blog .
+~~~
+DJANGOGIRLS
+│
+├── blog
+│   ├── admin.py
+│   ├── apps.py
+│   ├── __init__.py
+│   ├── migrations
+│   │   └── __init__.py
+│   ├── models.py
+│   ├── tests.py
+│   └── views.py
+├── db.sqlite3
+├── manage.py
+├── mysite
+│   ├── asgi.py
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── myvenv
+│   └── ...
+└── requirements.txt
+~~~
+
+~~~
+blog
+└───templates
+    └───blog
+~~~
+
+~~~
+DJANGOGIRLS
+│
+├── blog
+│   ├── migrations
+│   ├── static
+│   └── templates
+└── mysite
+~~~
+
+~~~
+DJANGOGIRLS
+│
+├── blog
+│     └─── static
+          └─── css
+               └─── blog.css
+~~~

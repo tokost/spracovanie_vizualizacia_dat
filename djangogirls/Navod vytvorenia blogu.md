@@ -173,7 +173,7 @@ Ako vieme Databáza je súbor údajov a teda miesto, kde budeme ukladať inform�
 
 Aby sme mali vo všetkom poriadok, vytvoríme v našom projekte **djangogirls** samostatnú aplikáciu s názvom **blog**. Na vytvorenie tejto aplikácie musíme v konzole Git Bash spustiť nasledujúci príkaz (z adresára djangogirls, kde je súbor manage.py):
 ~~~
-$ python manage.py startapp blog
+$ python manage.py startapp blog .
 ~~~
 Tým sa vytvoril nový adresár **blog** ktorý obsahuje množstvo súborov. Adresáre a súbory v našom projekte by mali potom vyzerať takto:
 ~~~
@@ -823,7 +823,7 @@ Ale čo treba urobiť ďalej aby sme z modelu prevzali skutočné blogové prís
 
 Vyššie sme sa oboznámili ako QuerySets fungujú. Hovorili sme o nich v kapitole <a href="#section1">Django ORM a QuerySets</a> .
 
-Takže teraz už vieme ako zoradiť publikované blogové príspevky podľa published_date. Urobili sme to už aj v časti QuerySets! Do blog/views.py pridáme riadok :
+Takže teraz už vieme ako **zoradiť publikované blogové príspevky podľa dátumu publikovania t.j. published_date**. Urobili sme to už aj v časti QuerySets! Do blog/views.py pridáme riadok :
 ~~~
 Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
 ~~~
