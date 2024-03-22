@@ -1197,6 +1197,16 @@ h4 {
     color: #FFFFFF;
     background-color: #f79100;
 }
+
+body {
+    padding-left: 15px;
+}
+
+h1 a,
+h2 a {
+    color: #f79100;
+    font-family: 'Lobster';
+}
 ~~~
 
 Potom ešte pridáme do HTML kódu v súbore **blog/templates/blog/post_list.htm**, pod začiatok cyklu riadok tag <[article](https://www.w3schools.com/tags/tag_article.asp)> ktorý špecifikuje samostatný nezávyslý obsah ktorý možno distribuovať nezávysle od zvyšku stránky.
@@ -1239,6 +1249,44 @@ za tento kód a upravme odstupy. Súbor uložme a obnovme web!
     </div>
 </main>
 ~~~
+Po úpravách a doplnkoch by mal súbor post_list.html vyzerať takto:
+
+~~~
+{% load static %}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Django Girls blog</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext">
+    </head>
+    <body>
+        <header class="page-header">
+            <div class="container">
+                <h1><a href="/">Django Girls Blog</a></h1>
+            </div>
+        </header>
+
+        <main class="container">
+            <div class="row">
+                <div class="col">
+                    {% for post in posts %}
+                        <article class="post">
+                            <time>published: {{ post.published_date }}</time>
+                            <h2><a href="">{{ post.title }}</a></h2>
+                            <p>{{ post.text|linebreaksbr }}</p>
+                        </article>
+                    {% endfor %}
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
+~~~
 
 Súbory uložte a obnovte svoj web aby sme dostali niečo takéto.
 ![](/obrazky/djangogirls18.png)
@@ -1249,11 +1297,11 @@ Nebojte sa v tomto CSS trochu pohrať a skúsiť niektoré veci zmeniť. Hranie 
 
 ### Rozšírenie šablóny
 
-Ďalšou užitočnou vecou, ​​ktorú má pre nás Django poskytuje, je **rozšírenie šablóny**. Čo to znamená? Znamená to, že **môžeme použiť rovnaké časti HTML kódu pre rôzne stránky** nášho webu.
+Ďalšou užitočnou vecou, ​​ktorú Django poskytuje, je **rozšírovanie akéjsi základnej šablóny**. Čo to znamená? Znamená to to, že časti ktoré sa opakujú vložíme do jednej šablóny a potom ich budeme používať v iných šablónach.**Vlastne použijeme nejaké rovnaké časti HTML kódu pre rôzne stránky** nášho webu.
 
-Šablóny nám pomáhajú aj vtedy, keď chceme použiť rovnaké informácie alebo rozloženie informácii na viacero ako jednom mieste. Nemusíte potom totiž opakovať rovnaký kód v každom súbore znova a znova. A ak chceme niečo zmeniť, nemusíte to robiť v každej šablóne a stačí nám keď to urobíme iba v jednej. Za týmto účelom si vytvoríme tzv. základnú (base) šablónu.
+Takto koncipované šablóny nám pomáhajú aj vtedy, keď chceme použiť rovnaké informácie alebo nejaké rozloženie informácii na viacerých miestach. Nemusíte potom totiž opakovať rovnaký kód v každom súbore znova a znova. A ak chceme niečo zmeniť, nemusíte to robiť v každej šablóne a stačí nám keď to urobíme iba v jednej šablóne. Je to tzv. základná (base) šablóna, ktorú si ale musíme vytvoriť. A otom po Za týmto účelom si vytvoríme tzv. základnú šablónu.
 
-#### Vytvorme základnú šablónu
+#### Vytvorenie základnej šablóny
 
 Base šablóna je základnou šablónou, ktorú rozširujete na každú stránku nášho webu.
 
