@@ -1199,7 +1199,17 @@ h4 {
 }
 ~~~
 
-Potom ešte zmeňme tento HTML kód v súbore **blog/templates/blog/post_list.htm**, ktorý zobrazuje príspevky s deklaráciami tried. 
+Potom ešte pridáme do HTML kódu v súbore **blog/templates/blog/post_list.htm**, pod začiatok cyklu riadok tag <[article](https://www.w3schools.com/tags/tag_article.asp)> ktorý špecifikuje samostatný nezávyslý obsah ktorý možno distribuovať nezávysle od zvyšku stránky.
+
+~~~
+<article class="post">
+    ...
+</artcle>
+~~~
+HTML kód <article class="post"> predstavuje element článku s atribútom class nastaveným na "post". V HTML sa <article> používa na definovanie samostatného obsahu, ako je napr. blogový príspevok, príspevok na fóre, spravodajský článok atď. Atribút class nám umožňuje aplikovať špecifický štýl (css) alebo správanie na prvky ktoré sú spojené s touto triedou.
+
+Teda <article class="post"> označuje konkrétnu časť webovej stránky, ktorá obsahuje príspevok alebo článok, a je deklarovaný ako trieda s názvom "post" na ktorú sa môže použiť úprava štýlu alebo priradenie konkrétneho vzhľadu resp. funkčnosťi prostredníctvom CSS.
+
 ~~~
 {% for post in posts %}
     <article class="post">
