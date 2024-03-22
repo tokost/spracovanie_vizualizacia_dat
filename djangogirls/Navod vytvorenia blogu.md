@@ -1288,6 +1288,85 @@ Po úpravách a doplnkoch by mal súbor post_list.html vyzerať takto:
 </html>
 ~~~
 
+V kontexte rámcov (frameworkov) pre vývoj webu, ako je Bootstrap, je „kontajner“ trieda alebo prvok, ktorý sa používa na vytvorenie responzívneho rozloženia obsahu v rámci webovej stránky. Čo robí kontajner: 
+1./ **Centrovanie obsahu**: Obsah sa vycentruje vodorovne v rámci zobrazovanej oblasti, čím sa zabezpečí, že sa obsah nerozšíri po celej šírke okna prehliadača. Pomáha to zachovať čitateľnosť a estetiku, najmä na väčších obrazovkách.
+
+2./ **Zabezpečí pevnú šírku** : Zvyčajne obmedzuje šírku obsahu a poskytuje kontajner s pevnou šírkou. To môže zabrániť tomu, aby sa obsah stal príliš širokým a ťažko čitateľným na väčších obrazovkách.
+
+3./ **Zabezpečí responzívne správanie** : Kontajnery v rámcoch, ako je Bootstrap, sú navrhnuté tak, aby reagovali, čo znamená, že sa prispôsobujú rôznym veľkostiam obrazovky a zariadeniam. Môžu upraviť ich šírku a výplň, aby poskytovali optimálny zážitok zo sledovania na rôznych zariadeniach vrátane stolných počítačov, tabletov a smartfónov.
+
+Tu je príklad použitia kontajnera v HTML:
+
+~~~
+<div class="container">
+    <!-- Sem pride obsah ktoreho sa to ma tykat -->
+</div>
+~~~
+
+V tomto príklade <div> prvok s triedou "container" slúži ako kontajner pre obsah v ňom. Obsah bude vycentrovaný vodorovne a bude mať pevnú šírku, čím sa zabezpečí konzistentné rozloženie na rôznych zariadeniach.
+
+<div class="container">je prvok HTML s atribútom class nastaveným na "container".
+
+V HTML <div>je generický kontajnerový prvok, ktorý sám o sebe nemá žiadny sémantický význam, ale používa sa na zoskupenie iných prvkov. Atribút class vám umožňuje aplikovať na prvok štýly CSS alebo správanie JavaScriptu.
+
+Trieda „container“ sa bežne používa v rámci webových vývojových rámcov, ako je Bootstrap, na vytvorenie kontajnera, ktorý drží a vycentruje obsah na webovej stránke. Je to spôsob, ako štruktúrovať a upravovať rozloženie webovej stránky.
+
+Napríklad:
+~~~
+<div class="container">
+    <!-- Sem pride obsah ktoreho sa to ma tykat -->
+</div>
+~~~
+
+Toto <div> s triedou „container“ môže byť naštylované pomocou CSS na ovládanie jej šírky, okrajov, výplne atď., čím sa zabezpečí konzistentné rozloženie obsahu, ktorý obsahuje.
+
+Element <main class="container">HTML predstavuje hlavnú obsahovú oblasť webovej stránky s atribútom class nastaveným na "container".
+
+* <main>: <main>Prvok je sémantický prvok HTML5, ktorý predstavuje hlavný obsah webovej stránky. Zvyčajne sa používa na zapuzdrenie primárneho obsahu stránky, ako sú články, sekcie alebo iný obsah priamo súvisiaci s ústrednou témou alebo účelom stránky.
+
+* class="container": Trieda „container“ sa často používa v rámci webových vývojových rámcov, ako je Bootstrap, na vytvorenie kontajnera, ktorý obsahuje a vycentruje obsah na webovej stránke. Pomáha pri vytváraní konzistentného rozloženia a medzier pre oblasť hlavného obsahu.
+
+Ide teda <main class="container">o kombináciu sémantického významu prvku <main>so štýlom rozloženia poskytovaným triedou „kontajner“, výsledkom čoho je oblasť hlavného obsahu, ktorá je štruktúrovaná a štylizovaná podľa pokynov rámca.
+
+Napríklad:
+~~~
+<main class="container">
+    <!-- Main content goes here -->
+</main>
+~~~
+
+Táto štruktúra zaisťuje, že oblasť hlavného obsahu je obsiahnutá v centrovanom kontajneri s vhodným rozstupom a rozložením, čo pomáha pri vytváraní vizuálne príťažlivej a organizovanej webovej stránky.
+
+
+<div class="row">je prvok HTML s atribútom triedy nastaveným na "riadok".
+
+Podobne ako <div class="container">, <div class="row">sa často používa v rámcoch vývoja webu, ako je Bootstrap, na štruktúrovanie rozloženia webovej stránky.
+
+V rámcoch ako Bootstrap sa trieda "riadok" zvyčajne používa na vytvorenie horizontálneho zoskupenia stĺpcov v rámci mriežkového systému. Pomáha zarovnať a umiestniť obsah v rámci rozloženia mriežky.
+
+Napríklad:
+~~~
+<div class="container">
+    <div class="row">
+        <!-- Content goes here -->
+    </div>
+</div>
+~~~
+
+V rámci tejto štruktúry <div class="row">by typicky obsahoval jeden alebo viac stĺpcových prvkov ( <div class="col">), ktoré sa používajú na definovanie rozloženia obsahu v rámci mriežkového systému.
+
+~~~
+<div class="container">
+    <div class="row">
+        <div class="col">Column 1</div>
+        <div class="col">Column 2</div>
+        <div class="col">Column 3</div>
+    </div>
+</div>
+~~~
+
+Táto štruktúra pomáha pri vytváraní responzívnych a organizovaných rozložení pre webové stránky.
+
 Súbory uložte a obnovte svoj web aby sme dostali niečo takéto.
 ![](/obrazky/djangogirls18.png)
 
