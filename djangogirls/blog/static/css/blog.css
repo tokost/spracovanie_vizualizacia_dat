@@ -1,3 +1,11 @@
+
+h1 a,
+h2 a {
+    color: #f79100;
+    font-family: 'Lobster';
+}
+
+
 .page-header {
     background-color: #f79100;
     margin-top: 0;
@@ -67,14 +75,4 @@ h4 {
 .btn-secondary:hover {
     color: #FFFFFF;
     background-color: #f79100;
-}
-
-body {
-    padding-left: 15px;
-}
-
-h1 a,
-h2 a {
-    color: #f79100;
-    font-family: 'Lobster';
 }

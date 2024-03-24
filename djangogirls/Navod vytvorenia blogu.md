@@ -503,7 +503,9 @@ Uložte súbor, prejdite na http://127.0.0.1:8000/ a pozrite sa, čo sa stane. �
 ![](/obrazky/djangogirls06.png)
 
 Text hovorí, že server beží, ale stále existujú nejaké problémy. Nebojte sa, je to len chybová stránka, niet sa čoho báť. Rovnako ako chybové hlásenia v konzole aj tieto hlásenia sú skutočne veľmi užitočné. Môžete si prečítať, že **TemplateDoesNotExist** . Poďme opraviť túto chybu a vytvoriť chýbajúcu šablónu (template).
-<a href="#section2">
+
+<h3 id="section2"></h3>
+
 ### Miesto pre vytvorenie súboru HTML
 </a>
 Ak by sme sa spýtali čo je to šablóna, odpoveď by bola.
@@ -512,14 +514,14 @@ Ak by sme sa spýtali čo je to šablóna, odpoveď by bola.
 
 Formát šablóny Django je opísaný v jazyku zvanom HTML (HyperText Markup Language ) ktorý je skriptovací jazyk používaný webovými prehliadačmi na vykresľovanie stránok v celosvetovej sieti www (world wide web).
 
-#### Čo je HTML?
+>## Čo je HTML?
 HTML je kód, ktorý interpretuje váš webový prehliadač – napríklad Chrome, Firefox alebo Safari – na zobrazenie webovej stránky pre používateľa.
 
 HTML je skratka pre „HyperText Markup Language“. HyperText znamená, že ide o typ textu, ktorý podporuje hypertextové prepojenia medzi stránkami. Označenie znamená, že sme vzali dokument a označili ho kódom, ktorý niečomu (v tomto prípade prehliadaču) povie, ako má stránku interpretovať. HTML kód je vytvorený pomocou značiek , z ktorých každá začína < a končí na >. Tieto značky predstavujú prvky označovania .
 
->### III. Django TEMPLATES
+>### Django TEMPLATES
 
-#### Vaša prvá šablóna
+### Vaša prvá šablóna
 
 Vytvorenie šablóny znamená vytvorenie súboru šablóny.
 
@@ -555,11 +557,10 @@ Teraz náš web vyzerá takto. Navštívte ho a zistite použitím príkazu http
 
 ![](/obrazky/djangogirls08.png)
 
-* Riadok <!DOCTYPE html> nie je značka HTML. Deklaruje iba typ dokumentu. Tu informuje prehliadač, že typ dokumentu je HTML5 . Toto je vždy začiatok akéhokoľvek súboru HTML5.
-* Najzákladnejšia značka, <html>, je vždy začiatkom html obsahu a </html>je vždy koncom. Ako vidíte, celý obsah webovej stránky sa nachádza medzi počiatočnou značkou <html>a záverečnou značkou</html>
-* <p> je značka pre prvky odseku; </p>zatvorí každý odsek
+* Riadok &lt;!DOCTYPE html&gt; nie je značka HTML. Deklaruje iba typ dokumentu. Tu informuje prehliadač, že typ dokumentu je HTML5 . Toto je vždy začiatok akéhokoľvek súboru HTML5.
+* Základná značka, &lt;html&gt;, vždy označuje začiatok html obsahu a &lt;/html&gt; je vždy značka jeho konca. Ako vidíte, celý obsah webovej stránky sa nachádza medzi počiatočnou značkou &lt;html&gt; a záverečnou značkou &lt;/html
+* &lt;p&gt; je značka pre prvky odseku; &lt;/p&gt; potom každý odsek uzatvorí.
 
-<h3 id="section2"> Hlava a telo HTML súboru</h3>
 
 Každá stránka HTML je tiež rozdelená na dve časti: hlavu a telo .
 
@@ -567,9 +568,9 @@ Každá stránka HTML je tiež rozdelená na dve časti: hlavu a telo .
 
 * **telo** je časť, ktorá obsahuje všetko ostatné, čo sa zobrazuje ako súčasť webovej stránky.
 
-Používame na to <head>, aby sme prehliadaču oznámili konfiguráciu stránky a <body> aby sme mu povedali, čo sa na stránke vlastne nachádza.
+Na vyznačenie hlavy používame na to tag &lt;head&gt;. Pomocou neho prehliadaču oznámime konfiguráciu stránky a na vynačenie tela používame tag &lt;body&gt;. Pomocou neho prehliadaču povieme čo sa na stránke vlastne nachádza.
 
-Môžete napríklad do post_list.html vložiť prvok názvu webovej stránky do súboru <head>, takto:
+Takto môžete napríklad do post_list.html a jeho bloku &lt;head&gt; vložiť prvok s názvuom webovej stránky:
 ~~~
 <!DOCTYPE html>
 <html>
@@ -586,17 +587,17 @@ Uložte súbor a obnovte stránku čím dostaneme:
 
 ![](/obrazky/djangogirls09.png)
 
-Na základe toho prehliadač pochopil, že názov vašej stránky je „Olin blog“. Interpretoval totiž riadok **<title>Ola's blog</title>** a umiestnil text do záhlavia vášho prehliadača (bude tiež použitý pre záložky atď.).
+Na základe toho prehliadač pochopil, že názov našej stránky je „Olin blog“. Interpretoval totiž riadok **&lt;title&gt;Ola's blog&lt;/titl&gt;** tak že má umiestniť daný text do záhlavia záložky ktorý zobrazí prehliadač.
 
-Ku každému úvodnému tagu (značke) v súbore post_list.html zodpovedá uzatváracia značka , s /, a že prvky sú vnorené (tj nemôžete zavrieť konkrétny tag, kým sa nezatvoria aj všetky, ktoré boli v ňom).
+Ku každému tagu (značke) v súbore post_list.html ktorý sa nachádza na začiatku musí existovať uzatvárací tag (značka) ktorá začina lomitkom (/). V tejto súvislosti **platí zásada že prvky sú vnorené** (t.j. nemôžete uzavrieť konkrétny tag, kým nie sú uzatvorené všetky tagy ktoré mali začiatky pred ním.
 
-Je to ako dávať veci do krabíc. Máte jednu veľkú krabicu, <html></html>; vnútri je <body></body>, a to obsahuje ešte menšie boxy: <p></p>.
+>Je to ako dávať veci do krabíc. Máme napr. jednu veľkú krabicu ktorú predstavuje, &lt;html&gt;&lt;/html&gt; vnútri nej je menšia krabica &lt;body&gt;&lt;/body&gt;, a v nej sa zase nachádzajú ďalšie ešte menšie krabice napr.: &lt;p&gt;&lt;/p&gt;.
 
-Musíme dodržiavať tieto pravidlá zatvárania značiek a vkladania prvkov, lebo ak tak neurobíme, prehliadač ich nemusí vedieť správne interpretovať a vaša stránka sa bude zobrazovať nesprávne.
+Tieto pravidlá je potrebné dôsledne dodržiavať pri uzatváraní tagov a vkladanní prvkov, lebo ak tak neurobíme, prehliadač ich nemusí vedieť správne interpretovať a vaša stránka sa bude zobrazovať nesprávne.
 
 #### Prispôsobenie šablóny
 
-Teraz nastal čas aby sme upravili, doplnili a prispôsobili našu šablónu. Tu je niekoľko užitočných značiek:
+Teraz nastal čas aby sme upravili resp. doplnili a prispôsobili našu šablónu. Tu je niekoľko užitočných značiek:
 ~~~
 * <h1>A heading</h1> pre váš najdôležitejší nadpis
 * <h2>A sub-heading</h2>pre nadpis na ďalšej úrovni
@@ -655,23 +656,53 @@ Vytvorili sme jednu sekciu **header** a dve sekcie.**article**
 
 ![](/obrazky/djangogirls10.png)
 
-V tomto štádiu je možné znovu nasadiť našu stránku do produkcie vybranému ISP ktorý ponúka prostredie na báze Pythonu a Django. Taktiež je vhodné výtvoriť zálohu nášho projektu na Git resp. GitHub.
+V tomto štádiu je možné znovu nasadiť našu stránku do produkcie vybranému ISP ktorý ponúka prostredie na báze Pythonu a frameworku Django. Taktiež je vhodné výtvoriť zálohu nášho projektu na Git-e resp. GitHub-e.
 
-<div id="section1">
-<h3> Django ORM a QuerySets - práca s databázou</h3>
-</div>
+>## Django - práca s databázou
 
+V tejto časti sa budeme zaoberať problematikou **ako sa Django pripája k databáze a ako do nej ukladá údaje**. Skôr však si povedzme čo je to QuerySets.
 
-V tejto časti sa budeme zaoberať problematikou **ako sa Django pripája k databáze a ukladá do nej údaje**.
-Skôr však si povedzme čo je to QuerySets.
+<h3 id="section1"></h3>
 
-QuerySet je v podstate zoznam objektov daného modelu. QuerySets nám umožňujú čítať dáta z databázy, filtrovať ich a objednávať.
+> ### Django ORM
 
-Najjednoduchšie je poznať túto problematiku prostredníctvom príkladu ktorý si najprv priblížime prostredníctvom Django Shell-u.
+Čo je to Django ORM a na čo sa používa ?
+
+ORM je skratka pre výraz **O**bject-**R**elational **M*apper ktorý predstavuje jednou z najvýkonnejších funkcií Django, ktorá nám umožňuje interagovať sa s našou databázou rovnakým spôsobom, ako keby sme pracovali s SQL. Ináč povedané Django ORM je v podstate technika založená na pythone ktorá nám umožňuje zostavenie SQL príkazov na dotazovanie a úpravu našej databázy resp. získavanie údajov z nej. ORM je softvér určený na preklad medzi reprezentáciami údajov používanými v databázach a reprezentáciami používanými v objektovo orientovanom programovaní. Je to v podstate akýsi tlmočník a v priloženej tabuľke vidíme ekvivalenciu jednotlivých príkazov.
+
+<h3 id="section3"></h3> 
+
+### QuerySets
+
+Čo je to QuerySet a aký je jeho vzťah s Django ORM ?
+
+Django ORM je vstavaný v QuerySet. QuerySet je jednoducho zoznam objektov z daného modelu Django. Pri použití Django ORM je napr.vytvorenie nového riadku v tabuľke uskutočnené tak že vytvoríme  nový objekt triedy Model v súbore models.py. Django ORM potom mapuje tieto objekty modelu na dotazy do relačnej databázy.
+
+Akýkoľvek SQL dotaz sa dá potom dá jednoducho napísať ako sada dotazov Django. Pomocou Django Shell-u si to môžeme samostatne otestovať napr. na dotazoch Create, Filter, Update, Order, a pod.  Po otestovaní v Django Shell to môžeme následne preniesť do kódu vo views.py .
+
+QuerySets nám umožňujú čítať dáta z databázy, vytvárať ich tam, filtrovať ich, usporiadavať ich a pod. Ako náhle zvládneme Django Queryset, môžeme napísať jeden univerzálny dotaz ktorý vieme použiť pre akýkoľvek pripojený databázový zdroj.
+
+Syntax pre QuerySet je vždy takáto:
+~~~
+ModelName.objects.method_name(argumenty)
+~~~
+
+Ak chcete napríklad získať všetky údaje z modelu *Blog* v rámci najakej aplikácie s názvom  *myapp*, spustíme pomocou pythonu Django Shell a zadáme nasledovné:
+~~~
+$ shell python manage.py 
+>>>  from myapp.models import Blog
+ >>> queryset = Blog.objects.all() 
+QuerySet [...]
+~~~
+
+### SQL query vs. Django ORM QuerySet
+![](./obrazky/QuerySet.png)
+
+Najjednoduchšie je spoznávať túto problematiku prostredníctvom príkladu ktorý si priblížime prostredníctvom Django Shell-u.
 
 #### Django Shell
 
-Otvorte teda lokálnu konzolu Pythonu a zadajte tento príkaz:
+Django Shell spustíme tak, že si najprv otvoríme terminálové okno a v ňom spustíme napr. Git Shell ktorý sa nám ohlási dolárom ($). Potom zadáme  tento príkaz:
 
 ~~~
 (myvenv) ~/djangogirls$ python manage.py shell
@@ -684,7 +715,7 @@ Otvorte teda lokálnu konzolu Pythonu a zadajte tento príkaz:
 >>>
 ~~~
 
-Čím sme sa dostali do interaktívnej konzoly Django. Je to ako výzva Pythonu, ale s rozˇˇsíreniami a špecifikami Django. To znamená že tu môžete použiť všetky príkazy Pythonu.
+A tým sme sa dostali do interaktívnej konzoly Django. Je to podobná konzole Pythonu, ale Django Shell na rozdiel od nej naviac disponuje určitými rozšíreniami a špecifikami Django. Na druhej strane to však znamená, že tu môžeme použiť všetky príkazy Pytonu ako v prípade Pythonovského Shellu. V ďalšom použjeme Django Shell na to aby sme si takto individuálne vyskúšali niektoré operácie ktoré neskôr zabudujeme do kódu.
 
 #### Ako vypísať všetky objekty
 
@@ -707,7 +738,7 @@ Model importuje **Post** z **blog.models**. Potom skúsime znova zobraziť všet
 
 A dostávame zoznam príspevkov, ktoré sme už skôr vytvorili. Tieto príspevky sme vytvorili ale manuálne pomocou administratívneho rozhrania Django. My teraz ale chceme vytvárať nové príspevky pomocou kódu Pythonu.
 
-#### Vytvorenie objektu
+#### Ako vytvoriť objekt
 
 My si vytvoríte nový objekt Post v databáze príkazom:
 ~~~
@@ -751,7 +782,7 @@ Ak áno môžeme pokračovať a pridať ďalšie príspevky, aby sme videli, ako
 ~~~
 a potom prejdite na ďalšiu časť. 
 
-#### Filtrovanie objektov
+#### Ako uskutočniť filtrovanie objektov
 
 Veľkým prínosom QuerySets je možnosť filtrovania. Povedzme, že chceme nájsť všetky príspevky, ktoré napísal používateľ ola. Budeme používať **filter** namiesto **all** v **Post.objects.all()**. V zátvorkách uvádzame, aké podmienky musí blogový príspevok spĺňať, aby skončil v našej sade dotazov. V našom prípade je podmienkou to, že **author** by sa mal rovnať **me**. Spôsob, ako to napísať v Django, je **author=me**. Teraz náš kúsok kódu vyzerá takto:
 ~~~
@@ -777,8 +808,6 @@ Môžeme tiež získať zoznam všetkých uverejnených príspevkov. Robíme to 
 
 Príspevok ktorý sme pridali z konzoly Python zatiaľ nie je zverejnený. Ale môžeme to zmeniť tak že najprv získame inštanciu príspevku, ktorý chceme zverejniť. Platí to však iba pre prípad ak máme iba jednu inštanciu modelu (my však máme dve a dokonca rovnaké "Sample title")
 
-<h4 id="section3">Príklad</h4>
-
 ~~~
 >>> post = Post.objects.get(title="Sample title") je pre jednu inštanciu modelu
 >>> posts = Post.objects.filter(title="Sample title") je pre viacero inštancii modelu
@@ -796,7 +825,7 @@ Teraz teda skúsme znova získať zoznam publikovaných príspevkov (trikrát st
 <QuerySet [<Post: Sample title>]>
 ~~~
 
-#### Zoraďovanie objektov
+#### Ako urobiť zoradenie objektov
 
 QuerySets vám tiež umožňujú usporiadať zoznam objektov. Skúsme ich zoradiť podľa poľa **created_date**:
 ~~~
@@ -818,24 +847,25 @@ Ako ste videli, niektoré metódy QuerySet vracajú **Post.objects**. Podobné m
 <QuerySet [<Post: Post number 2>, <Post: My 3rd post!>, <Post: 4th title of post>, <Post: Sample title>]>
 ~~~
 
-Je to veľmi silný nástroj a umožňuje nám písať pomerne zložité dotazy (queries). Ak chceme zatvoriť shell, zadajte toto:
+**Je to veľmi silný nástroj a umožňuje nám písať pomerne zložité dotazy (queries)**. Ak chceme Django Shell zatvoriť, zadáme takýto príkaz:
 ~~~
 >>> exit()
-$
 ~~~~
 
-### Dynamické údaje v šablónach
+>## Dynamické údaje v šablónach
 
 Zatiaľ máme v našej aplikácii tieto tri rôzne časti: 
-* model **Post** ktorý je definovaný v models.py
-* **post_list** ktorý je definovaný v **views.py **a 
-* pridali sme aj jednu šablónu **post_list.html**. 
+* model **Post** ktorý je **definovaný v models.py**
+* **logiku zobrazenia** obsahu stránky **post_list** ktorá je definovaná vo **views.py** a 
+* pridali sme aj jednu **šablónu na vlastné zobrazenie** stránky **post_list.html**. 
   
-Ako ale zabezpečíme, aby sa naše príspevky zobrazovali v našej šablóne HTML? Veď to je to, čo vlastne **chceme urobiť, vziať nejaký obsah (model uložený v databáze) a pekne ho zobraziť v našej šablóne**.
+Ako ale zabezpečíme, aby sa naše príspevky zobrazovali v našej šablóne HTML ? Veď to je nakoniec náš cieľ, to je to, čo vlastne chceme urobiť. **Chceme vziať daný obsah databázy (model uložený v databáze) a zobraziť ho v etetickej podobe pomocou našej šablóny**.
 
-A to je presne to, čo majú **views** (zobrazenia) robiť: **spájajú modely a šablóny**. Na základe toho budeme musieť vziať modely podľa nášho **post_list**, ktoré chceme zobraziť, a odovzdať ich šablóne. Vo view sa rozhoduje, čo sa (resp. čo model) zobrazí v šablóne.
+**A to je presne to, čo majú robiť views (zobrazenia): spájajú modely a šablóny**. 
 
-Dosiahneme to tak že otvoríme **blog/views.py** v našom editore kódu kde vidíme ako doterajší views post_list-u:
+>Na základe toho budeme musieť vziať modely podľa nášho **post_list**, ktoré chceme zobraziť, a odovzdáme ich šablóne. Vo view sa implementujeme logiku na základe ktorej sa bude rozhodovať čo sa (resp. čo model) v šablóne zobrazí .
+
+Riešiť to budeme tak že otvoríme súbor **blog/views.py** v našom editore kódu a v ňom uvidíme jeho doterajší obsah views post_list-u, ktorý vyzerátakto:
 ~~~
 from django.shortcuts import render
 
@@ -843,16 +873,18 @@ def post_list(request):
     return render(request, 'blog/post_list.html', {})
 ~~~
 
-Teraz aplikujeme myšlienku, keď sme hovorili o prepojení kódu napísaného v rôznych súboroch pomocou from... import... . Teraz je ten moment, kedy musíme prepojiť model pre **Post**, ktorý sme napísali do **models.py**. Urobíme to v **blog/views.py** pridaním riadku **from .models import Post** takto:
+V prvom kroku aplikujeme myšlienku ktorú sme spomenuli pri prepojení kódu ktorý je napísaný v rôznych súboroch t.j. používanie knižníc a modulov pomocou from... import... . 
+
+Teraz totiž nastáva ten požadovaný krok, kedy musíme prepojiť model pre **Post**, ktorý sme napísali do súboru **models.py** s logikou zobrazenia. Urobíme to v súbore **blog/views.py** pridaním riadku **from .models import Post** takto:
 
 ~~~
 from django.shortcuts import render
 from .models import Post
 ~~~
 
-Bodka pred **models** znamená ***aktuálny adresár alebo aktuálnu aplikáciu*** . Oba súbory **views.py** a **models.py** sú pritom v rovnakom adresári. To znamená, že môžeme použiť **.** a iba názov súboru (bez **.py**). Takto importujeme názov modelu ( **Post** ).
+>Bodka pred **models** znamená ***aktuálny adresár alebo aktuálnu aplikáciu*** . Môžeme tak urobiť preto, lebo oba súbory **views.py** a **models.py** sú umiestnené v rovnakom adresári. To znamená, že môžeme použiť **.** a iba názov súboru (bez **.py**). Takto importujeme názov modelu ( **Post** ).
 
-Ale čo treba urobiť ďalej aby sme z modelu prevzali skutočné blogové príspevky **Post** ? Potrebujeme niečo také ako **QuerySet** s ktorým sme sa zoznámi vyššie a nezaškodí nám keď sa do tejto časti znovu pozrieme.
+Vyvstáva však ešte otázka, čo treba urobiť ďalej aby sme z modelu prevzali skutočné blogové príspevky **Post** ? Na to použijeme operácie z **QuerySet** s ktorým sme sa zoznámi vyššie. Určite nezaškodí aby sme sa k tejto časti znovu vrátili a danú problematiku sme si pred ďalším pokračovaním znovu pozreli.
 
 ### QuerySet
 
@@ -895,21 +927,24 @@ def post_list(request):
 
 To je ku QuerySets v Django pre naše potreby všetko. Ak by ste sa chceli s touto problematikou zoznámiť trochu viac mali by ste sa pozrieť na stránku : https://docs.djangoproject.com/en/3.2/ref/models/querysets/
 
-### Šablóny (templates) Django
+>## Šablóny (templates) Django
 
-Nastal čas aby sme v našom projekte zobrazili nejaké údaje. Django nám za týmto účelom poskytuje pre šablóny niekoľko užitočných tagov (značiek) ktoré sú vstavané v Djangu.
+Nastal čas aby sme v našom projekte nejaké údaje zobrazili na webovej stránke. Django nám za týmto účelom poskytuje tzv. šablóny (templates) ktoré predstavujú HTML (HyperText Markup Language) súbory. Tie používajú nie len bežné html tagy (značky), ale aj niekoľko užitočných tagov ktoré prináša Django. Tie často používané štandardné tagy sme uviedli v tabuľke vyššie a s tými ktoré pridáva Django sa budeme môcť zoznámiť neskôr napr. v súbore **blog.css** ktorý bude použitý pri šablóne post_list.html.
+ 
+#### Čo sú tagy/značky v šablonách ?
 
-#### Čo sú značky šablón?
+Na začiatok by sme si asi mali povedať, že do HTML súborov nemôžeme písať kód Pythonu. Je to preto, že prehliadače mu nerozumejú. Kódu Python rozumejú iba interprety Pythonu. Internetové prehlaidače ktoré používame na zobrazovanie webových stránok aplikácii poznajú iba kód napísaný v HTML. Všeobecne je známe že HTML a jeho súbor je skôr statického typu (t.j. obsah súboru a jeho interpretácia sú nemenné). Zatiaľ čo Python je nástrojom oveľa dynamickejším t.j. jeho interpretácia sa môže meniť.
 
-Asi nám je zrejmé, že do HTML súborov nemôžeme písať kód Pythonu. Je to preto, že prehliadače mu nerozumejú. Kódu Python rozumejú iba interprety Pythonu. Internetové prehlaidače ktoré používame na spúšťanie weboývý aplikácii poznajú iba HTML. Vieme, že HTML je skôr statický (obsah súboru a jeho interpretácia sú nemenné) nástroj, zatiaľ čo Python je nástrojom oveľa dynamickejším.
+>Prínosom tagov ktoré do šablón prináša Django je to, že nám umožňujú prenášať do HTML veci ktoré sú podobné Pythonu. Takže tým môžeme rýchlejšie vytvárať dynamické (menitelné) webové stránky bez nutnosti opakovania statických stránok s odlišným obsahom a prejavom.
 
-Značky šablón Django nám umožňujú prenášať do HTML veci ktoré sú podobné Pythonu. Takže tým môžeme rýchlejšie vytvárať dynamické (menitelné) webové stránky bez nutnosti opakovania statických stránok s odlišným obsahom a prejavom.
 
-#### Zobrazenie šablóny so zoznamom príspevkov
+> ## Použitie premenných v Django šablónach
+
+### Zobrazenie šablóny so zoznamom príspevkov
 
 V predchádzajúcej časti sme poskytli našej šablóne zoznam príspevkov v premennej **posts**. A teraz zoznam príspevkov zobrazíme v HTML.
 
-Na tlač premennej v šablónach Django používame dvojité zložené zátvorky s názvom premennej vo vnútri, napríklad v takto:
+> Na použitie premennej v šablónach Django používame dvojité zložené zátvorky s názvom premennej vo vnútri, napríklad v takto:
 ~~~
 {{ posts }}
 ~~~
@@ -922,16 +957,21 @@ Ako vidieť, všetko, čo máme v **blog/templates/blog/post_list.html**, je tot
 ~~~
 <QuerySet [<Post: My second post>, <Post: My first post>]>
 ~~~
-To znamená, že Django to chápe príspevky - post ako zoznam objektov. Zo základov Pythonu by sme si mali pamätať ako môžeme takéto zoznamy zobraziť . Áno, so slučkami v cykle for. V šablóne Django ich však robíte so zloženými zátvorkami a percentami %:
+To znamená, že použitím QuerySet Django chápe príspevky (post) ako zoznam objektov. V na+som príklade ich máme dva a tak musíme použiť prostriedok ktorý nám umožní zobraziť všetky príspevky. Tým prostriedkom je cyklus for.
+
+### Cykly for v Django
+
+ Zo základov Pythonu by sme si mohli pamätať ako môžeme spracovávať viacprvkové zoznamy a ako takéto zoznamy zobraziť . Áno, s iteráciami v cykle for. **V šablóne Django ich však robíte so zloženými zátvorkami a percentami %** ako napr.:
 ~~~
 {% for post in posts %}
     {{ post }}
 {% endfor %}
 ~~~
+Po zabudovaní tejto konštrukcie do súboru views.py dostaneme omnoho čitatelnejší výsledok ako tomu bolo v predchádzajúcom obrázku.
 
 ![](/obrazky/djangogirls12.png)
 
-Funguje to ale my chceme aby sa príspevky zobrazovali ako statické príspevky, ktoré sme vytvorili už predtým v časti kde sa zaoberáme <a href="#section2">úvodom do HTML</a> . Tagy HTML však môžete kombinovať so šablónami. Naše **body** v **blog/templates/blog/post_list.html** bude vyzerať takto:
+Funguje to, ale my zatiaľ chceme aby sa príspevky zobrazovali iba ako statické príspevky, ktoré sme vytvorili už predtým v časti kde sa zaoberáme <a href="#section2">úvodom do HTML</a> . Tagy HTML však môžete kombinovať so šablónami. Naše **body** v **blog/templates/blog/post_list.html** bude vyzerať takto:
 ~~~
 <header>
     <h1><a href="/">Django Girls Blog</a></h1>
@@ -952,7 +992,7 @@ Všetko, čo vložíte medzi **{% for %}** a **{% endfor %}** sa bude opakovať 
 
 Môžeme si všimnúť, že sme tentoraz sme použili trochu iný zápis ( **{{ post.title }}** alebo **{{ post.text }}** ). Takto pristupujeme k údajom v každom z polí ktoré je definované v našom modeli **Post**. **|linebreaksbr** vyjadruje že text príspevkov prechádza cez filter, aby takto ukončenie riadkov previedli na odseky.
 
-## CSS nám pomôže urobiť stránku krajšiu
+>## CSS nám pomôže urobiť stránku krajšiu
 
 Náš blog zatiaľ vyzerá dosť škaredo. Preto je čas urobiť našu stránku trochu krajšou a použijeme na to CSS.
 
@@ -1106,7 +1146,7 @@ h1 a, h2 a {
 ~~~
 ![](/obrazky/djangogirls17.png)
 
-Ako už bolo spomenuté vyššie, CSS má koncept tried. Tieto nám umožňujú pomenovať časť kódu HTML a použiť štýly iba na túto časť bez ovplyvnenia ostatných častí. To môže byť veľmi užitočné. Možno máte dva <**div**>-y, ktoré robia niečo iné (napríklad vaša hlavička a váš príspevok). Trieda vám môže pomôcť, aby vyzerali inak. Pokračujme teda týmto smerom a pomenujme niektoré časti kódu HTML. Nahraďme v <**header**> v súbore **blog/templates/blog/post_list.html**, všetko to čo sa tam nachádza týmto vrátane označenia bloku <**header**> <**/header**> a v prípade potreby upravte odstupy aby zodpovedali tomuto kódu:
+Ako už bolo spomenuté vyššie, CSS má koncept tried. Tieto nám umožňujú pomenovať časť kódu HTML a použiť štýly iba na túto časť bez ovplyvnenia ostatných častí. To môže byť veľmi užitočné. Možno máte dva <**div**>-y, ktoré robia niečo iné (napríklad vaša hlavička a váš príspevok). Trieda vám môže pomôcť, aby vyzerali inak. Pokračujme teda týmto smerom a pomenujme niektoré časti kódu HTML. Nahraďme v <**header**> v súbore **blog/templates/blog/post_list.html**, všetko to čo sa tam nachádza týmto vrátane označenia bloku <**header**> <**/header**> a v prípade potreby upravíme odstupy odstupy od kraja aby zodpovedali tomuto kódu:
 ~~~
 <header class="page-header">
     <div class="container">
@@ -1114,7 +1154,7 @@ Ako už bolo spomenuté vyššie, CSS má koncept tried. Tieto nám umožňujú 
     </div>
 </header>
 ~~~
-a následne sem pridáme triedu **post**, ktorá obsahuje príspevok blogu **article** a tiež upravíme odstupy.
+a následne sem pridáme pod za+ciatok cyklu for triedu **post**, ktorá obsahuje príspevok blogu **article** a tiež tu upravíme odstupy od okraja.
 
 ~~~
 <article class="post">
@@ -1124,9 +1164,16 @@ a následne sem pridáme triedu **post**, ktorá obsahuje príspevok blogu **art
 </article>
 ~~~
 
-Následne pridáme do rôznych selektorov bloky deklarácií. Selektory začínajúce na **.** sa pritom týkajú tried. Na webe je na túto tému veľa dobrých návodov a článkov o CSS ako napr. na [freeCodeCamp](https://learn.freecodecamp.org/). Tieto môžu pomôcť pochopiť  aj nasledujúci kód. Zatiaľ ho iba skopírujeme a vložíme na koniec do súboru **blog/static/css/blog.css**:
+Následne pridáme do rôznych selektorov bloky deklarácií. Selektory začínajúce na **.** sa pritom týkajú tried. Na webe je na túto tému veľa dobrých návodov a článkov o CSS ako napr. na [freeCodeCamp](https://learn.freecodecamp.org/). Tieto môžu pomôcť pochopiť  aj nasledujúci kód. Zatiaľ iba bez ďalšieho vysvetlenia skopírujeme nižšie uvedený kód a vložíme ho na koniec do súboru **blog/static/css/blog.css**:
 
 ~~~
+h1 a,
+h2 a {
+    color: #f79100;
+    font-family: 'Lobster';
+}
+
+
 .page-header {
     background-color: #f79100;
     margin-top: 0;
@@ -1198,15 +1245,6 @@ h4 {
     background-color: #f79100;
 }
 
-body {
-    padding-left: 15px;
-}
-
-h1 a,
-h2 a {
-    color: #f79100;
-    font-family: 'Lobster';
-}
 ~~~
 
 Potom ešte pridáme do HTML kódu v súbore **blog/templates/blog/post_list.htm**, pod začiatok cyklu riadok tag <[article](https://www.w3schools.com/tags/tag_article.asp)> ktorý špecifikuje samostatný nezávyslý obsah ktorý možno distribuovať nezávysle od zvyšku stránky.
@@ -1216,9 +1254,10 @@ Potom ešte pridáme do HTML kódu v súbore **blog/templates/blog/post_list.htm
     ...
 </artcle>
 ~~~
-HTML kód <article class="post"> predstavuje element článku s atribútom class nastaveným na "post". V HTML sa <article> používa na definovanie samostatného obsahu, ako je napr. blogový príspevok, príspevok na fóre, spravodajský článok atď. Atribút class nám umožňuje aplikovať špecifický štýl (css) alebo správanie na prvky ktoré sú spojené s touto triedou.
 
-Teda <article class="post"> označuje konkrétnu časť webovej stránky, ktorá obsahuje príspevok alebo článok, a je deklarovaný ako trieda s názvom "post" na ktorú sa môže použiť úprava štýlu alebo priradenie konkrétneho vzhľadu resp. funkčnosťi prostredníctvom CSS.
+HTML kód &lt;article class="post"&gt; predstavuje element článku s atribútom class nastaveným na "post". V HTML sa &lt;article&gt; používa na definovanie samostatného obsahu, ako je napr. blogový príspevok, príspevok na fóre, spravodajský článok atď. Atribút class nám umožňuje aplikovať špecifický štýl (css) alebo spr&gt;ávanie na prvky ktoré sú spojené s touto triedou.
+
+Teda &lt;article class="post"&gt; označuje konkrétnu časť webovej stránky, ktorá obsahuje príspevok alebo článok, a je deklarovaný ako trieda s názvom "post" na ktorú sa môže použiť úprava štýlu alebo priradenie konkrétneho vzhľadu resp. funkčnosťi prostredníctvom CSS.
 
 ~~~
 {% for post in posts %}
@@ -1303,11 +1342,11 @@ Tu je príklad použitia kontajnera v HTML:
 </div>
 ~~~
 
-V tomto príklade <div> prvok s triedou "container" slúži ako kontajner pre obsah v ňom. Obsah bude vycentrovaný vodorovne a bude mať pevnú šírku, čím sa zabezpečí konzistentné rozloženie na rôznych zariadeniach.
+V tomto príklade &lt;div&gt; prvok s triedou "container" slúži ako kontajner pre obsah v ňom. Obsah bude vycentrovaný vodorovne a bude mať pevnú šírku, čím sa zabezpečí konzistentné rozloženie na rôznych zariadeniach.
 
-<div class="container">je prvok HTML s atribútom class nastaveným na "container".
+&lt;div class="container"&gt;je prvok HTML s atribútom class nastaveným na "container".
 
-V HTML <div>je generický kontajnerový prvok, ktorý sám o sebe nemá žiadny sémantický význam, ale používa sa na zoskupenie iných prvkov. Atribút class vám umožňuje aplikovať na prvok štýly CSS alebo správanie JavaScriptu.
+V HTML &lt;div&gt;je generický kontajnerový prvok, ktorý sám o sebe nemá žiadny sémantický význam, ale používa sa na zoskupenie iných prvkov. Atribút class vám umožňuje aplikovať na prvok štýly CSS alebo správanie JavaScriptu.
 
 Trieda „container“ sa bežne používa v rámci webových vývojových rámcov, ako je Bootstrap, na vytvorenie kontajnera, ktorý drží a vycentruje obsah na webovej stránke. Je to spôsob, ako štruktúrovať a upravovať rozloženie webovej stránky.
 
@@ -1318,15 +1357,16 @@ Napríklad:
 </div>
 ~~~
 
-Toto <div> s triedou „container“ môže byť naštylované pomocou CSS na ovládanie jej šírky, okrajov, výplne atď., čím sa zabezpečí konzistentné rozloženie obsahu, ktorý obsahuje.
+Toto &lt;div&gt; s triedou „container“ môže byť naštylované pomocou CSS na ovládanie jej šírky, okrajov, výplne atď., čím sa zabezpečí konzistentné rozloženie obsahu, ktorý obsahuje.
 
-Element <main class="container">HTML predstavuje hlavnú obsahovú oblasť webovej stránky s atribútom class nastaveným na "container".
+Element &lt;main class="container"&gt; HTML predstavuje hlavnú obsahovú oblasť webovej stránky s atribútom class nastaveným na "container".
 
-* <main>: <main>Prvok je sémantický prvok HTML5, ktorý predstavuje hlavný obsah webovej stránky. Zvyčajne sa používa na zapuzdrenie primárneho obsahu stránky, ako sú články, sekcie alebo iný obsah priamo súvisiaci s ústrednou témou alebo účelom stránky.
+* &lt;main&gt;: &lt;main&gt; Prvok je sémantický prvok HTML5, ktorý predstavuje hlavný obsah webovej stránky. Zvyčajne sa používa na zapuzdrenie primárneho obsahu stránky, ako sú články, sekcie alebo iný obsah priamo súvisiaci s ústrednou témou alebo účelom stránky.
 
 * class="container": Trieda „container“ sa často používa v rámci webových vývojových rámcov, ako je Bootstrap, na vytvorenie kontajnera, ktorý obsahuje a vycentruje obsah na webovej stránke. Pomáha pri vytváraní konzistentného rozloženia a medzier pre oblasť hlavného obsahu.
 
-Ide teda <main class="container">o kombináciu sémantického významu prvku <main>so štýlom rozloženia poskytovaným triedou „kontajner“, výsledkom čoho je oblasť hlavného obsahu, ktorá je štruktúrovaná a štylizovaná podľa pokynov rámca.
+
+Pri zápise &lt;main class="container"&gt; ide teda o kombináciu sémantického významu prvku &lt;main&gt; so štýlom rozloženia poskytovaným triedou „container“, výsledkom čoho je časť hlavného obsahu, ktorá je štruktúrovaná a štylizovaná podľa pokynov rámca.
 
 Napríklad:
 ~~~
@@ -1337,12 +1377,11 @@ Napríklad:
 
 Táto štruktúra zaisťuje, že oblasť hlavného obsahu je obsiahnutá v centrovanom kontajneri s vhodným rozstupom a rozložením, čo pomáha pri vytváraní vizuálne príťažlivej a organizovanej webovej stránky.
 
+&lt;div class="row"&gt; je prvok HTML s atribútom triedy nastaveným na "row" (riadok).
 
-<div class="row">je prvok HTML s atribútom triedy nastaveným na "riadok".
+Podobne ako &lt;div class="container"&gt;, &lt;div class="row"&gt; sa často používa v rámcoch vývoja webu, ako je Bootstrap, na štruktúrovanie rozloženia webovej stránky.
 
-Podobne ako <div class="container">, <div class="row">sa často používa v rámcoch vývoja webu, ako je Bootstrap, na štruktúrovanie rozloženia webovej stránky.
-
-V rámcoch ako Bootstrap sa trieda "riadok" zvyčajne používa na vytvorenie horizontálneho zoskupenia stĺpcov v rámci mriežkového systému. Pomáha zarovnať a umiestniť obsah v rámci rozloženia mriežky.
+V rámcoch ako Bootstrap sa trieda "row" (riadok) zvyčajne používa na vytvorenie horizontálneho zoskupenia stĺpcov v rámci mriežkového systému. Pomáha zarovnať a umiestniť obsah v rámci rozloženia mriežky.
 
 Napríklad:
 ~~~
@@ -1353,7 +1392,7 @@ Napríklad:
 </div>
 ~~~
 
-V rámci tejto štruktúry <div class="row">by typicky obsahoval jeden alebo viac stĺpcových prvkov ( <div class="col">), ktoré sa používajú na definovanie rozloženia obsahu v rámci mriežkového systému.
+V rámci tejto štruktúry &lt;div class="row"&gt; by typicky obsahoval jeden alebo viac stĺpcových prvkov ( &lt;div class="col"&gt;), ktoré sa používajú na definovanie rozloženia obsahu v rámci mriežkového systému.
 
 ~~~
 <div class="container">
@@ -1368,21 +1407,22 @@ V rámci tejto štruktúry <div class="row">by typicky obsahoval jeden alebo via
 Táto štruktúra pomáha pri vytváraní responzívnych a organizovaných rozložení pre webové stránky.
 
 Súbory uložte a obnovte svoj web aby sme dostali niečo takéto.
+
 ![](/obrazky/djangogirls18.png)
 
 Ak sa pozrieme na kód, ktorý sme práve vložili, tak by sme našli miesta, kde sme pridali  triedy a použili ich v CSS. Napr. kde by ste potom urobili zmenu, ak by ste chceli, aby bol dátum inej farby a bol napr. tyrkysový ?
 
 Nebojte sa v tomto CSS trochu pohrať a skúsiť niektoré veci zmeniť. Hranie sa s CSS vám môže iba pomôcť lepšie pochopiť, čo jednotlivé skripty a bloky robia. Ak niečo pokazíte, nebojte sa, vždy to môžete vrátiť späť !
 
-### Rozšírenie šablóny
+>## Rozšírenie šablóny
 
-Ďalšou užitočnou vecou, ​​ktorú Django poskytuje, je **rozšírovanie akéjsi základnej šablóny**. Čo to znamená? Znamená to to, že časti ktoré sa opakujú vložíme do jednej šablóny a potom ich budeme používať v iných šablónach.**Vlastne použijeme nejaké rovnaké časti HTML kódu pre rôzne stránky** nášho webu.
+Ďalšou užitočnou a veľmi často používanou programovacou technikou, ​​ktorú Django poskytuje, je **používanie základnej šablóny**. Čo to znamená ? Znamená to to, že časti ktoré sa opakujú vložíme do tejto základnej šablóny a potom ich budeme používať v iných šablónach v ktorých sa nachádza iba kód ktorý sa neopakuje. **Je to vlastne postup kedy sú opakujúce sa časti kódu šablon sústredené do jednej tzv. základnej (base) šablóny a ostatné šablóny s odlišným HTML kódom ju využívajú**.
 
-Takto koncipované šablóny nám pomáhajú aj vtedy, keď chceme použiť rovnaké informácie alebo nejaké rozloženie informácii na viacerých miestach. Nemusíte potom totiž opakovať rovnaký kód v každom súbore znova a znova. A ak chceme niečo zmeniť, nemusíte to robiť v každej šablóne a stačí nám keď to urobíme iba v jednej šablóne. Je to tzv. základná (base) šablóna, ktorú si ale musíme vytvoriť. A otom po Za týmto účelom si vytvoríme tzv. základnú šablónu.
+To nám umožňuje to, že nemusíme opakovať ten istý kód vo viacerých súboroch. Pozitívny dôsledok takéhoto prístupu tiež spočíva v tom, že ak chceme niečo zmeniť v opakujúcom sa kóde, nemusíte to robiť v každej šablóne samostatne, ale stačí keď to urobíme iba v jednej základnej šablóne. Túto **základnú (base) šablónu si však ale musíme vytvoriť** a tento postup ako to urobíme je náplňou nasledovnej časti.
 
 #### Vytvorenie základnej šablóny
 
-Base šablóna je základnou šablónou, ktorú rozširujete na každú stránku nášho webu.
+Base šablóna je základnou šablónou, ktorú v ostatných šablónach podľa potreby využívame, rozširujeme a doplňame podľa toho ako potrebujeme pre vytváranie jednotlivých webových stránok.
 
 Vytvorme teda **base.html** súbor v adresári **blog/templates/blog/**:
 ~~~
@@ -1395,7 +1435,7 @@ blog
             post_list.html
 ~~~
 
-Potom ho otvorte v editore kódu a skopírujte všetko zo súboru **post_list.html** do **base.html**:
+Potom ho otvorte v editore kódu a skopírujte všetko zo súboru **post_list.html** do **base.html** t.j. základnú šablónu vytvoríme z úplného obsahu doposiaľ koncipovenej šablóny post_list.html:
 
 ~~~
 {% load static %}
@@ -1458,9 +1498,11 @@ Môžeme si všimnúť, že to nahradilo všetko od **{% for post in posts %}** 
 {% endblock %}
 ~~~
 
-Je to preto že sme práve vytvorili tzv. block. Pomocou značky-tagu šablóny **{% block %}** sme vytvorili oblasť, do ktorej bude vložený kód HTML. Tento HTML kód bude pochádzať z inej šablóny, a týmto rozširuje túto šablónu ( base.html). O chvíľu si ukážeme, ako na to.
+### Vytvorenie bloku kódu
 
-Najprv **base.html** uložme a znova otvorme v editore kódu **blog/templates/blog/post_list.html**. Chystáme sa totiž odstrániť všetko nad **{% for post in posts %}** a pod **{% endfor %}**. Keď tak urobíme súbor post_list.html bude vyzerať takto:
+Vytvorenie bloku znamená že nejakú časť kódu označíme ako blok s tým zámerom že ho použijeme pod hlavičkou bloku. Na vytvorenei bloku je potrebné použiť príkaz **{% block %}**. Pomocou značky/tagu šablóny **{% block %}** sme vytvorili oblasť, do ktorej bude vložený kód HTML. Tento HTML kód bude pochádzať z inej šablóny, a týmto rozširuje túto šablónu ( base.html). V nasledovnom si ukážeme ako tento postup uskutočníme.
+
+Najprv si však súbor **base.html** uložme a znova sa vrátme v editore kódu k súboru **blog/templates/blog/post_list.html**. Musíme tu totiž odstrániť všetko čo sa nachádza nad príkazom **{% for post in posts %}** a pod príkazom **{% endfor %}** lebo sm eto uložili do súboru base.html. Keď tak urobíme súbor post_list.html bude vyzerať nasledovne:
 
 ~~~
 {% for post in posts %}
@@ -1474,10 +1516,11 @@ Najprv **base.html** uložme a znova otvorme v editore kódu **blog/templates/bl
 {% endfor %}
 ~~~
 
-Urobili sme to preto lebo to chceme použiť ako súčasť našej šablóny **post_list.html** za účelom použitia aj pre všetky ostatné bloky nášho obsahu. Tým nastal čas pridať do tohto súboru značky bloku. Pritom chceme aby sa naša značka bloku zhodovala so značkou v našom súbore **base.html**. Tiež chceme, aby tento súbor obsahoval všetok kód, ktorý patrí do našich blokov obsahu. Ak to chcete urobiť, vložíme všetok kód vyššie medzi príkazy **{% block content %}** a **{% endblock %}** čím dostaneme v post_list.html takýto skript:
+Urobili sme to preto, lebo chceme príslušný blok použiť nie len ako súčasť našej šablóny **post_list.html** ale tým že použijeme to označenei môžeme vyznačenú časť tiež použiť aj v iných šablónách. **Vytvorenie tagu blok v html súbore sme si definovali časť kódu ktorý môžeme použiť aj v iných súboroch.** Pritom ale chceme aby sa naša značka bloku zhodovala so značkou v našom súbore **base.html**. Tiež chceme, aby tento súbor obsahoval aj kód, ktorý patrí do našich. Ak to chcetme zabezpečiť, tak musíme vložiť všetok kód uvedený vyššie medzi príkazy **{% block content %}** a **{% endblock %}**. Na základe toho dostaneme v post_list.html takýto skript:
 
 ~~~
 {% block content %}
+
     {% for post in posts %}
         <article class="post">
             <time class="date">
@@ -1487,10 +1530,13 @@ Urobili sme to preto lebo to chceme použiť ako súčasť našej šablóny **po
             <p>{{ post.text|linebreaksbr }}</p>
         </article>
     {% endfor %}
+
 {% endblock %}
 ~~~
 
-Nakoniec nám ešte zostala jedna vec. A to je to že tieto **dve šablóny musíme spojiť**. O tom totiž **je to rozšírenie šablón**. Urobíme to pridaním značky **extends** na začiatok súboru. 
+### Prepojenie základnej šablóny so šablónami odvodenými
+
+Pre úplnosť nám nakoniec ešte zostava vyriešiť jednu vec. **Musíme ešte spojiť tieto dve šablóny (post_list.html a base.html) dohromady**. Princíp rozširovania šablón s využívaním základných šablón je totiž o tom. Tým prostriedkom ako to urobiť je použitie tagu **extends** ktorý musíme umiestniť na začiatok súboru. 
 
 ~~~
 {% extends 'blog/base.html' %}
@@ -1508,11 +1554,11 @@ Nakoniec nám ešte zostala jedna vec. A to je to že tieto **dve šablóny mus�
 {% endblock %}
 ~~~
 
-To je všetko. Uložme súbor a skontrolujme, či náš web stále správne funguje.
+Dostali sme sa do ďalšieho štádia prípravy webovej aplikácie a preto je vhodné aby sme v tomto štádiu všetky súbory uložili a skontrolovali, či náš web v tomto štádiu stále správne funguje.
 
-Poznámka: Ak sa zobrazí chyba TemplateDoesNotExist, znamená to to, že neexistuje žiadny súbor blog/base.html a v konzole máte spustený runserver. Skúste ho zastaviť (stlačením Ctrl+C – kláves Control a C spolu) a znovu reštartovať spustením príkazu python manage.py runserver.
+**Poznámka**: Ak sa zobrazí chyba TemplateDoesNotExist, znamená to to, že neexistuje žiadny súbor blog/base.html a v konzole máte spustený runserver. Skúste proces výpočtu zastaviť (stlačením Ctrl+C – kláves Control a C spolu) a znovu ho reštartovať spustením príkazu python manage.py runserver.
 
-## Rozširovanie našej webovej aplikácie
+>## Rozširovanie našej webovej aplikácie
 
 Keď sme dokončili všetky kroky potrebné na vytvorenie našej webovej stránky t.j vieme, **ako napísať model, URL, views a šablónu**. A vieme tiež, **ako urobiť našu webovú stránku pomocou HTML a CSS peknou**. Nastal čas na rozširovanie našej webovej stránky.
 
