@@ -1502,7 +1502,7 @@ Môžeme si všimnúť, že to nahradilo všetko od **{% for post in posts %}** 
 
 Vytvorenie bloku znamená že nejakú časť kódu označíme ako blok s tým zámerom že ho použijeme pod hlavičkou bloku. Na vytvorenei bloku je potrebné použiť príkaz **{% block %}**. Pomocou značky/tagu šablóny **{% block %}** sme vytvorili oblasť, do ktorej bude vložený kód HTML. Tento HTML kód bude pochádzať z inej šablóny, a týmto rozširuje túto šablónu ( base.html). V nasledovnom si ukážeme ako tento postup uskutočníme.
 
-Najprv si však súbor **base.html** uložme a znova sa vrátme v editore kódu k súboru **blog/templates/blog/post_list.html**. Musíme tu totiž odstrániť všetko čo sa nachádza nad príkazom **{% for post in posts %}** a pod príkazom **{% endfor %}** lebo sm eto uložili do súboru base.html. Keď tak urobíme súbor post_list.html bude vyzerať nasledovne:
+Najprv si však súbor **base.html** uložme a znova sa vrátme v editore kódu k súboru **blog/templates/blog/post_list.html**. Musíme tu totiž odstrániť všetko čo sa nachádza v base.html t.j. všetko d príkazom **{% for post in posts %}** až po začiatok a všetko pod príkazom **{% endfor %}** t.j. všetko až po koniec. Spravili sme to preto lebo sme tento kód uložili do súboru base.html. Keď tak urobíme tak v posl_list.html zostane iba časť kódu ktorá bude vyzerať nasledovne:
 
 ~~~
 {% for post in posts %}
@@ -1556,13 +1556,15 @@ Pre úplnosť nám nakoniec ešte zostava vyriešiť jednu vec. **Musíme ešte 
 
 Dostali sme sa do ďalšieho štádia prípravy webovej aplikácie a preto je vhodné aby sme v tomto štádiu všetky súbory uložili a skontrolovali, či náš web v tomto štádiu stále správne funguje.
 
-**Poznámka**: Ak sa zobrazí chyba TemplateDoesNotExist, znamená to to, že neexistuje žiadny súbor blog/base.html a v konzole máte spustený runserver. Skúste proces výpočtu zastaviť (stlačením Ctrl+C – kláves Control a C spolu) a znovu ho reštartovať spustením príkazu python manage.py runserver.
+**Poznámka**: Ak sa zobrazí chyba TemplateDoesNotExist, znamená to to, že neexistuje žiadny súbor blog/base.html a v konzole máte spustený runserver. Skúste proces výpočtu zastaviť (stlačením Ctrl+C – kláves Control a C spolu) a znovu ho reštartovať spustením príkazu python manage.py runserver cislo_portu.
 
 >## Rozširovanie našej webovej aplikácie
 
-Keď sme dokončili všetky kroky potrebné na vytvorenie našej webovej stránky t.j vieme, **ako napísať model, URL, views a šablónu**. A vieme tiež, **ako urobiť našu webovú stránku pomocou HTML a CSS peknou**. Nastal čas na rozširovanie našej webovej stránky.
+Keď sme dokončili všetky doterajšie kroky potrebné na vytvorenie našej webovej stránky, tak sme sa dostali do štádia kedy vieme, **ako napísať model, URL, views a šablónu**. A vieme tiež, **ako urobiť našu webovú stránku pomocou HTML a CSS peknou**. 
 
-Prvá vec, ktorú v našom blogu potrebujeme, je stránka na zobrazenie iba jedného vybraného príspevku. Model príspevku už máme (Post), takže sa môžeme vrátiť k súboru models.py.
+>Vytvorili sme akúsi základnú verziu našej webovej aplikácie a tak nastal čas na jej rozširovanie o ďalšie prvky.
+
+Napr. prvá vec, ktorú v našom blogu potrebujeme, je to aby na+sa aplikácia umožňovala poskytnúť stránku na zobrazenie iba jedného vybraného príspevku. Model príspevku (Post) ktorý k tomu budeme potrebovať, lebo nám poskytne daný príspevok ktorý je uložený v databáze, už máme. Takže sa môžeme vrátiť k našemu súboru models.py v ktorom je tento model definovaný.
 
 ### Vytvorenie odkazu na šablónu pre zobrazenie podrobností príspevku
 
