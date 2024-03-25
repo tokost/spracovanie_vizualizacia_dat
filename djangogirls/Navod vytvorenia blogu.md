@@ -615,7 +615,7 @@ Teraz nastal čas aby sme upravili resp. doplnili a prispôsobili našu šablón
 * <html></html> predstavuje koreň dokumentu HTML aje kontajnerom pre všetky ostatné prvky HTML (okrem značky <!DOCTYPE> ).
 * <head></head> je kontajner pre metadáta (údaje o údajoch) a je umiestnený medzi tagom <html> a tagom <body>. Metadáta sú údaje o dokumente HTML a metadáta sa nezobrazujú.
 * <header></header>určuje hlavičku dokumentu alebo sekcie
-* <body></body> určuje telo dokumentu
+* <body></body> určuje telo dokumentu obsahuje všetok obsah dokumentu HTML, ako sú nadpisy, odseky, obrázky, hypertextové odkazy, tabuľky, zoznamy atď.
 * <div></div>definuje časť stránky
 * <main></main>určuje hlavný obsah dokumentu
 * <aside></aside>definuje nejaký obsah okrem obsahu, do ktorého je umiestnený (napríklad bočný panel)
