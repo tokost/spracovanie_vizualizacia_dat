@@ -609,6 +609,7 @@ Teraz nastal čas aby sme upravili resp. doplnili a prispôsobili našu šablón
 * <a href="https://djangogirls.org">link</a> vytvorí odkaz
 * <ul><li>first item</li><li>second item</li></* ul>vytvorí zoznam, ako je tento!
 
+~~~
 * <nav></nav>definuje množinu navigačných odkazov
 * <article></article>špecifikuje nezávislý, samostatný obsah
 * <section></section>definuje sekciu v dokumente
