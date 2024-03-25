@@ -672,7 +672,7 @@ V tejto časti sa budeme zaoberať problematikou **ako sa Django pripája k data
 
 Čo je to Django ORM a na čo sa používa ?
 
-ORM je skratka pre výraz **O**bject-**R**elational **M*apper ktorý predstavuje jednou z najvýkonnejších funkcií Django, ktorá nám umožňuje interagovať sa s našou databázou rovnakým spôsobom, ako keby sme pracovali s SQL. Ináč povedané Django ORM je v podstate technika založená na pythone ktorá nám umožňuje zostavenie SQL príkazov na dotazovanie a úpravu našej databázy resp. získavanie údajov z nej. ORM je softvér určený na preklad medzi reprezentáciami údajov používanými v databázach a reprezentáciami používanými v objektovo orientovanom programovaní. Je to v podstate akýsi tlmočník a v priloženej tabuľke vidíme ekvivalenciu jednotlivých príkazov.
+ORM je skratka pre výraz **O**bject-**R**elational **M**apper ktorý predstavuje jednou z najvýkonnejších funkcií Django, ktorá nám umožňuje interagovať sa s našou databázou rovnakým spôsobom, ako keby sme pracovali s SQL. Ináč povedané Django ORM je v podstate technika založená na pythone ktorá nám umožňuje zostavenie SQL príkazov na dotazovanie a úpravu našej databázy resp. získavanie údajov z nej. ORM je softvér určený na preklad medzi reprezentáciami údajov používanými v databázach a reprezentáciami používanými v objektovo orientovanom programovaní. Je to v podstate akýsi tlmočník a v priloženej tabuľke vidíme ekvivalenciu jednotlivých príkazov.
 
 <h3 id="section3"></h3> 
 
