@@ -608,8 +608,6 @@ Teraz nastal čas aby sme upravili resp. doplnili a prispôsobili našu šablón
 * <br>prejde na iný riadok (do br nemôžete vložiť nič a nie je tam žiadna uzatváracia značka)
 * <a href="https://djangogirls.org">link</a> vytvorí odkaz
 * <ul><li>first item</li><li>second item</li></* ul>vytvorí zoznam, ako je tento!
-
-~~~
 * <nav></nav>definuje množinu navigačných odkazov
 * <article></article>špecifikuje nezávislý, samostatný obsah
 * <section></section>definuje sekciu v dokumente
