@@ -608,11 +608,15 @@ Teraz nastal čas aby sme upravili resp. doplnili a prispôsobili našu šablón
 * <br>prejde na iný riadok (do br nemôžete vložiť nič a nie je tam žiadna uzatváracia značka)
 * <a href="https://djangogirls.org">link</a> vytvorí odkaz
 * <ul><li>first item</li><li>second item</li></* ul>vytvorí zoznam, ako je tento!
-* <div></div>definuje časť stránky
+
 * <nav></nav>definuje množinu navigačných odkazov
 * <article></article>špecifikuje nezávislý, samostatný obsah
 * <section></section>definuje sekciu v dokumente
+* <html></html> predstavuje koreň dokumentu HTML aje kontajnerom pre všetky ostatné prvky HTML (okrem značky <!DOCTYPE> ).
+* <head></head> je kontajner pre metadáta (údaje o údajoch) a je umiestnený medzi tagom <html> a tagom <body>. Metadáta sú údaje o dokumente HTML a metadáta sa nezobrazujú.
 * <header></header>určuje hlavičku dokumentu alebo sekcie
+* <body></body> určuje telo dokumentu
+* <div></div>definuje časť stránky
 * <main></main>určuje hlavný obsah dokumentu
 * <aside></aside>definuje nejaký obsah okrem obsahu, do ktorého je umiestnený (napríklad bočný panel)
 * <footer></footer>definuje pätu dokumentu alebo sekcie
