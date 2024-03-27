@@ -22,8 +22,8 @@
             <div class="row">
                 <div class="col">
                     {% for post in posts %}
-                        <article class="post">
-                            <time>published: {{ post.published_date }}</time>
+                        <article class="post">{{ post.published_date }}
+                            <time>published: </time>
                             <h2><a href="">{{ post.title }}</a></h2>
                             <p>{{ post.text|linebreaksbr }}</p>
                         </article>

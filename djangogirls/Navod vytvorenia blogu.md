@@ -1880,20 +1880,24 @@ Ak stránku refrešneme a stlačime ikonu v pravom hornom rohu ktorú sme tam pr
 
 ![](./obrazky/djangogirls27.png)
 
-Všimnime si na nej to že jej URL adresa je síce http://127.0.0.1:8000/post/new/ ale je šablóna je post_edit.html. Nie je to však ešte všetko. Keď totiž niečo zadáte do polí **title** a **text** a pokúsite sa to uložiť, tak sa nič nestane a opäť zostávame na tej istej stránke. Náš zadaný text je preč a nepridal sa žiadny nový príspevok. Čo sa teda stalo ? Odpoveď znie: že nič. Z nášho pohľadu musíme len ešte niečo doplniť aby to fungovalo tak ako to má a formulár sa so svojim obsahom uložil.
+Všimnime si na nej to že jej URL adresa je síce http://127.0.0.1:8000/post/new/ ale šablóna je post_edit.html a nie napr. post_new.html ako sme názvy v urls a views ktoré boli navzájom prepojené používali doposial. Nie je to však ešte všetko. Keď totiž niečo zadáte do polí **title** a **text** a pokúsite sa to uložiť, tak sa nič nestane a opäť zostávame na tej istej stránke. Náš zadaný text je preč a nepridal sa žiadny nový príspevok. Čo sa teda stalo ? Odpoveď znie: že nič. Z nášho pohľadu musíme len ešte niečo doplniť aby to fungovalo tak ako to má a formulár sa so svojim obsahom uložil.
 
 ### Uloženie vyplneného formulára
 
-Znova otvoríme v editore kódu **blog/views.py** a v súčasnosti v ňom pre post_new máme iba nasledovné :
+Za týmto účelom znova otvoríme v editore kódu **blog/views.py** a zatiaľ v ňom máme pre post_new iba nasledovný kód:
 ~~~
 def post_new(request):
     form = PostForm()
     return render(request, 'blog/post_edit.html', {'form': form})
 ~~~
 
-Keď odošleme formulár, vrátime sa späť do rovnakého zobrazenia, ale tentoraz máme v **request** nejaké ďalšie údaje, presnejšie v **request.POST**(pomenovanie nemá nič spoločné s blogovým príspevkom „post“, súvisí to so skutočnosťou, že „zverejňujú“ údaje). Pamätáte si, ako v HTML súbore  **<form>** mala naša definícia premennú **method="POST"**? Všetky polia z formulára sú teraz v **request.POST**. Nemali by ste premenovať **POST** na nič iné, lebo jediná platná hodnota pre **method** je **GET**. Ale tu nemáme priestor vysvetľovať, v čom spočíva rozdiel.
+*Príprava riešenia:*
 
-Takže podľa nášho zámeru musíme zvládnuť dve samostatné situácie: 
+Keď odošleme formulár, vrátime sa späť do rovnakého zobrazenia, lenže tentoraz máme v **request** nejaké ďalšie údaje, presnejšie v **request.POST** (pozor: toto pomenovanie nemá nič spoločné s blogovým príspevkom „post“, súvisí to so skutočnosťou, že pracujeme s údajmi ktoré sa „zverejňujú“ a sú označené ako "published"). Bolo to použté v HTML súbore  pri **<form>** kde mala naša definícia premennú **method="POST"**. 
+
+>Treba si uvedomiť že všetky polia z formulára sú teraz v **request.POST**. Nemali by ste premenovať **POST** na nič iné, lebo jediná platná hodnota pre **method** je **GET**. Tu však nemáme priestor a ani nie je potrebné vysvetľovať podrobnosti v čom spočíva rozdiel.
+
+Takže sa sústredíme na naš cieľ ktorý chceme dosiahnuť a to je zvládnuť dve samostatné situácie: 
 * ***po prvé***, keď prvýkrát vstúpime na stránku a chceme prázdny formulár, a 
 * ***po druhé***, keď sa vrátime do zobrazenia so všetkými údajmi formulára, ktoré sme práve zadali. 
 
@@ -1905,13 +1909,13 @@ else:
     form = PostForm()
 ~~~
 
-Je to čas doplniť bodky [...]. Ak **method** je POST, potom chceme zostaviť **PostForms** s údajmi z formulára. Čo urobíme nasledovne:
+A v našom prípade to znamená že je tu čas  doplniť tie bodky [...]. Ak **method** je POST, potom chceme zostaviť **PostForms** s údajmi z formulára. To urobíme nasledovne:
 
 ~~~
 form = PostForm(request.POST)
 ~~~
 
-Ďalšia vec je skontrolovať, či je formulár správny (t.j. či sú všetky povinné polia nastavené a neboli odoslané žiadne nesprávne hodnoty). Robíme to validačným príkazom **form.is_valid()** v súbore blog/views.py. Skontrolujeme, či je formulár platný a ak áno, môžeme ho uložiť.
+Ďalšia vec ktorú musíme tiež ošetriť je skontrolovať, či je formulár správny (t.j. či sú vo všetkých povinných poliach zapísané povolené údaje aby sme zabránili tomu že budú odoslané nesprávne hodnoty). Robíme to validačným príkazom **form.is_valid()** v súbore blog/views.py. Skontrolujeme ním, či je formulár platný a ak áno, umožíme ho uložiť.
 
 ~~~
 if form.is_valid():
@@ -1941,7 +1945,9 @@ return redirect('post_detail', pk=post.pk)
 
 **post_detail** je názov zobrazenia, do ktorého chceme ísť. Pamätáte si, že toto ***zobrazenie*** vyžaduje premennú **pk**. Na jej odovzdanie do views používame **pk=post.pk**, kde **post** je novovytvorený blogový príspevok.
 
-Celá definícia post_new vo views potom vyzerá takto :
+*Zhrnutie riešenia*
+
+Celá definícia post_new vo **blog/views.py** potom vyzerá takto:
 ~~~
 def post_new(request):
     if request.method == "POST":
@@ -1957,7 +1963,7 @@ def post_new(request):
     return render(request, 'blog/post_edit.html', {'form': form})
 ~~~
 
-Prejdite na stránku http://127.0.0.1:8000/post/new/ a uvidíme, či to bude fungovať. Pridajte **title**, **text** a uložte to. Nový blogový príspevok je pridaný a my sme presmerovaní na stránku **post_detail**.
+Ak v tomto zmysle upravíme **blog/views.py** prejdeme na stránku http://127.0.0.1:8000/post/new/ a uvidíme, či to bude fungovať. Pridajte nejaký text do **title** a **text**, uložte to a skontrolujte či to funguje. Ak áno, nový blogový príspevok je pridaný a my sme presmerovaní na stránku **post_detail** tak ako sme chceli.
 
 Možno ste si všimli, že pred uložením nastavujeme dátum zverejnenia automaticky. Neskôr si vytvoríme na to tlačitko "Publikovať".
 
@@ -2230,6 +2236,12 @@ def post_publish(request, pk):
     return redirect('post_detail', pk=pk)
 ~~~
 
+Tu sme pou+yili príkaz redirect ktorý však musíme podložiť importom v tvare 
+~~~
+from django.shortcuts import redirect
+~~~
+resp. pridaním jeho importu k inému riadku.
+
 Keď sme vytvorili model **Post**, napísali sme metódu **publish**. Vyzeralo to takto:
 ~~~
 def publish(self):
@@ -2255,9 +2267,11 @@ Teraz potrebujeme adresu URL v súbore **blog/urls.py** :
 ~~~
 path('post/<pk>/remove/', views.post_remove, name='post_remove'),
 ~~~
-V ďalšom opäť k tomu vytvoríme zobrazenie. Otvorme preto súbor **blog/views.py** a pridajte tento kód:
+V ďalšom opäť k tomu vytvoríme zobrazenie. Otvorme preto súbor **blog/views.py** a pridajte tento kód spolu s importom redirect do súboru views.py:
 
 ~~~
+from django.shortcuts import redirect, get_object_or_404
+
 def post_remove(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.delete()
