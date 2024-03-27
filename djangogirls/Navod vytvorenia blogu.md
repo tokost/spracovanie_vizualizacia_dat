@@ -1,7 +1,7 @@
 >## Vytvorenie webovej aplikácie blogu
 https://tutorial.djangogirls.org/en/ 
 
-![](/obrazky/djangogirls01.png)
+![](./obrazky/djangogirls01.png)
 
 >### Inštalácia a príprava
 
@@ -343,7 +343,7 @@ Ako vidíme, importujeme (zahrnieme) do admina model Post  definovaný v súbore
 
 Týmto si už môžeme náš model Post aj pozrieť. Urobíme to tak že na konzole spustíme webový server príkazom **$ python manage.py runserverv cislo_portu**. Prejdeme do webového prehliadača a zadáme adresu http://127.0.0.1:cislo_portu/admin/ . Zobrazí sa nám prihlasovacia stránka administrátora, ktorá vyzerá takto:
 
-![](/obrazky/djangogirls02.png)
+![](./obrazky/djangogirls02.png)
 
 Pre prihlásenie je potrebné vytvoriť superužívateľa, ktorý má kontrolu nad všetkým na stránke. Preto prerušme chod web servera CTRL-C a vrátime sa na príkazový riadok terminálu kde nápíšeme, **python manage.py createsuperuser**. Následne zadáme požadované údaje a zapamätáme si ich pre neskorśie použitie.
 
@@ -367,7 +367,7 @@ Prejdime na Post (príspevky) a trochu s nimi poexperimentujme. Pridajtme päť 
 
 Uistite sa, že aspoň dva alebo tri príspevky (ale nie všetky) majú nastavený dátum zverejnenia - publikovania. Neskôr to budeme potrebovať.
 
-![](/obrazky/djangogirls04.png)
+![](./obrazky/djangogirls04.png)
 
 Ak sa chcete dozvedieť viac o Django adminovi, mali by ste si pozrieť dokumentáciu Django: https://docs.djangoproject.com/en/3.2/ref/contrib/admin/
 
@@ -383,7 +383,7 @@ Pokračujeme vo vývoji našej webovej aplikácie blogu. Najprv sa však musíme
 
 URL je webová adresa. Adresu URL môžete vidieť pri každej návšteve webovej stránky – je viditeľná v paneli s adresou vášho prehliadača. (Áno! 127.0.0.1:8000je URL. A https://djangogirls.orgje tiež URL.)
 
-![](/obrazky/djangogirls05.png)
+![](./obrazky/djangogirls05.png)
 
 Každá stránka na internete potrebuje svoju vlastnú URL. Vaša aplikácia tak vie, čo má kedy ukázať používateľovi, ktorý otvorí danú adresu URL. V Django používame niečo, čo sa nazýva **URLconf**(konfigurácia URL). URLconf je sada vzorov, ktoré sa Django pokúsi priradiť k požadovanej adrese URL, aby našiel správne zobrazenie.
 
@@ -500,7 +500,7 @@ Ako vidieť vytvorili sme funkciu ( def) **post_list**, ktorá preberá **reques
 
 Uložte súbor, prejdite na http://127.0.0.1:8000/ a pozrite sa, čo sa stane. Ďalšia chyba! Tak si prečítajme, čo sa teraz deje:
 
-![](/obrazky/djangogirls06.png)
+![](./obrazky/djangogirls06.png)
 
 Text hovorí, že server beží, ale stále existujú nejaké problémy. Nebojte sa, je to len chybová stránka, niet sa čoho báť. Rovnako ako chybové hlásenia v konzole aj tieto hlásenia sú skutočne veľmi užitočné. Môžete si prečítať, že **TemplateDoesNotExist** . Poďme opraviť túto chybu a vytvoriť chýbajúcu šablónu (template).
 
@@ -540,7 +540,7 @@ Pozrite sa, ako náš web vyzerá teraz: http://127.0.0.1:8000/
 
 Ak chyba **TemplateDoesNotExist** pretrváva, skúste reštartovať server. Prejdite na príkazový riadok, zastavte server stlačením Ctrl+C (klávesy Control a C spolu) a spustite ho znova spustením príkazu **python manage.py runserver**.
 
-![](/obrazky/djangogirls07.png)
+![](./obrazky/djangogirls07.png)
 
 Ak chyba pominula, tak náš web nezverejňuje nič okrem prázdnej stránky, pretože aj naša šablóna je prázdna. To musíme ale napraviť. Otvorte preto post_list.html a pridajme nasledujúci kód:
 ~~~
@@ -555,7 +555,7 @@ Ak chyba pominula, tak náš web nezverejňuje nič okrem prázdnej stránky, pr
 
 Teraz náš web vyzerá takto. Navštívte ho a zistite použitím príkazu http://127.0.0.1:8000/
 
-![](/obrazky/djangogirls08.png)
+![](./obrazky/djangogirls08.png)
 
 * Riadok &lt;!DOCTYPE html&gt; nie je značka HTML. Deklaruje iba typ dokumentu. Tu informuje prehliadač, že typ dokumentu je HTML5 . Toto je vždy začiatok akéhokoľvek súboru HTML5.
 * Základná značka, &lt;html&gt;, vždy označuje začiatok html obsahu a &lt;/html&gt; je vždy značka jeho konca. Ako vidíte, celý obsah webovej stránky sa nachádza medzi počiatočnou značkou &lt;html&gt; a záverečnou značkou &lt;/html
@@ -585,7 +585,7 @@ Takto môžete napríklad do post_list.html a jeho bloku &lt;head&gt; vložiť p
 ~~~
 Uložte súbor a obnovte stránku čím dostaneme:
 
-![](/obrazky/djangogirls09.png)
+![](./obrazky/djangogirls09.png)
 
 Na základe toho prehliadač pochopil, že názov našej stránky je „Olin blog“. Interpretoval totiž riadok **&lt;title&gt;Ola's blog&lt;/titl&gt;** tak že má umiestniť daný text do záhlavia záložky ktorý zobrazí prehliadač.
 
@@ -657,7 +657,7 @@ Vytvorili sme jednu sekciu **header** a dve sekcie.**article**
 
 Čo nám vytvorí tento efekt:
 
-![](/obrazky/djangogirls10.png)
+![](./obrazky/djangogirls10.png)
 
 V tomto štádiu je možné znovu nasadiť našu stránku do produkcie vybranému ISP ktorý ponúka prostredie na báze Pythonu a frameworku Django. Taktiež je vhodné výtvoriť zálohu nášho projektu na Git-e resp. GitHub-e.
 
@@ -954,7 +954,7 @@ V predchádzajúcej časti sme poskytli našej šablóne zoznam príspevkov v pr
 
 Vyskúšajme to v našej šablóne **blog/templates/blog/post_list.html**. Otvorme ju v editore kódu a nahraďme existujúce prvky **<article** s **{{ posts }}**. Uložme súbor a obnovme stránku, aby sme videli výsledky:
 
-![](/obrazky/djangogirls11.png)
+![](./obrazky/djangogirls11.png)
 
 Ako vidieť, všetko, čo máme v **blog/templates/blog/post_list.html**, je toto:
 ~~~
@@ -972,7 +972,7 @@ To znamená, že použitím QuerySet Django chápe príspevky (post) ako zoznam 
 ~~~
 Po zabudovaní tejto konštrukcie do súboru views.py dostaneme omnoho čitatelnejší výsledok ako tomu bolo v predchádzajúcom obrázku.
 
-![](/obrazky/djangogirls12.png)
+![](./obrazky/djangogirls12.png)
 
 Funguje to, ale my zatiaľ chceme aby sa príspevky zobrazovali iba ako statické príspevky, ktoré sme vytvorili už predtým v časti kde sa zaoberáme <a href="#section2">úvodom do HTML</a> . Tagy HTML však môžete kombinovať so šablónami. Naše **body** v **blog/templates/blog/post_list.html** bude vyzerať takto:
 ~~~
@@ -991,7 +991,7 @@ Funguje to, ale my zatiaľ chceme aby sa príspevky zobrazovali iba ako statick�
 
 Všetko, čo vložíte medzi **{% for %}** a **{% endfor %}** sa bude opakovať pre každý objekt v zozname. Obnovte svoju stránku a mali by sme dostať niečo takéto:
 
-![](/obrazky/djangogirls13.png)
+![](./obrazky/djangogirls13.png)
 
 Môžeme si všimnúť, že sme tentoraz sme použili trochu iný zápis ( **{{ post.title }}** alebo **{{ post.text }}** ). Takto pristupujeme k údajom v každom z polí ktoré je definované v našom modeli **Post**. **|linebreaksbr** vyjadruje že text príspevkov prechádza cez filter, aby takto ukončenie riadkov previedli na odseky.
 
@@ -1018,7 +1018,7 @@ Ak chcete nainštalovať Bootstrap, otvoríme svoj blog/templates/blog/post_list
 
 Týmto sa do nášho projektu síce nepridajú žiadne súbory ale získame odkaz na súbory ktoré existujú na internete a ktoré môžeme takto použiť. Takže pokračujme tým že otvoríme svoj web a obnovíme svoju stránku.
 
-![](/obrazky/djangogirls14.png)
+![](./obrazky/djangogirls14.png)
 
 Zmena je tu evidentne batatelná.
 
@@ -1123,7 +1123,7 @@ Prehliadač číta súbory v poradí, v akom sú zadané, takže sa musíme uist
 ~~~
 
 Keď súbor uložíme súbor a obnovíme stránku dostaneme toto:
-![](/obrazky/djangogirls15.png)
+![](./obrazky/djangogirls15.png)
 
 Vo vzhľade našej stránky sme už pokročili, ale možno by sme ju mohli trochu prevzdušniť a zvýšiť odstup od ľavého okraja. Skúsme preto v **blog/static/css/blog.css** pridať toto:
 ~~~
@@ -1131,7 +1131,7 @@ body {
     padding-left: 15px;
 }
 ~~~
-![](/obrazky/djangogirls16.png)
+![](./obrazky/djangogirls16.png)
 
 Možno by sme chceli ďalej prispôsobiť písmo v hlavičke. Urobíme to tak, že do hlavičky <**head**> v súbore **blog/templates/blog/post_list.html** pridáme toto:
 ~~~
@@ -1147,7 +1147,7 @@ h1 a, h2 a {
     font-family: 'Lobster';
 }
 ~~~
-![](/obrazky/djangogirls17.png)
+![](./obrazky/djangogirls17.png)
 
 Ako už bolo spomenuté vyššie, CSS má koncept tried. Tieto nám umožňujú pomenovať časť kódu HTML a použiť štýly iba na túto časť bez ovplyvnenia ostatných častí. To môže byť veľmi užitočné. Možno máte dva <**div**>-y, ktoré robia niečo iné (napríklad vaša hlavička a váš príspevok). Trieda vám môže pomôcť, aby vyzerali inak. Pokračujme teda týmto smerom a pomenujme niektoré časti kódu HTML. Nahraďme v <**header**> v súbore **blog/templates/blog/post_list.html**, všetko to čo sa tam nachádza týmto vrátane označenia bloku <**header**> <**/header**> a v prípade potreby upravíme odstupy odstupy od kraja aby zodpovedali tomuto kódu:
 ~~~
@@ -1411,7 +1411,7 @@ Táto štruktúra pomáha pri vytváraní responzívnych a organizovaných rozlo
 
 Súbory uložte a obnovte svoj web aby sme dostali niečo takéto.
 
-![](/obrazky/djangogirls18.png)
+![](./obrazky/djangogirls18.png)
 
 Ak sa pozrieme na kód, ktorý sme práve vložili, tak by sme našli miesta, kde sme pridali  triedy a použili ich v CSS. Napr. kde by ste potom urobili zmenu, ak by ste chceli, aby bol dátum inej farby a bol napr. tyrkysový ?
 
@@ -1588,31 +1588,31 @@ Začneme pridaním odkazu do súboru **blog/templates/blog/post_list.html**. Otv
 {% endblock %}
 ~~~
 
-Chceme mať odkaz na stránku s podrobnosťami o príspevku cez názov príspevku ktorý sa nachádza v zozname príspevkov. Zmeňme teda 
+Chceme mať odkaz na stránku s podrobnosťami ktoré sa nachádzajú v príspevku a chceme aby sme sa k nim dostali cez názov príspevku ktorý sa nachádza v zozname príspevkov post_list.html. Zmeňme teda riadok
 ~~~
 <h2><a href="">{{ post.title }}</a></h2>
 ~~~
- tak, aby sa odkazovalo na stránku s podrobnosťami o príspevku:
+ tak, že k pôvodnému textu pridáme {% url 'post_detail' pk=post.pk %} čo nám vytvorí odkaz na stránku s podrobnosťami o príspevku. Celý riadok potom nadobudne takýto tvar:
 ~~~
 <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
 ~~~
 
-Žiada sa však, aby sme konštrukciu **{% url 'post_detail' pk=post.pk %}** vysvetlili. Ako možno tušíte zápis medzi **{% %}** znamená, že používame značky šablón Django. Tentokrát ale použijeme taký, ktorý nám vytvorí URL adresu. URL adresu na stránku detailov príspevku.
+Keď sme pridali tento doplnok žiada sa aby sme konštrukciu **{% url 'post_detail' pk=post.pk %}** vysvetlili. Ako možno tušíte zápis medzi **{% %}** znamená, že budú použité tagy šablón Django (tento krát ale nie cyklus pri ktorom sme to použili tiež). Teraz použijeme taký, ktorý nám vytvorí URL adresu a to URL adresu na stránku detailov príspevku.
 
 Zápis **post_detail** znamená, že Django bude očakávať URL zo súboru **blog/urls.py** kde bude mať meno **name=post_detail**
 
-A čo takto použiť **pk=post.pk** ? **pk** je totiž skratka pre **primárny kľúč**, čo je jedinečný identifikátor pre každý záznam v databáze. Každý model Django má pole, ktoré slúži ako jeho primárny kľúč, a nech už má akýkoľvek iný názov, môže byť tiež označovaný ako „pk“. Pretože sme v našom modeli nešpecifikovali primárny kľúč pre **Post**, Django nám ho vytvorí (štandardne je to pole s názvom „id“ obsahujúce číslo, ktoré sa zvyšuje pre každý záznam, t.j. nadobúda hodnoty 1, 2, 3). Pridá nám ho ako pole na každý náš príspevok. **K primárnemu kľúču pristupujeme zápisom post.pk**, je to rovnakým spôsobom, akým pristupujeme v našom objekte **Post** aj k iným poliam ( napr. title, author, atď.).
+A čo takto použiť **pk=post.pk** ? **pk** je to totiž skratka pre **primárny kľúč**, čo je jedinečný identifikátor pre každý záznam v databáze. Veď každý model Django musí mať pole, ktoré slúži ako jeho primárny kľúč, a nech už má akýkoľvek iný názov, môže byť napr. označený aj ako „pk“ (t.j. počiatočné písmená **p**rimary **k**ey). Pretože sme ale v našom modeli nešpecifikovali primárny kľúč „pk“ pre **Post**, Django nám ho automaticky prevezme z poľa ktoré bolo ako porimary key definované pri tvorbe databázy. Štandardne je to pole s názvom „id“ obsahujúce číslo, ktoré sa zvyšuje pre každý záznam, t.j. nadobúda hodnoty 1, 2, 3 atď. Inými slovami povedané naše „pk“ s ktorým budeme pracovať zodpovedá v databáze názvu poĺa „id“, čo zabezpečí Django. Dôsledok zavedenia „pk“ potom spôsobí že nám Django pridá „pk“ ako pole na každý náš príspevok. **K primárnemu kľúču ktorý je priradený nášmu príspevku potom pristupujeme pomocou bodkovej konvencie  zápisom post.pk**. Je to pritom rovnaký spôsob, akým pristupujeme v našom objekte **Post** aj k iným databázovým poliam ( ako napr. title, author, a pod.).
 
-Keď prejdeme v tomto štádiu vývoja na adresu http://127.0.0.1:8000/, zobrazí sa chyba (podľa očakávania, pretože ešte nemáme pre post_detail ani URL adresu ani view ). Bude to vyzerať nejako takto:
+Keď ale prejdeme po uskutočnení tejto zmeny na adresu http://127.0.0.1:8000/, zobrazí sa nám chyba (je to podľa očakávania, pretože ešte nemáme vytvorenú ani šablónu post_detail ani URL adresu a ani view ). Tá chyba bude  vyzerať nejako takto:
 
-![](/obrazky/djangogirls19.png)
+![](./obrazky/djangogirls19.png)
 
 ### Vytvorenie URL adresy pre zobrazenie (views) podrobností príspevku
 
-Poďme vytvoriť **urls.py** v ktorom umiestníme URL pre naše zobrazenie **post_detail**. Pritom 
-chceme, aby sa podrobnosti nášho prvého príspevku zobrazovali na adrese ktorá bude mať takýto tvar URL : http://127.0.0.1:8000/post/1/
+Poďme teda znovu aplikovať štandardný postu a najprv vytvoriť **urls.py** v ktorom umiestníme URL pre naše zobrazenie **post_detail**. Pritom 
+chceme, aby sa podrobnosti nášho prvého príspevku zobrazovali na stránke ktorá bude na adrese takéhoto tvaru URL: http://127.0.0.1:8000/post/1/
 
-V súbore **blog/urls.py** zadáme URL adresu, ktorá nasmeruje Djanga na views s názvom **post_detail** a to zobrazí celý príspevok blogu. Otvorte súbor **blog/urls.py** v editore kódu a pridajme do neho riadok **path('post/<int:pk>/', views.post_detail, name='post_detail')**, tak aby súbor vyzeral takto:
+V súbore **blog/urls.py** zadáme URL adresu, ktorá nasmeruje Djanga na views s názvom **post_detail** a to zobrazí celý príspevok blogu. Otvorte súbor **blog/urls.py** v editore kódu a pridajme do neho riadok **path('post/&lt;int:pk&gt;/', views.post_detail, name='post_detail')**, tak aby celý súbor vyzeral takto:
 
 ~~~
 from django.urls import path
@@ -1624,13 +1624,13 @@ urlpatterns = [
 ]
 ~~~
 
-Časť **post/<int:pk>/** špecifikuje vzor URL adresy čo si vysvetlíme v ďalšom:
+Časť **post/&lt;int:pk&gt;/** špecifikuje vzor URL adresy čo si vysvetlíme v ďalšom:
 
 * post/ znamená, že URL adresa by mala začínať slovom **post**, za ktorým nasleduje znak **/** .
-* <int:pk> – vyjadruje trochu zložitejšiu časť. Znamená to, že Django očakáva celočíselnou hodnotu a prenesie ju do views ako premennú s názvom **pk** (ide o spomínaný primary key).
+* <**int : pk**> – vyjadruje trochu zložitejšiu časť. Znamená to, že Django očakáva celočíselnou hodnotu a prenesie ju do views ako premennú s názvom **pk** (ide o spomínaný primary key).
 * / – potrebujeme znova umiestniť pred dokončením URL adresy.
 * 
-To znamená, že ak vstúpime v prehliadači na adresu http://127.0.0.1:8000/post/5/, Django pochopí, že hľadáme views s názvom **post_detail** a prenesie do príslušnej šablóny informácie (zázanam z DB tabuľky), ktoré prislúchajú tomuto views s identifikátorom **pk** rovnému hodnote číslo 5 (t.j. 5.-mu riadku tabuľky)
+Z toho vyplýva, že ak vstúpime v prehliadači napr. na adresu http://127.0.0.1:8000/post/5/, Django pochopí, že hľadáme views s názvom **post_detail** a prenesie do príslušnej šablóny informácie (údaje z DB tabuľky), ktoré prislúchajú tomuto views s identifikátorom **pk** rovnajúcemu sa hodnote číslo 5 (t.j. rovnajúcemu sa 5. riadku tabuľky DB tabuľky)
 
 Do **blog/urls.py ** sme teda pridali nový vzor URL adresy. Obnovme stránku: http://127.0.0.1:8000/ a opäť zistíme že server prestal bežať. Pozrieme sa na konzolu a ako sme mohli po zásahu do url.py očakávať je tu ďalšia chyba.
 
@@ -1660,11 +1660,11 @@ Post.objects.get(pk=pk)
 
 Ale tento kód má problém. Ak tam nie je žiadne **Post** s daným primary key (**pk**), dostaneme veľkú chybu.
 
-![](/obrazky/djangogirls20.png)
+![](./obrazky/djangogirls20.png)
 
 To však nechceme, ale našťastie Django prichádza s niečím, čo to zvládne za nás. Je to pomoc pri ošetrení chyby **get_object_or_404**. V prípade, že tam nie je **Post** s daným **pk**, zobrazí sa oveľa krajšia stránka, **Page Not Found 404** ktorá nás nasmeruje na príčinu chyby.
 
-![](/obrazky/djangogirls21.png)
+![](./obrazky/djangogirls21.png)
 
 Tento nástroj, ktorý nám Django poskytuje nám umožní vytvoriť aj svoju vlastnú stránku na hlásenie chyby (s inou správou ako Page not found) a urobiť ju tak ako chceme. To v+sak teraz nebude predmetom nášho riešenia a tak túto tému preskočíme.
 
@@ -1685,17 +1685,17 @@ def post_detail(request, pk):
 
 Keď obnovíme stránku: http://127.0.0.1:8000/ dostaneme síce známy vizuál, 
 
-![](/obrazky/djangogirls22.png)
+![](./obrazky/djangogirls22.png)
 
-ale po nakliknutí na názov príspevku dostaneme zase chybu.
+ale po nakliknutí na názov príspevku sa nám podrobnosti alebo príspevku nezobrazia, alebo ked zadáme napr. manualne http://127.0.0.1:8000/post/2/ dostaneme zase chybu.
 
-![](/obrazky/djangogirls23.png)
+![](./obrazky/djangogirls23.png)
 
 S takouto chybou sme sa však už stretli skôr a tak sa s ňou už vieme vysporiadať. Ak si spomenieme, musíme pridať pre post_detail šablónu!
 
-### Vytvorenie šablóny pre podrobnosti v príspevku
+## Vytvorenie šablóny pre podrobnosti v príspevku
 
-Vytvoríme si súbor s názvom **post_detail.html** v adresári **blog/templates/blog** a otvoríme ho v editore kódu. Potom zadáme nasledujúci kód:
+Vytvoríme si súbor s názvom **post_detail.html** v adresári **blog/templates/blog** a otvoríme ho v editore kódu. Potom zadáme do neho nasledujúci kód:
 
 ~~~
 {% extends 'blog/base.html' %}
@@ -1712,15 +1712,17 @@ Vytvoríme si súbor s názvom **post_detail.html** v adresári **blog/templates
     </article>
 {% endblock %}
 ~~~
-Opäť v ňom využijeme base.html. V bloku **content*  chceme zobraziť dátum zverejnenia príspevku (ak existuje), názov príspevku a jeho obsah. Skôr než tak urobíme mali by sme podiskutovať o niektorých dôležitých veciach.
+Tentó kód sa podobá kódu post_list.html až na to že je tu použitý rozhodovací príkaz if a class="date" ktorá zabezpečí pre dátum použitie stýlu zo súboru blog.css. Opäť v ňom však využijeme base.html. V bloku **content*  chceme zobraziť ak existuje cez premenné dátum zverejnenia príspevku {{ post.published_date }}, názov príspevku {{ post.title }} a jeho obsah {{ post.text|linebreaksbr }}. Skôr než tak však urobíme mali by sme spomenúť niekľko dôležitých vecí.
 
-**{% if ... %} ... {% endif %}** je značka šablóny, ktorú môžeme použiť, keď chceme niečo skontrolovať. (Spomínate si if ... else ...zo základov Pythonu ?) V tejto časti chceme napr. skontrolovať, či príspevok **published_date** nie je prázdny. OK, tak obnovme našu stránku a zistime, či je chyba **TemplateDoesNotExist** preč.
+Týka sa to konštrukcie **{% if ... %} ... {% endif %}** je tag šablóny, ktorú môžeme použiť, keď chceme niečo skontrolovať. (Spomeňme si na if ... else ...zo základov Pythonu !) V tejto časti chceme napr. skontrolovať, či príspevok **published_date** nie je prázdny. Ak obnovíme našu stránku a zadáme do prehliadača opäť manuálne adresu http://127.0.0.1:8000/post/2/ tak zistíme, že naša chyba **TemplateDoesNotExist** je preč a my uvidíme obsah našej šablóny post_detail.html.
 
-![](/obrazky/djangogirls24.png)
+Čo ešte musíme urobiť je prepojenie šablón post_list.html a post_detail.html tak aby po nakliknutí názvu príspevku sa nám zobrazil jeho obsah bez toho abz sme manualne zadávali jeho URL
+
+![](./obrazky/djangogirls24.png)
 
 ## Formuláre s Djangom
 
-Posledná vec, ktorú chceme na našej webovej stránke urobiť, je vytvoriť vhodný spôsob pridávania a úpravy blogových príspevkov. Djangoý **admin** je síce fajn, ale je príliš jednoduchý a je dosť náročné ho prispôsobiť na lepší design. Djangove **forms** však bude vhodnejším riešením rozhrania s užívateľom a budeme s ním môcť robiť takmer všetko čo potrebujeme.
+Ďalšia vec, ktorú chceme na našej webovej stránke urobiť, je vytvoriť vhodný spôsob pridávania a úpravy blogových príspevkov. Djangový **admin** sa síce dá použiť na tieto účely, ale je príliš jednoduchý a je dosť náročné ho prispôsobiť na lepší design. Riešením je preto použitie Djangových formulárov tzv. **forms**. To bude vhodnejšie riešenie rozhrania s užívateľom a budeme s ním môcť robiť takmer všetko čo potrebujeme vrátane dizajnových úprav. Naviac túto techniku môžeme použiť kedykoľvek keď budeme potrebovať vytvoríť nejaký vstupný formulár pre zadávanie údajov do databázy.
 
 Zaujímavou vlastnosťou na formulároch Django je aj to, že môžeme ho vždy vytvárať od samotného začiatku alebo môžeme vytvoriť formulár ktorý sa prostredníctvom **ModelForm** uloží do modelu k opakovanému použitiu. A to je presne to, čo chceme urobiť. Vytvoriť formulár pre náš model **Post**.
 
@@ -1750,17 +1752,21 @@ Najprv musíme importovať formuláre Django ( **from django import forms**) a n
 
 **PostForm**, ako pravdepodobne tušíte, je názov nášho formulára. V tejto súvislosti musíme Djangovi povedať, že tento formulár je **ModelForm** takže Django zabezpečí že za to bude zodpovedný **forms.ModelForm** .
 
-Ďalej budeme pracovať s **class Meta**, kde povieme Djangovi, ktorý model by sa mal použiť na vytvorenie nášho formulára ( **model = Post**).
+Ďalej budeme pracovať s triedou ktorú označíme ako **class Meta**, kde povieme Djangovi, ktorý model by sa mal použiť na vytvorenie nášho formulára ( **model = Post**).
 
-Nakoniec ešte musíme povedať povedať, ktoré pole (polia) databázovej tabuľky by mali byť v našom formulári napĺňané. V tomto scenári chceme len **title**, **text**, **author** ktorým je osoba, ktorá je práve prihlásená (napr. Vy) a **created_date** by mal byť už vytváraný automaticky pri inicializácii písania príslušného príspevku.
+Nakoniec ešte musíme Djangovi povedať, ktoré pole (resp. polia) databázovej tabuľky by mali byť v našom formulári napĺňané. V tomto scenári chceme len tieto tri **title**, **text**, **author**. Je to teda osoba/autor, ktorý je práve prihlásený (napr. Vy ako admin), ďalej text ktorý je nápnou príspevku spolu s jeho názvom a dátum vytvorenia príspevku **created_date** ktorý sa bude vytvárať automaticky pri inicializácii písania príslušného príspevku tak že sa preberie zo systémového času.
 
-Všetko, čo teraz musíme urobiť, je použiť formulár vo views a prepojiť ho na šablónu. Ešte raz si teda budeme musieť v urls.py vytvoriť na stránku odkaz, zadať URL, vytvoriť views a šablónu.
+Všetko, čo teraz musíme urobiť, je použiť formulár vo views a prepojiť ho na šablónu. Ešte raz si teda budeme musieť zopakovať zaužívaný postup že najprv v urls.py vytvoríme na stránku odkaz, zadať URL, potom vytvoriť views a nakoniec vytvoriť pre formulár šablónu.
 
 ### Odkaz na stránku s formulárom
 
-Pred pridaním odkazu potrebujeme na naše stránky zabudovať nejaké ikony, ktoré použijeme ako tlačidlá pre aktivovanie odkazu. Pre tento návod si stiahneme [súbor-earmark-plus.svg](https://icons.getbootstrap.com/icons/file-earmark-plus/) a uložíme si ho do priečinka **blog/templates/blog/icons/** ktorý si tu najprv  musíme vytvoriť napr. prieskumníkom. Stiahnutý súbor ikony má základný rozmer ktorý je pre naše účely veľmi malý. Rozmery ikony zväčšíme zmenou hodnôt v súbore file-earmark-plus.svg napr. na hodnoty width="50" height="50" a v súbore pencil-fill.svg na hodnoty width="15" height="15"
+Pred pridaním odkazu na formulá však potrebujeme na naše stránky zabudovať nejaké ikony, ktoré použijeme ako tlačidlá pre aktivovanie odkazu. Pre tento návod si za týmto účelom stiahneme súbor v ktorom sú už takéto ikony vytvorené. Ide o [súbor-earmark-plus.svg](https://icons.getbootstrap.com/icons/file-earmark-plus/) ktorý si uložíme do priečinka **blog/templates/blog/icons/** Ten si ešte pred tým najprv musíme vytvoriť napr. prieskumníkom. Stiahnutý súbor má ale ikony vytvorené v základnom rozmere ktorý je pre naše účely veľmi malý. 
 
-Je čas otvoriť v editore kódu **blog/templates/blog/base.html**. Teraz môžeme použiť tento súbor ikony v základnej šablóne nasledovne. Vo  vnútri sekcie **header** a v elemente **div** pridáme pred  **h1**  odkaz:
+>Rozmery ikony preto zväčšíme zmenou hodnôt v súbore file-earmark-plus.svg napr. na hodnoty width="50" height="50" a keby sme použili súbor pencil-fill.svg tak zmeníme hodnoty na width="15" height="15"
+
+Urobíme to tak že si editorom tento súbor otvoríme a hodnoty 16 prepíseme na 50
+
+Na to aby sme túto knižnicu zabudovali do našel aplikácia musíme v editore kódu otvoriť súbor **blog/templates/blog/base.html**. Teraz môžeme použiť tento súbor s ikonami v našej základnej šablóne nasledovne. Vo  vnútri sekcie **header** a v elemente **div** pridáme pred  **h1**  pod class="container"odkaz:
 
 ~~~
 <a href="{% url 'post_new' %}" class="top-menu">
@@ -1768,11 +1774,13 @@ Je čas otvoriť v editore kódu **blog/templates/blog/base.html**. Teraz môže
 </a>
 ~~~
 
-Dohodnime sa že náš nový view by bolo vhodné nazvať **post_new**. Ikony nám poskytuje [Bootstrap](https://icons.getbootstrap.com/) vo formáte SVG a tá naša ktorú sme si stiahli zobrazí stránku so znamienkom plus. 
+>Dohodnime sa že náš nový view ktorý bude prislúchať formuláru by bolo vhodné nazvať **post_new**. Tento názov použijeeme pri konštrukcii v urls.py a views.py avšak sablónu ktorá post_new prislúcha nazveme nižšie **post_edit.html** nakoľko bude použitá nie len na vytváranie nových príspevkov, ale aj na editovanie (úpravu) príspevkov už existujúcich.
 
-![](/obrazky/djangogirls25.png)
+Súbor s ikonami nám v grafickom formáte SVG poskytol [Bootstrap](https://icons.getbootstrap.com/) a tá naša ktorú sme si stiahli pod názvom file-earmark-plus.svg sa nám zobrazí ako stránka so znamienkom plus. 
 
-Použijeme direktívu šablóny Django s názvom **include**. Tým sa vloží zo súboru kód ikony  do šablóny Django. Webový prehliadač už potom vie, ako s týmto typom obsahu zaobchádzať bez akéhokoľvek ďalšieho spracovania.
+![](./obrazky/djangogirls25.png)
+
+Na vloženie súboru s kódom ikony do našej šablóny sa použije direktíva šablóny Django s názvom **include**. Tým sa vloží zo súboru kód ikony  do šablóny Django. Webový prehliadač už potom vie, ako s týmto typom obsahu zaobchádzať a nie je potrebné žiadne ďalšie manipulovanie s týmto súborom.
 
 Všetky ikony Bootstrap si môžete stiahnuť [tu](https://github.com/twbs/icons/releases/download/v1.1.0/bootstrap-icons-1.1.0.zip). Súbor sa rozbalí a všetky obrazové súbory SVG sa skopírujú do nového priečinka **blog/templates/blog/icons**. Týmto spôsobom môžete získať prístup k ikone, ako je file-earmark-plus.svg alebo pencil-fill.svg ak použijeme k súboru danú cestu **blog/templates/blog/icons/file-earmark-plus.svg**
 
@@ -1830,7 +1838,7 @@ urlpatterns = [
 ~~~
 Po obnovení stránky keďže nemáme views **post_new** implementované, tak sa nám zobrazí **AttributeError** . Podme to hneď vyriešiť.
 
-### post_new vo views.py
+### post_new resp. post_edit vo views.py
 
 Je čas otvoriť v editore kódu súbor **blog/views.py** a pridať nasledujúce riadky k zvyšným riadkom **from ... import ...**:
 ~~~
@@ -1845,7 +1853,7 @@ def post_new(request):
 
 Na vytvorenie nového formulára **Post** musíme zavolať **PostForm()** a odovzdať ho šablóne. K tomuto views sa ešte vrátime, ale teraz si najprv vytvoríme šablónu formulára.
 
-### post_new šablóna
+###  šablóna post_edit
 
 V adresári **blog/templates/blog** musíme vytvoriť súbor **post_edit.html** a otvoriť ho v editore kódu. Aby formulár fungoval, potrebujeme niekoľko vecí:
 
@@ -1853,7 +1861,7 @@ V adresári **blog/templates/blog** musíme vytvoriť súbor **post_edit.html** 
 * Vyššie uvedený riadok je potrebné zabaliť do HTML prvku formulára: **<form method="POST">...</form>**.
 * Potrebujeme tlačítko Save (Uložiť) na uloženie formuláru. Urobíme to pomocou HTML tlačidla : **<button type="submit">Save</button>**.
 * A nakoniec, hneď za úvodnú značku **<form ...>** musíme pridať **{% csrf_token %}**. Je to veľmi dôležité, pretože to robí vaše formuláre bezpečnými! Ak na tento kód zabudnete,keď sa pokúsite uložiť formulár, Django sa bude takto sťažovať :
-![](/obrazky/djangogirls26.png)
+![](./obrazky/djangogirls26.png)
 
 Poďme sa teda pozrieť, ako by mal vyzerať HTML kód v **post_edit.html** :
 
@@ -1868,13 +1876,11 @@ Poďme sa teda pozrieť, ako by mal vyzerať HTML kód v **post_edit.html** :
     </form>
 {% endblock %}
 ~~~
-Ak stránku refrešneme mali by sme dostať takýto dizajn formulára :
+Ak stránku refrešneme a stlačime ikonu v pravom hornom rohu ktorú sme tam práve vložili mala by sa nám zobraziť stránka formulára s takýmto dizajnom:
 
-![](/obrazky/djangogirls27.png)
+![](./obrazky/djangogirls27.png)
 
-Ale, to ešte nie je všetko. Keď niečo zadáte do polí **title** a **text** a pokúsite sa to uložiť, čo sa stane?
-
-Nič! Opäť sme na tej istej stránke, náš text je preč... a nepridal sa žiadny nový príspevok. Čo sa teda pokazilo? Odpoveď znie: že nič. Z nášho pohľadu musíme len ešte niečo doplniť aby to fungovalo ako má.
+Všimnime si na nej to že jej URL adresa je síce http://127.0.0.1:8000/post/new/ ale je šablóna je post_edit.html. Nie je to však ešte všetko. Keď totiž niečo zadáte do polí **title** a **text** a pokúsite sa to uložiť, tak sa nič nestane a opäť zostávame na tej istej stránke. Náš zadaný text je preč a nepridal sa žiadny nový príspevok. Čo sa teda stalo ? Odpoveď znie: že nič. Z nášho pohľadu musíme len ešte niečo doplniť aby to fungovalo tak ako to má a formulár sa so svojim obsahom uložil.
 
 ### Uloženie vyplneného formulára
 
@@ -1963,7 +1969,7 @@ Keďže sme nedávno použili admin rozhranie Django, systém si momentálne mys
 
 Teraz si ukážeme, aké skvelé sú formuláre vytvorené pomocou Djanga. Blogový príspevok musí mať polia **title** a **text**. V našom modeli **Post** sme nepovedali, že tieto polia (na rozdiel od poľa **published_date**) nie sú povinné. Takže Django na základe toho štandardne očakáva, že budú nejako nastavené do východzieho stavu. Pokúste sa teda uložiť formulár bez **title** a **text** a pozrime čo sa staneˇ.
 
-![](/obrazky/djangogirls29.png)
+![](./obrazky/djangogirls29.png)
 
 > Django sa postará o overenie správnosti všetkých polí v našom formulári.
 
@@ -2043,11 +2049,11 @@ form = PostForm(instance=post)
 
 Vyskúšajme, či to funguje a poďme na stránku **post_detail**. Vedľa príspevku by malo byť tlačidlo úprav s ceruzkou:
 
-![](/obrazky/djangogirls30.png)
+![](./obrazky/djangogirls30.png)
 
 a keď naň klikneme, zobrazí sa nám formulár s príspevkom na našom blogu:
 
-![](/obrazky/djangogirls31.png)
+![](./obrazky/djangogirls31.png)
 
 Teraz tu môžeme zmeniť názov alebo text a tieto zmeny uložiť.
 
@@ -2232,7 +2238,7 @@ def publish(self):
 ~~~
 a teraz to konečne môžeme použiť. Po zverejnení príspevku sme okamžite presmerovaní na stránku **post_detail**.
 
-![](/obrazky/djangogirls32.png)
+![](./obrazky/djangogirls32.png)
 
 Posledným krokom bude pridanie tlačidla Odstrániť.
 
@@ -2260,7 +2266,7 @@ def post_remove(request, pk):
 
 Jedinou funkcionalitou tejto časti je skutočne odstrániť blogový príspevok. Každý model Django môže byť odstránený pomocou **.delete()**. Prejdite na niektorú stránku s príspevkom a skúste ju odstrániť!
 
-![](/obrazky/djangogirls33.png)
+![](./obrazky/djangogirls33.png)
 
 >## Implementácia prihlasovania užívateľov
 
@@ -2589,7 +2595,7 @@ Teraz prejdime na **blog/templates/blog/post_detail.html** a pred riadok **{% fo
 ~~~
 Ak prejdeme na stránku s podrobnosťami o príspevku, mala by sa vám zobraziť táto chyba:
 
-![](/obrazky/djangogirls34.png)
+![](./obrazky/djangogirls34.png)
 
 Vieme, ako to napraviť a prejdite na **blog/urls.py** aby sme pridali tento vzor do url **patterns** :
 ~~~
@@ -2598,7 +2604,7 @@ path('post/<int:pk>/comment/', views.add_comment_to_post, name='add_comment_to_p
 
 Keď obnovíme stránku tak sa zobrazí iná chyba.
 
-![](/obrazky/djangogirls35.png)
+![](./obrazky/djangogirls35.png)
 
 Ak chceme túto chybu opraviť, pridáme na koniec do **blog/views.py** toto zobrazenie :
 ~~~
@@ -2624,11 +2630,11 @@ from .forms import PostForm, CommentForm
 
 Teraz by ste mali na stránke s podrobnosťami o príspevku vidieť tlačidlo „Pridaj komentár“ (Add comment).
 
-![](/obrazky/djangogirls37.png)
+![](./obrazky/djangogirls37.png)
 
 Keď však kliknete na toto tlačidlo, uvidíte:
 
-![](/obrazky/djangogirls36.png)
+![](./obrazky/djangogirls36.png)
 
 Ako nám chyba hovorí, šablóna zatiaľ neexistuje. Takže vytvorte nový súbor na adrese **blog/templates/blog/add_comment_to_post.html** a pridajte do neho nasledujúci kód:
 
