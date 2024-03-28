@@ -2073,9 +2073,9 @@ Viacej informácií o formulároch Django si možno prečítať v dokumentácii:
 
 ## Bezpečnosť našich stránok
 
-Možnosť vytvárať nové príspevky kliknutím na odkaz je úžasná. Ale práve teraz bude môcť každý, kto navštívi vašu stránku, vytvoriť nový blogový príspevok, a to pravdepodobne nie je niečo čo by sme chceli. Preto zatiaľ kým nebudeme mať implementovanú funkciu prihlásenia registrovaného užívateľa, to urobme tak, aby sa tlačítko zobrazovalo iba vám a nikomu inému.
+Možnosť vytvárať nové príspevky kliknutím na odkaz je úžasná. Ale práve teraz bude môcť každý, kto navštívi našu stránku, vytvoriť nový blogový príspevok a to každopádne nie je niečo čo by sme chceli. Preto zatiaľ kým nebudeme mať implementovanú funkciu prihlásenia registrovaného užívateľa, to urobíme tak, aby sa tlačítko na vytváranie novej stránky (ikona stránky s plusom) zobrazovalo iba vám a nikomu inému.
 
-Otvorte v editore kódu **blog/templates/blog/base.html** a nájdite vo vnútri **header** prvok **div**, ktorý sme tam predtým vložili. Malo by to vyzerať takto:
+Otvorme v editore kódu **blog/templates/blog/base.html** a nájdite vo vnútri **header** prvok **div**, ktorý sme tam predtým vložili. Malo by to vyzerať takto:
 
 ~~~
 <a href="{% url 'post_new' %}" class="top-menu">
@@ -2083,7 +2083,7 @@ Otvorte v editore kódu **blog/templates/blog/base.html** a nájdite vo vnútri 
 </a>
 ~~~
 
-K tomuto textu pridáme ďalšiu značku **{% if %}**, vďaka ktorej sa odkaz zobrazí iba užívateľom, ktorí sú prihlásení s privilégiami správcu. Práve teraz ste to len vy. Zmeňte prvok <**a**> tak, aby vyzeral takto:
+Tento text vložíme do podmienky ktorá začína **{% if %}** a konči **{% endif %}** . Ak bude táto podmienka splnená t.j. bude mať hodnotu True, tak sa odkaz za ktorým sa nachádza nová ikona tvaru veľké plus zobrazí iba užívateľom, ktorí sú prihlásení. Momentálne keď ešte v aplikácii nie je riešená funkcionalita registrovanie a prihlasovania uživateľov, bude možnosť vytvárania nových príspevkov poskytnutá iba privilegovanému správcovi napr. s menom admin. Zatiaľ ste tým privilegovaným správcom iba vy. Vysledná časť kódu potom bude vyzerať takto :
 
 ~~~
 {% if user.is_authenticated %}
@@ -2093,9 +2093,13 @@ K tomuto textu pridáme ďalšiu značku **{% if %}**, vďaka ktorej sa odkaz zo
 {% endif %}
 ~~~
 
-To **{% if %}** spôsobí, že sa odkaz odošle do prehliadača iba v prípade, že používateľ, ktorý stránku požaduje, je prihlásený. Vytváranie nových príspevkov to úplne nechráni, ale ako prvý krok ochrany je to celkom dobré. Problematike bezpečnosti sa budeme venovať v ďalších častiach.
+Konštrukcia **{% if user.is_authenticated%}** spôsobí, že sa odkaz odošle do prehliadača iba v prípade, že používateľ, ktorý stránku požaduje, je prihlásený. Zabudovanie tejto konštrukcie do views.py nám tiež názorne ukazuje aké je poslanie tohoto súboru a v čom napr. spočíva riešenie logiky pre šablóny. Vytváranie nových príspevkov to síce úplne neochráni, ale ako prvý krok ochrany je to celkom dobré. Problematike bezpečnosti sa budeme podrobnejšie venovať v ďalších častiach návodu. Ak sa chceme presvedčiť či nám táto logika funguje musíme prejisť na stránku admina zadaním URL http://127.0.0.1:8000/admin kde je nám v hornom riadku ponúknutá voľba na odhlásenie sa z admin-a. 
 
-Podobný problém sa týka aj ikony úprav, ktorú sme práve pridali na našu stránku s podrobnosťami príspevku. Tiež by sme tam potrebovali pridať rovnakú zmenu aby iní ľudia nenemohli upravovať existujúce príspevky a aby to bola iba výsada administrátora alebo vlastníka príspevku.
+![](/djangogirls/obrazky/admin.png)
+
+Po tomto úkone sa nám ikona pre pridávanie nových príspevkov z pravého horného rohu stratí.
+
+Podobný problém t.j. sprístupnenie úprav iba prihláseným užívateľom sa týka aj ikony úprav, ktorú sme pridali na našu stránku s podrobnosťami príspevku. Tiež by sme tam potrebovali pridať rovnakú zmenu aby iní ľudia nemohli upravovať existujúce príspevky a aby to bola iba výsada administrátora alebo vlastníka príspevku.
 
 Otvorte preto v editore kódu **blog/templates/blog/post_detail.html** a nájdite tento riadok:
 
