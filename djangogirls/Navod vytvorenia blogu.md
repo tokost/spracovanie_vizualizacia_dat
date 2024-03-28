@@ -1931,7 +1931,7 @@ V zásade tu riešime dve veci:
 
 Väčšinu budeme používať **form.save** bez **commit=False**, ale v tomto prípade ho musíme zadať. **post.save()** zachová zmeny (počká na pridanie autora) a až potom sa vytvorí nový blogový príspevok.
 
-Nakoniec by bolo dobré, keby sme mohli okamžite prejsť na stránku **post_detail** nášho novovytvoreného blogového príspevku. No na to potrebujeme ešte jeden import:
+Nakoniec by bolo dobré, keby sme mohli okamžite prejsť na stránku **post_detail** nášho novovytvoreného blogového príspevku. No a na to potrebujeme ešte funkciu **redirect** a jej import, ktorý môžeme v súbore blog/views.py pridať k importom existujúcim, alebo ho napísať samostatne ako je to uvedené tu:
 
 ~~~
 from django.shortcuts import redirect
