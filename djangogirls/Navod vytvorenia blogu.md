@@ -1981,13 +1981,13 @@ Teraz si ukážeme, aké skvelé sú formuláre vytvorené pomocou Djanga. Blogo
 
 > Django sa postará o overenie správnosti všetkých polí v našom formulári.
 
-### Úprava nášho formulára
+### Úprava existujúceho príspevku pomocou formulára
 
-Teraz už vieme, ako pridať nový príspevok. Čo ak však chceme upraviť už existujúci príspevok ? Toto je veľmi podobné tomu, čo sme práve urobili, ale má to svoje odlišnosti. Poďme rýchlo vytvoriť dôležité veci.
+Teraz už vieme, ako pridať nový príspevok. Čo ak však chceme upraviť už existujúci príspevok ? Je to funkcionalita na ktorú môžeme použiť tiež práve vytvorený formulár. Napriek tomu že je tam veľa podobností a v tom, čo sme práve vytvorili, sú tu určité odlišnosti ktoré budeme musieť rešpektovať a doriešiť. Poďme teda na to a najprv venujme požornosť avizovaným odlišnostiam ktoré sú pre očakávanú funkcionalitu dôležité.
 
-Najprv si stiahneme a do adresára ikons si uložíme ikonu, ktorá predstavuje tlačidlo úprav. Stiahnite si súbor **pencil-fill.svg** a uložte ho do umiestnenia **blog/templates/blog/icons/**.
+Tá prvá sa týka ikony ktorá sa nachádza na stránke zobrazujúcej daný príspevok a ktorú keď aktivujeme tak prejdeme do režimu jeho úpravy. Na tento účel použijeme ikonu ktorá zobrazuje pero a ktorú si podobne ako to bolo v prípade ikony zobrazujúcej stránku s plus stiahneme z knižnice bootstrap. Ikone so zobrazením pera tu zodpovedá súbor **pencil-fill.svg** ktorý si stiahneme a vložíme do adresára **blog/templates/blog/icons/**.
 
-Otvorte **blog/templates/blog/post_detail.html** v editore kódu a pridajte nasledujúci kód do prvku **article**:
+Použijeme k tomu šablónu **blog/templates/blog/post_detail.html** ktorú sme si vytvorili už skôr keď sme skúšali či sa nám zobrezí obsah príspevku a či fungujú príslušné kódy v urls.py a views.py. Tento súbor otvoríme v editore kódu a pridáme do do prvku **article** nasledujúci kód:
 
 ~~~
 <aside class="actions">
@@ -2019,12 +2019,16 @@ takže celá šablóna post_detail.html bude vyzerať takto:
     </article>
 {% endblock %}
 ~~~
-Otvorte v editore kódu **blog/urls.py** a pridajte tento riadok:
-~~~
+
+Máme tu do činenie s HTML tagom <**aside**> ktorý
+ktorý sa použva na definovanie určitého doplňujúceho obsahu ku ktorému je priložený.Vedľajší obsah by mal nepriamo súvisieť s okolitým obsahom. Obsah <**aside**>je často umiestnený ako bočný panel v dokumente. Prvok <aside>sa v prehliadači nevykresľuje ako niečo špeciálne. Na úpravu jeho štýlu môžete použiť CSS.
+
+Potom otvoríme v editore kódu **blog/urls.py** a pridáme tento riadok:
+~~~ 
  path('post/<int:pk>/edit/', views.post_edit, name='post_edit'),
 ~~~
 
-Šablónu **blog/templates/blog/post_edit.html** použijeme znova, a posledná chýbajúca vec je ***view***. Otvorme v editore kódu **blog/views.py** a na úplný koniec súboru pridajme toto:
+Pri riešení tejto úlohy tiež znovu použijem  šablónu **blog/templates/blog/post_edit.html** . Najskôr však doplníme kód do ***view*** a v editore otvoríme súbor **blog/views.py** aby sme na jeho úplný koniec pridali nasledovné:
 
 ~~~
 def post_edit(request, pk):
@@ -2055,7 +2059,7 @@ form = PostForm(request.POST, instance=post)
 form = PostForm(instance=post)
 ~~~
 
-Vyskúšajme, či to funguje a poďme na stránku **post_detail**. Vedľa príspevku by malo byť tlačidlo úprav s ceruzkou:
+Vyskúšajme, či to funguje a poďme na stránku **post_detail** tak že do prehlaidača manuálne zadáme http://127.0.0.1:8000/post/2/. Vedľa príspevku by malo byť tlačidlo úprav s ceruzkou:
 
 ![](./obrazky/djangogirls30.png)
 
