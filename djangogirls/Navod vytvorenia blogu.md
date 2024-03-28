@@ -1693,9 +1693,9 @@ ale po nakliknutí na názov príspevku sa nám podrobnosti alebo príspevku nez
 
 S takouto chybou sme sa však už stretli skôr a tak sa s ňou už vieme vysporiadať. Ak si spomenieme, musíme pridať pre post_detail šablónu!
 
-## Vytvorenie šablóny pre podrobnosti v príspevku
+## Vytvorenie šablóny pre zobrazenie podrobnosti  príspevku
 
-Vytvoríme si súbor s názvom **post_detail.html** v adresári **blog/templates/blog** a otvoríme ho v editore kódu. Potom zadáme do neho nasledujúci kód:
+Aby sme mohli skontrolovať či nám urls.py a views.py pre zobrazenie podrobností v príslevku funguje správne musíme si vytvoriť pomocnú šablónu ktorú použijeme s manuálnym zadaním URL. Vytvoríme si teda súbor s názvom **post_detail.html** v adresári **blog/templates/blog** a otvoríme ho v editore kódu. Potom zadáme do neho nasledujúci kód:
 
 ~~~
 {% extends 'blog/base.html' %}
@@ -1714,9 +1714,9 @@ Vytvoríme si súbor s názvom **post_detail.html** v adresári **blog/templates
 ~~~
 Tentó kód sa podobá kódu post_list.html až na to že je tu použitý rozhodovací príkaz if a class="date" ktorá zabezpečí pre dátum použitie stýlu zo súboru blog.css. Opäť v ňom však využijeme base.html. V bloku **content*  chceme zobraziť ak existuje cez premenné dátum zverejnenia príspevku {{ post.published_date }}, názov príspevku {{ post.title }} a jeho obsah {{ post.text|linebreaksbr }}. Skôr než tak však urobíme mali by sme spomenúť niekľko dôležitých vecí.
 
-Týka sa to konštrukcie **{% if ... %} ... {% endif %}** je tag šablóny, ktorú môžeme použiť, keď chceme niečo skontrolovať. (Spomeňme si na if ... else ...zo základov Pythonu !) V tejto časti chceme napr. skontrolovať, či príspevok **published_date** nie je prázdny. Ak obnovíme našu stránku a zadáme do prehliadača opäť manuálne adresu http://127.0.0.1:8000/post/2/ tak zistíme, že naša chyba **TemplateDoesNotExist** je preč a my uvidíme obsah našej šablóny post_detail.html.
+Týka sa to konštrukcie **{% if ... %} ... {% endif %}** je tag šablóny, ktorú môžeme použiť, keď chceme niečo skontrolovať. (Spomeňme si na if ... else ...zo základov Pythonu !) V tejto časti chceme napr. skontrolovať, či príspevok **published_date** nie je prázdny. Ak obnovíme našu stránku a zadáme do prehliadača opäť manuálne adresu http://127.0.0.1:8000/post/2/ tak zistíme, že naša chyba **TemplateDoesNotExist** je preč a my uvidíme obsah našej šablóny post_detail.html. Táto pomocná šablóna nám poslúži aj na odstránenie chyby ktorá nastane ak do URL vložíme čislo riadku ktorý v našej databáze neexistuje (napr. 10 keďže máme iba 5 príspevkov)
 
-Čo ešte musíme urobiť je prepojenie šablón post_list.html a post_detail.html tak aby po nakliknutí názvu príspevku sa nám zobrazil jeho obsah bez toho abz sme manualne zadávali jeho URL
+<s>Čo ešte musíme urobiť je prepojenie šablón post_list.html a post_detail.html tak aby po  nakliknutí názvu príspevku sa nám zobrazil jeho obsah bez toho aby sme manualne zadávali jeho URL</s>
 
 ![](./obrazky/djangogirls24.png)
 
@@ -1949,6 +1949,8 @@ return redirect('post_detail', pk=post.pk)
 
 Celá definícia post_new vo **blog/views.py** potom vyzerá takto:
 ~~~
+from django.shortcuts import redirect
+...
 def post_new(request):
     if request.method == "POST":
         form = PostForm(request.POST)
@@ -2227,7 +2229,7 @@ A nastal čas aby sme v súbore **blog/urls.py** doplnili URL adresu:
 ~~~
 path('post/<pk>/publish/', views.post_publish, name='post_publish'),
 ~~~
-a nakoniec ako vždy pohľad musíme vytvoriť zobrazenie pre **post_publish** v súbore **blog/views.py** :
+a nakoniec ako vždy musíme vytvoriť zobrazenie pre **post_publish** v súbore **blog/views.py** :
 
 ~~~
 def post_publish(request, pk):
@@ -2236,7 +2238,7 @@ def post_publish(request, pk):
     return redirect('post_detail', pk=pk)
 ~~~
 
-Tu sme pou+yili príkaz redirect ktorý však musíme podložiť importom v tvare 
+Tu sme požiili príkaz redirect ktorý však musíme podložiť importom v tvare 
 ~~~
 from django.shortcuts import redirect
 ~~~
@@ -2372,7 +2374,43 @@ LOGIN_REDIRECT_URL = '/'
 ~~~
 čo spôsobí že pri priamom prístupe na prihlasovaciu stránku, presmeruje úspešné prihlásenie na index najvyššej úrovne (t.j. domovskú stránku nášho blogu).
 
-### Zlepšenie lyuotu - rozloženia prvkov
+V tomto štádiu súbpr views.py potom bude mať nasledovný obsah:
+~~~
+from django.shortcuts import render
+from django.utils import timezone
+from .models import Post
+# pridane kvoli post_detail.html
+from django.shortcuts import redirect, get_object_or_404
+# pridane kvoli post_edit.html
+from .forms import PostForm
+
+# Create your views here.
+# Pridanie views pre post_list.html
+def post_list(request):
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'blog/post_list.html', {'posts': posts})
+
+# Pridanie views pre post_detail.html
+def post_detail(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    return render(request, 'blog/post_detail.html', {'post': post})
+
+# Pridanie views pre post_edit.html
+def post_new(request):
+    if request.method == "POST":
+        form = PostForm(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+            post.published_date = timezone.now()
+            post.save()
+            return redirect('post_detail', pk=post.pk)
+    else:
+        form = PostForm()
+    return render(request, 'blog/post_edit.html', {'form': form})
+~~~
+
+### Zlepšenie layoutu - rozloženia prvkov
 
 Keď už máme všetko nastavené tak, že tlačítka na pridávanie a úpravu príspevkov uvidia len oprávnení užívatelia (teda napr. my) môžeme pokračovať ďalej. Teraz sa chceme uistiť, že prihlasovacie tlačítko sa zobrazí aj všetkým ostatným užívatelom ktorí sa dostanú na počiatočnú domovskú stránku.
 
@@ -2620,8 +2658,12 @@ Keď obnovíme stránku tak sa zobrazí iná chyba.
 
 ![](./obrazky/djangogirls35.png)
 
-Ak chceme túto chybu opraviť, pridáme na koniec do **blog/views.py** toto zobrazenie :
+Ak chceme túto chybu opraviť, pridáme do importov a na koniec do **blog/views.py** toto zobrazenie :
 ~~~
+from django.shortcuts import redirect
+
+...
+
 def add_comment_to_post(request, pk):
     post = get_object_or_404(Post, pk=pk)
     if request.method == "POST":
